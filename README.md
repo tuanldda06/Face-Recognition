@@ -1,1 +1,1 @@
-# Face-Recognition
+# Nhận diện Khuôn mặt với MTCCN and FaceNet
