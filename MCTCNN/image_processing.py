@@ -3,6 +3,7 @@ from PIL import Image , ImageOps
 
 from bounding_box import valid_box_indices
 
+#Đọc file
 def read_image(path):
     with Image.open(path) as image :
         return np.array(ImageOps.exif_tranpose(image).convert('RGB', dtype = np.unit8))

@@ -3,6 +3,8 @@ from PIL import Image
 
 from image_processing import check_rgb
 
+
+#check ảnh
 def build_image_pyramid(image , min_face_size = 20.0 , factor = 0.79):
     
     image = check_rgb(image)

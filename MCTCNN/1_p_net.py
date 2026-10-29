@@ -22,10 +22,13 @@ def build_pnet() :
     x = layers.PReLU(shared_axis = [1,2])
     
      # Hai nhánh dùng chung feature map x, mỗi nhánh có trọng số riêng.
+    
+    # softmax đưa về xác suất
     face = layers.Conv2D(
          2,1 , activation ='softmax'
      )
     
+    # đưa về tọa độ 
     bbox = layers.Conv2D(
         4,1,activation = 'linear'
     )

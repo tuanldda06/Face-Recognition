@@ -1,7 +1,7 @@
 import numpy as np
 
 
-#Chạy ngay sau P-Net , face_map là kết quả đầu ra của lớp tích chập 
+#Chạy ngay sau P-Net , face_map là kết quả đầu ra của lớp tích chập mmmmmm
 def generate_bounding_box(face_map ,bbox_map , scale , threshold = 0.6):
     probabilities = np.asarray(face_map , dtype = np.float32)
     offsets = np.asarray(bbox_map , dtype = np.float32)
@@ -16,6 +16,5 @@ def valid_box_indices(boxes):
         raise ValueError("boxes phải có shape (N,4).")
     mask = np.all(np.isfinite(boxes), axis=1) & np.all(boxes[:, 2:] > boxes[:, :2], axis=1)
     return np.flatnonzero(mask)
-
 
 
