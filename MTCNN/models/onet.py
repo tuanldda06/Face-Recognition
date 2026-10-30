@@ -48,16 +48,14 @@ class ONet(nn.Module):
 
         x = self.prelu4(self.conv4(x))
 
-        # Trải phẳng tensor từ (B, 128, 3, 3) -> (B, 1152)
-        x = torch.flatten(x, start_dim=1)
 
-        # Fully Connected
+        x = x.permute(0, 3, 2, 1).contiguous()
+        x = x.view(x.size(0), -1)
+
         x = self.prelu5(self.dense5(x))
 
-        # 3 đầu ra
-        cls = self.dense6_1(x)
+        cls = F.softmax(self.dense6_1(x), dim=1)
         bbox = self.dense6_2(x)
         landmarks = self.dense6_3(x)
-
 
         return bbox, landmarks, cls

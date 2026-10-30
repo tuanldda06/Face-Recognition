@@ -40,10 +40,12 @@ class RNet(nn.Module):
         x = self.prelu3(self.conv3(x))
 
         # Trải phẳng tensor từ (B, 64, 3, 3) thành (B, 576) để đưa vào lớp Linear
-        x = torch.flatten(x, start_dim=1)
+        x = x.permute(0, 3, 2, 1).contiguous()
+        x = x.view(x.size(0), -1)
 
         x = self.prelu4(self.dense4(x))
 
-        cls = self.dense5_1(x)
+        cls = F.softmax(self.dense5_1(x), dim=1)
         bbox = self.dense5_2(x)
+
         return bbox, cls

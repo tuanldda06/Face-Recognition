@@ -63,7 +63,7 @@ def nms(boxes, scores, threshold=0.5, mode="union"):
         else:
             denominator = areas[i] + areas[remaining] - intersection
 
-        overlap = intersection / denominator
+        overlap = np.divide( intersection, denominator,out=np.zeros_like(intersection, dtype=np.float32),where=denominator > 0,)
         order = remaining[overlap <= threshold]
 
     return np.array(keep, dtype=np.int64)

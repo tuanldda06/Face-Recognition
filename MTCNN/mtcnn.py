@@ -107,11 +107,25 @@ class MTCNN:
     def detect(self, image):
         if isinstance(image, (str, Path)):
             image = read_image(image)
+
         image = check_rgb(image)
+
         boxes = self._run_pnet(image)
-        if len(boxes):
-            boxes = self._run_rnet(image, boxes)
-        return self._run_onet(image, boxes) if len(boxes) else DetectionResult.empty()
+        print("P-Net:", len(boxes), "boxes")
+
+        if len(boxes) == 0:
+            return DetectionResult.empty()
+
+        boxes = self._run_rnet(image, boxes)
+        print("R-Net:", len(boxes), "boxes")
+
+        if len(boxes) == 0:
+            return DetectionResult.empty()
+
+        result = self._run_onet(image, boxes)
+        print("O-Net:", len(result.boxes), "boxes")
+
+        return result
 
     @torch.inference_mode()
     @torch.inference_mode()
