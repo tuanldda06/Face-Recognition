@@ -4,8 +4,9 @@ from PIL import Image , ImageOps
 
 #Đọc file
 def read_image(path):
-    with Image.open(path) as image :
-        return np.array(ImageOps.exif_tranpose(image).convert('RGB', dtype = np.unit8))
+    with Image.open(path) as image:
+        image = ImageOps.exif_transpose(image).convert("RGB")
+        return np.asarray(image, dtype=np.uint8)
 
 
 def check_rgb(image):

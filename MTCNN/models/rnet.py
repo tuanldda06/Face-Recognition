@@ -8,14 +8,14 @@ class RNet(nn.Module):
 
         self.conv1 = nn.Conv2d(3 , 28 , 3)
         self.prelu1 = nn.PReLU(28)
-        self.pool1 = nn.MaxPooling2d(3 , 2 , ceil_mode = True)
+        self.pool1 = nn.MaxPool2d(3 , 2 , ceil_mode = True)
 
 
-        self.conv2 = nn.Conv2d(3 , 48 , 3)
+        self.conv2 = nn.Conv2d(28 , 48 , 3)
         self.prelu2 = nn.PReLU(48)
-        self.pool2 = nn.MaxPooling2d(3 , 2 , ceil_mode = True)
+        self.pool2 = nn.MaxPool2d(3 , 2 , ceil_mode = True)
 
-        self.conv3 = nn.Conv2d(3 , 64 , 2)
+        self.conv3 = nn.Conv2d(48 , 64 , 2)
         self.prelu3 = nn.PReLU(64)
 
         self.dense4 = nn.Linear(576 , 128)

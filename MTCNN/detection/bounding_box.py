@@ -21,15 +21,15 @@ def generate_bounding_box(face_map ,bbox_map , scale , threshold = 0.6):
 def iou(box , boxes): # boxes :[x1, y1 , x2 , y2]
     x1 = np.maximum(box[0] , boxes[:,0])
     y1 = np.maximum(box[1] , boxes[:,1])
-    x2 = np.maximum(box[2] , boxes[:,2])
-    y2 = np.maximum(box[3] , boxes[:,3])
+    x2 = np.minimum(box[2] , boxes[:,2])
+    y2 = np.minimum(box[3] , boxes[:,3])
     
     w = np.maximum(0 , x2 - x1)
     h = np.maximum(0 , y2 - y1)
     
     intersection = w * h
     area1 = (box[2] - box[0])*(box[3]-box[1])
-    area2 = (box[:,2] -  box[:,0]) * (box[:,3] - box[:,1])
+    area2 = (boxes[:,2] -  boxes[:,0]) * (boxes[:,3] - boxes[:,1])
     
     union = area1 + area2 - intersection
     
@@ -70,3 +70,20 @@ def square_boxes(boxes):
     result[:, 2:] = center + side[:, None] / 2
 
     return result
+
+
+def valid_box_indices(boxes):
+    valid = (
+        np.isfinite(boxes).all(axis=1)
+        & (boxes[:, 2:] > boxes[:, :2]).all(axis=1)
+    )
+    return np.flatnonzero(valid)
+
+
+def decode_landmarks(boxes, points):
+    wh = boxes[:, 2:] - boxes[:, :2]
+
+    xs = boxes[:, 0, None] + points[:, :5] * wh[:, 0, None]
+    ys = boxes[:, 1, None] + points[:, 5:] * wh[:, 1, None]
+
+    return np.stack([xs, ys], axis=-1).astype(np.float32)

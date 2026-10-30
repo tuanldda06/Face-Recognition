@@ -14,7 +14,6 @@ from MTCNN.detection.bounding_box import (
 from MTCNN.preprocessing.image_processing import (
     read_image, check_rgb, normalize_pixels, crop_and_resize,
 )
-from MTCNN.preprocessing.face_alignment import align_face
 
 
 @dataclass
@@ -115,17 +114,20 @@ class MTCNN:
         return self._run_onet(image, boxes) if len(boxes) else DetectionResult.empty()
 
     @torch.inference_mode()
-    def extract_faces(self, image, result=None, size=160, align=False):
-        """Return FaceNet input tensor (N,3,size,size) on CPU."""
+    @torch.inference_mode()
+    def extract_faces(self, image, result=None, size=160):
         if isinstance(image, (str, Path)):
             image = read_image(image)
+
         image = check_rgb(image)
-        result = self.detect(image) if result is None else result
-        if align:
-            crops = np.stack([
-                normalize_pixels(align_face(image, pts, size))
-                for pts in result.landmarks
-            ]) if len(result.boxes) else np.empty((0, size, size, 3), np.float32)
-        else:
-            crops, _ = crop_and_resize(image, result.boxes, size)
-        return torch.from_numpy(np.ascontiguousarray(crops)).permute(0, 3, 1, 2)
+
+        if result is None:
+            result = self.detect(image)
+
+        crops, _ = crop_and_resize(
+        image, result.boxes, size
+        )
+
+        tensor = torch.from_numpy(np.ascontiguousarray(crops))
+
+        return tensor.permute(0, 3, 1, 2)
