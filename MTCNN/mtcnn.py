@@ -128,7 +128,6 @@ class MTCNN:
         return result
 
     @torch.inference_mode()
-    @torch.inference_mode()
     def extract_faces(self, image, result=None, size=160):
         if isinstance(image, (str, Path)):
             image = read_image(image)
