@@ -18,6 +18,7 @@ def generate_bounding_box(face_map ,bbox_map , scale , threshold = 0.6):
     return boxes , scores , offsets
 
 #Tinh IoU và Non-Maximum Suppression
+#Tinh IoU và Non-Maximum Suppression
 def iou(box , boxes): # boxes :[x1, y1 , x2 , y2]
     x1 = np.maximum(box[0] , boxes[:,0])
     y1 = np.maximum(box[1] , boxes[:,1])
@@ -35,21 +36,37 @@ def iou(box , boxes): # boxes :[x1, y1 , x2 , y2]
     
     return intersection / union
 
-def nms(boxes , scores , threshold = 0.5):
+
+def nms(boxes, scores, threshold=0.5, mode="union"):
+    """Remove overlapping boxes, keeping the highest scores."""
     order = np.argsort(scores)[::-1]
+    areas = np.prod(boxes[:, 2:] - boxes[:, :2], axis=1)
     keep = []
-    
-    while len(order) > 0 :
+
+    while len(order) > 0:
         i = order[0]
         keep.append(i)
-        
+
         remaining = order[1:]
-        
-        if len(remaining) == 0 :
+        if len(remaining) == 0:
             break
-        ious = iou(boxes[i] , boxes[remaining])
-        order = remaining[ious < threshold]
-    return np.array(keep , dtype = np.int64)
+
+        # Tính diện tích giao nhau
+        top_left = np.maximum(boxes[i, :2], boxes[remaining, :2])
+        bottom_right = np.minimum(boxes[i, 2:], boxes[remaining, 2:])
+        wh = np.maximum(0, bottom_right - top_left)
+        intersection = wh[:, 0] * wh[:, 1]
+
+        # Tính overlap
+        if mode == "min":
+            denominator = np.minimum(areas[i], areas[remaining])
+        else:
+            denominator = areas[i] + areas[remaining] - intersection
+
+        overlap = intersection / denominator
+        order = remaining[overlap <= threshold]
+
+    return np.array(keep, dtype=np.int64)
 
 def calibrate_boxes(boxes , offsets):
     
