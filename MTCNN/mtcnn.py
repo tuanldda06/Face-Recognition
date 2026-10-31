@@ -12,8 +12,9 @@ from MTCNN.detection.bounding_box import (
     valid_box_indices, decode_landmarks,
 )
 from MTCNN.preprocessing.image_processing import (
-    read_image, check_rgb, normalize_pixels, crop_and_resize,
+    read_image, check_rgb, normalize_pixels, crop_and_resize, crop_and_resize_rgb,
 )
+from MTCNN.preprocessing.face_alignment import align_face
 
 
 @dataclass
@@ -127,20 +128,39 @@ class MTCNN:
 
         return result
 
-    @torch.inference_mode()
-    def extract_faces(self, image, result=None, size=160):
+    def extract_faces_rgb(self, image, result=None, size=160, align=False):
+        """Return RGB uint8 (N, size, size, 3), without normalization.
+
+        align=False: square crop via bbox (no face stretching).
+        align=True: align the original image using O-Net's 5 landmarks.
+        """
         if isinstance(image, (str, Path)):
             image = read_image(image)
-
         image = check_rgb(image)
-
+        if not isinstance(size, (int, np.integer)) or size < 1:
+            raise ValueError("size phải là số nguyên dương")
         if result is None:
             result = self.detect(image)
+        if not len(result.boxes):
+            return np.empty((0, size, size, 3), dtype=np.uint8)
 
-        crops, _ = crop_and_resize(
-        image, result.boxes, size
-        )
+        if align:
+            if result.landmarks.shape != (len(result.boxes), 5, 2):
+                raise ValueError("Landmarks phải có shape (N, 5, 2)")
+            return np.stack(
+                [align_face(image, landmarks, size) for landmarks in result.landmarks]
+            )
 
-        tensor = torch.from_numpy(np.ascontiguousarray(crops))
+        boxes = square_boxes(result.boxes)
+        crops, _ = crop_and_resize_rgb(image, boxes, size)
+        return crops
 
-        return tensor.permute(0, 3, 1, 2)
+    @torch.inference_mode()
+    def extract_faces(self, image, result=None, size=160, align=False):
+        """Return normalized float32 torch Tensor (N, 3, size, size).
+
+        Use extract_faces_rgb() if FaceNet owns the normalization step.
+        """
+        faces = self.extract_faces_rgb(image, result, size, align)
+        normalized = (faces.astype(np.float32) - 127.5) / 128.0
+        return torch.from_numpy(normalized).permute(0, 3, 1, 2).contiguous()

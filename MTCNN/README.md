@@ -22,7 +22,8 @@ Face-Recognition-main/
     │   ├── image_pyramid.py      # Resize ảnh theo nhiều scale cho P-Net
     │   └── bounding_box.py       # Generate boxes, NMS, regression, landmarks
     ├── preprocessing/
-    │   └── image_processing.py   # Đọc RGB, chuẩn hóa, crop và resize
+    │   ├── image_processing.py   # Đọc RGB, chuẩn hóa, crop và resize
+    │   └── face_alignment.py     # Căn chỉnh 5 landmarks (tùy chọn)
     └── weights/
         ├── pnet.pt                # Checkpoint P-Net
         ├── rnet.pt                # Checkpoint R-Net
@@ -45,6 +46,9 @@ Face-Recognition-main/
 | `preprocessing/image_processing.py` | `read_image()` | Đọc ảnh, áp dụng EXIF orientation, chuyển RGB uint8 |
 | `preprocessing/image_processing.py` | `normalize_pixels()` | `(pixel - 127.5) / 128.0` |
 | `preprocessing/image_processing.py` | `crop_and_resize()` | Cắt khuôn mặt, resize 24/48/160, chuẩn hóa |
+| `preprocessing/image_processing.py` | `crop_and_resize_rgb()` | Cắt khuôn mặt thành RGB uint8, không normalize |
+| `preprocessing/face_alignment.py` | `align_face()` | Căn chỉnh khuôn mặt dựa trên 5 landmarks |
+| `mtcnn.py` | `MTCNN.extract_faces_rgb()` | Xuất khuôn mặt RGB uint8 cho FaceNet |
 | `model_loader.py` | `load_pretrained_models()` | Load `pnet.pt`, `rnet.pt`, `onet.pt` |
 | `mtcnn.py` | `MTCNN.detect()` | Chạy detection, trả boxes, scores, landmarks |
 | `mtcnn.py` | `MTCNN.extract_faces()` | Trả tensor khuôn mặt `(N, 3, 160, 160)` |
@@ -111,10 +115,11 @@ Nếu không có mặt, `N = 0`; `--output` vẫn lưu ảnh gốc, không có b
   -> Crop 24x24 -> R-Net -> NMS (union) -> BBox Regression -> Square Boxes
   -> Crop 48x48 -> O-Net -> Decode 5 Landmarks -> BBox Regression -> NMS (min)
   -> DetectionResult: boxes (N,4), scores (N,), landmarks (N,5,2)
-  -> Crop + Resize 160x160 -> FaceNet input tensor (N,3,160,160)
+  -> Square Crop hoặc 5-point Alignment (tuỳ chọn)
+  -> Ảnh RGB uint8 (N,160,160,3) hoặc tensor chuẩn hóa (N,3,160,160)
 ```
 
-**Lưu ý:** `extract_faces()` chỉ crop/resize theo bounding box, **không sử dụng 5 landmarks để align**, đúng với quyết định đơn giản hóa project. Dữ liệu ảnh đầu vào phải là RGB `uint8`; không đưa ảnh đã normalize vào `detect()`. Tensor trả về đã chuẩn hóa theo `(pixel - 127.5)/128` nên không chuẩn hóa lại lần nữa. Nếu chuyển sang model FaceNet khác, cần xác nhận preprocessing/normalization mà model đó yêu cầu.
+**Lưu ý:** `extract_faces()` mặc định crop theo box vuông, có thể bật `align=True` để sử dụng 5 landmarks. Dữ liệu ảnh đầu vào phải là RGB `uint8`; không đưa ảnh đã normalize vào `detect()`. Tensor trả về đã chuẩn hóa theo `(pixel - 127.5)/128` nên không chuẩn hóa lại lần nữa. Nếu FaceNet tự normalize, dùng `extract_faces_rgb()` để nhận RGB uint8.
 
 ## 5. Sử dụng MTCNN từ code Python
 
@@ -138,3 +143,67 @@ print(faces.shape)              # torch.Size([N, 3, 160, 160])
 - `Boxes: []`: Kiểm tra xem P-Net có tạo boxes không và ảnh đầu vào có khuôn mặt đủ rõ không. Không sửa threshold trước khi xác nhận CNN outputs đúng thứ tự.
 - `CUDA unavailable`: Dùng `--device cpu` hoặc cài đúng bản PyTorch CUDA.
 - Kết quả `extract_faces` có shape `(0,3,160,160)`: Không tìm thấy mặt; không phải lỗi tensor.
+
+## 6. Face Alignment và interface bàn giao cho FaceNet
+
+MTCNN hiện hỗ trợ **hai cách tiền xử lý ảnh mặt** mà không cần thay đổi P-Net, R-Net hoặc O-Net:
+
+- **`align=False` (mặc định)**: mở rộng bounding box thành hình vuông quanh tâm, crop và resize. Không xoay ảnh.
+- **`align=True`**: dùng 5 landmarks của O-Net (mắt trái, mắt phải, mũi, khóe miệng trái, khóe miệng phải) để ước lượng phép biến đổi similarity (xoay, phóng to/thu nhỏ, tịnh tiến), sau đó tạo ảnh mặt bằng `cv2.warpAffine()`.
+
+### File và thư viện mới
+
+- `MTCNN/preprocessing/face_alignment.py`: `similarity_transform()` tính ma trận 2×3, `align_face()` xuất một ảnh RGB `uint8`, mặc định 160×160.
+- `MTCNN/preprocessing/image_processing.py`: `crop_and_resize_rgb()` crop ảnh không normalize; `crop_and_resize()` giữ nguyên hợp đồng cũ cho R-Net/O-Net.
+- `MTCNN/mtcnn.py`: `extract_faces_rgb(..., align=True)` cho người làm FaceNet, `extract_faces(..., align=True)` cho đầu ra tensor đã normalize.
+- Thêm dependency `opencv-python-headless` để chạy alignment trên môi trường không có desktop GUI.
+
+**Lưu ý:** Template 5 điểm sử dụng **ArcFace 112×112** và được scale theo kích thước đầu ra. Đây **không phải** pipeline crop mặc định của `facenet-pytorch`. Cần so sánh kết quả trên tập validation trước khi quyết định dùng alignment cho FaceNet và điều chỉnh threshold nhận diện nếu cần. Enrollment và recognition phải dùng cùng cách preprocessing.
+
+### Chạy demo và xuất các khuôn mặt đã căn chỉnh
+
+Tại thư mục gốc dự án:
+
+```bash
+# Dùng ảnh mẫu MTCNN/face.jpg
+python -m MTCNN.demo --align --output detected.jpg --faces-dir aligned_faces
+
+# Dùng ảnh riêng trong MTCNN/
+python -m MTCNN.demo MTCNN/anhcho.jpg --align --faces-dir aligned_faces
+
+# Crop thông thường, không alignment
+python -m MTCNN.demo --faces-dir cropped_faces
+
+# Chạy tests
+python -m pytest -q tests/test_face_alignment.py
+```
+
+Trong `aligned_faces/face_1.png` là ảnh RGB 160×160 có pixel `0..255`, chưa normalize, sẵn sàng cho bước preprocessing của FaceNet.
+
+### Giao diện Python cho người làm FaceNet
+
+```python
+from MTCNN.mtcnn import MTCNN
+
+mtcnn = MTCNN(device="cpu")
+result = mtcnn.detect("MTCNN/face.jpg")
+
+# Input FaceNet: ảnh chưa normalize, (N, 160, 160, 3), dtype uint8
+faces_rgb = mtcnn.extract_faces_rgb(
+    "MTCNN/face.jpg", result, size=160, align=True
+)
+
+# Metadata khớp thứ tự với faces_rgb
+boxes = result.boxes             # (N, 4)
+scores = result.scores           # (N,)
+landmarks = result.landmarks     # (N, 5, 2)
+
+# Nếu FaceNet cần tensor đã normalize thay vì uint8:
+faces_tensor = mtcnn.extract_faces(
+    "MTCNN/face.jpg", result, size=160, align=True
+)  # (N, 3, 160, 160), float32, normalized
+```
+
+**Không chuẩn hóa hai lần.** Nếu FaceNet của người 2 tự normalize, hãy sử dụng `extract_faces_rgb()` thay vì tensor trả về bởi `extract_faces()`.
+
+Phần FaceNet/database/enrollment vẫn nằm ngoài package MTCNN. Ảnh mặt được xuất chỉ là dữ liệu đầu vào; chưa thể kết luận người đó đã đăng ký hay chưa.
