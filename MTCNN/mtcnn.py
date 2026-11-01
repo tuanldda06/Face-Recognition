@@ -31,6 +31,37 @@ class DetectionResult:
             np.empty((0, 5, 2), np.float32),
         )
 
+def validate_detection_result(result):
+    """Check metadata shapes, scores, coordinates and row alignment."""
+    boxes = np.asarray(result.boxes)
+    scores = np.asarray(result.scores)
+    landmarks = np.asarray(result.landmarks)
+    n = len(boxes)
+
+    if boxes.shape != (n, 4) or scores.shape != (n,) or landmarks.shape != (n, 5, 2):
+        raise ValueError("Số lượng hoặc shape boxes/scores/landmarks không khớp")
+    if not (np.isfinite(boxes).all() and np.isfinite(scores).all()
+            and np.isfinite(landmarks).all()):
+        raise ValueError("Detection chứa NaN hoặc Inf")
+    if np.any(boxes[:, 2:] <= boxes[:, :2]):
+        raise ValueError("Bounding box có chiều rộng hoặc chiều cao không hợp lệ")
+    if np.any((scores < 0) | (scores > 1)):
+        raise ValueError("Confidence phải nằm trong [0, 1]")
+    return result
+
+
+def validate_face_coverage(boxes, image_shape, min_ratio=0.25):
+    """Reject crops with less than min_ratio inside the image."""
+    h, w = image_shape[:2]
+    top_left = np.maximum(boxes[:, :2], [0, 0])
+    bottom_right = np.minimum(boxes[:, 2:], [w, h])
+    overlap_wh = np.maximum(bottom_right - top_left, 0)
+    inside_area = np.prod(overlap_wh, axis=1)
+    box_area = np.prod(boxes[:, 2:] - boxes[:, :2], axis=1)
+    if np.any(inside_area / box_area < min_ratio):
+        raise ValueError("Bounding box gần như nằm ngoài ảnh, crop không đáng tin cậy")
+
+
 class MTCNN:
     def __init__(self, device="cpu", weights_dir=None, models=None,
                  min_face_size=20, factor=0.709,
@@ -141,8 +172,10 @@ class MTCNN:
             raise ValueError("size phải là số nguyên dương")
         if result is None:
             result = self.detect(image)
+        validate_detection_result(result)
         if not len(result.boxes):
             return np.empty((0, size, size, 3), dtype=np.uint8)
+        validate_face_coverage(result.boxes, image.shape)
 
         if align:
             if result.landmarks.shape != (len(result.boxes), 5, 2):
@@ -152,6 +185,7 @@ class MTCNN:
             )
 
         boxes = square_boxes(result.boxes)
+        validate_face_coverage(boxes, image.shape)
         crops, _ = crop_and_resize_rgb(image, boxes, size)
         return crops
 

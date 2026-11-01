@@ -30,15 +30,10 @@ def main():
     print("Scores:", result.scores)
     print("Landmarks:", result.landmarks)
 
-    faces = detector.extract_faces_rgb(image,result,size=160,align=True)
-
-    print("FaceNet input:", faces.shape, faces.dtype)
-    
-    
-    print("FaceNet input:", tuple(faces.shape), "float32, normalized")
+    rgb_faces = detector.extract_faces_rgb(image, result, align=args.align)
+    print("FaceNet input RGB:", tuple(rgb_faces.shape), rgb_faces.dtype)
 
     if args.faces_dir:
-        rgb_faces = detector.extract_faces_rgb(image, result, align=args.align)
         args.faces_dir.mkdir(parents=True, exist_ok=True)
         for i, face in enumerate(rgb_faces):
             path = args.faces_dir / f"face_{i + 1}.png"

@@ -1,13 +1,16 @@
 # MTCNN Face Detection (PyTorch + NumPy + Pillow)
 
-Project này tự triển khai 3 mạng **P-Net, R-Net, O-Net** của MTCNN, dùng bộ pretrained weights có sẵn để **phát hiện khuôn mặt**. Các tác vụ hình học và xử lý ảnh dùng NumPy/Pillow, CNN inference dùng PyTorch. Module **chưa nhận diện danh tính**; nếu muốn Face Recognition, cần nối đầu ra ảnh mặt với FaceNet và cơ sở dữ liệu embeddings.
+Triển khai 3 mạng **P-Net, R-Net, O-Net** của MTCNN, dùng bộ pretrained weights có sẵn để **phát hiện khuôn mặt**. Các tác vụ hình học và xử lý ảnh dùng NumPy/Pillow, CNN inference dùng PyTorch. Module **chưa nhận diện danh tính**; nếu muốn Face Recognition, cần nối đầu ra ảnh mặt với FaceNet và cơ sở dữ liệu embeddings.
 
 ## 1. Cấu trúc và chức năng từng file
 
 ```text
 Face-Recognition-main/
 ├── README.md                     # Tài liệu này
-├── requirements.txt              # Thư viện cần cài
+├── requirements.txt              # Thư viện chạy inference
+├── requirements-dev.txt          # Thư viện chạy tests
+├── pytest.ini                    # Cấu hình pytest
+├── tests/                        # Unit tests + smoke test MTCNN
 └── MTCNN/
     ├── __init__.py               # Đánh dấu Python package
     ├── demo.py                   # Entry point chạy inference và vẽ kết quả
@@ -101,7 +104,7 @@ O-Net: ... boxes
 Boxes: [[x1 y1 x2 y2] ...]
 Scores: [0.99 ...]
 Landmarks: [[[x y] ...] ...]
-FaceNet input shape: (N, 3, 160, 160)
+FaceNet input RGB: (N, 160, 160, 3) uint8
 ```
 
 Nếu không có mặt, `N = 0`; `--output` vẫn lưu ảnh gốc, không có box/landmarks.
@@ -207,3 +210,34 @@ faces_tensor = mtcnn.extract_faces(
 **Không chuẩn hóa hai lần.** Nếu FaceNet của người 2 tự normalize, hãy sử dụng `extract_faces_rgb()` thay vì tensor trả về bởi `extract_faces()`.
 
 Phần FaceNet/database/enrollment vẫn nằm ngoài package MTCNN. Ảnh mặt được xuất chỉ là dữ liệu đầu vào; chưa thể kết luận người đó đã đăng ký hay chưa.
+
+
+## 7. Kiểm thử và validation trước khi bàn giao FaceNet
+
+Cài các dependency dành cho kiểm thử:
+
+```bash
+python -m pip install -r requirements-dev.txt
+
+# Chạy tất cả tests, gồm CPU smoke test dùng ảnh mặt thật và weights có sẵn
+python -m pytest -q
+
+# Chỉ chạy unit tests, bỏ qua inference pretrained
+python -m pytest -q -m "not integration"
+```
+
+**Các trường hợp được kiểm tra:**
+
+- Landmarks thiếu điểm, NaN/Inf, hai mắt trùng nhau, năm điểm thẳng hàng
+- Bounding boxes không hợp lệ, hoàn toàn ngoài ảnh, hoặc chỉ nằm một phần ngoài ảnh
+- Metadata `boxes (N,4)`, `scores (N,)`, `landmarks (N,5,2)` đồng bộ, confidence nằm trong `[0,1]`
+- NMS `union`/`min`, hiệu chỉnh bbox và thứ tự 10 tọa độ landmarks từ O-Net
+- Đầu ra `extract_faces_rgb` giữ RGB `uint8` trong `[0,255]`, batch `(N,160,160,3)` và thứ tự khuôn mặt
+- Trường hợp không có khuôn mặt; output tensor `float32` và batch rỗng
+- Smoke test tích hợp ba pretrained networks trên `MTCNN/face.jpg`
+
+Validation được dùng trong `extract_faces_rgb()` để **báo lỗi rõ ràng** khi metadata không hợp lệ hoặc crop có dưới 25% diện tích nằm trong ảnh. Trong `align_face()`, ảnh căn chỉnh có dưới 25% vùng pixel lấy từ ảnh gốc cũng bị từ chối. Các ngưỡng là **chính sách chất lượng sơ bộ**, không phải ngưỡng được tối ưu từ dữ liệu nhận diện. Không âm thầm loại detection rồi làm lệch thứ tự boxes/landmarks/faces.
+
+**Quy ước:** Input image là RGB `uint8`; bbox `[x1,y1,x2,y2]` theo pixel của ảnh gốc; landmarks theo thứ tự *mắt trái, mắt phải, mũi, khóe miệng trái, khóe miệng phải* như định nghĩa template (nhìn theo phía trái/phải của ảnh frontal), không suy ra nhãn trái/phải giải phẫu từ camera mirror. O-Net raw landmarks dùng `[x1..x5,y1..y5]`; `decode_landmarks()` biến đổi thành `(N,5,2)` theo tọa độ gốc. Cần đảm bảo cùng chuẩn alignment/preprocessing ở enrollment và recognition; template ArcFace có thể chưa tối ưu với FaceNet ONNX cụ thể.
+
+**Giới hạn:** Các tests này không chứng minh độ chính xác recognition hay threshold Known/Unknown. Điều đó thuộc đánh giá end-to-end cùng FaceNet và database.

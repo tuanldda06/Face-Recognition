@@ -38,13 +38,18 @@ def crop_and_resize_rgb(image, boxes, size):
     if not np.isfinite(boxes).all() or np.any(boxes[:, 2:] <= boxes[:, :2]):
         raise ValueError("Bounding box không hợp lệ")
 
-    actual = np.concatenate([np.floor(boxes[:, :2]), np.ceil(boxes[:, 2:])], axis=1).astype(np.int32)
+    actual = np.concatenate(
+        [np.floor(boxes[:, :2]), np.ceil(boxes[:, 2:])], axis=1
+    ).astype(np.int32)
     crops = np.empty((len(actual), size, size, 3), dtype=np.uint8)
     source = Image.fromarray(image)
 
     for i, box in enumerate(actual):
         crop = source.crop(tuple(int(v) for v in box))
-        crops[i] = np.asarray(crop.resize((size, size), Image.Resampling.BILINEAR),dtype=np.uint8,)
+        crops[i] = np.asarray(
+            crop.resize((size, size), Image.Resampling.BILINEAR),
+            dtype=np.uint8,
+        )
 
     return crops, actual.astype(np.float32)
 
