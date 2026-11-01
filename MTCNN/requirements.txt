@@ -1,0 +1,8 @@
+# MTCNN runtime dependencies only (no FaceNet or Camera dependencies).
+# Install from the repository root:
+#   python -m pip install -r MTCNN/requirements.txt
+
+numpy>=1.24
+Pillow>=9.1
+torch>=2.2
+opencv-python-headless>=4.8
