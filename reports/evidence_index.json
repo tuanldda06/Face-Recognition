@@ -1,0 +1,988 @@
+{
+  "schema_version": "facenet-scientific-evidence-index/1",
+  "runtime_dependency": false,
+  "archive_root": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924",
+  "archive_manifest_sha256": "c823d3098e1e020003ed7dd5baa8963d69fcd5dffa83f3d1b3ae57f9be5a01ce",
+  "archive_verification_sha256": "c825aac4eac915343eb76c001c6fd62408d3fbfd969c72feba2e046c9dab21fc",
+  "restore_instructions": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\RESTORE_INSTRUCTIONS.md",
+  "retained_artifacts": [
+    {
+      "original_relative_path": "reports/calibration_phase5b3c_results.json",
+      "sha256": "39a56a3f211a72f457c434c4f402063e4cca0940a16f123b4866a8d0d437a035",
+      "current_location": "D:\\Face-Recognition-System\\reports\\calibration_phase5b3c_results.json",
+      "handoff_relative_location": "reports/calibration_phase5b3c_results.json",
+      "purpose": "Required runtime/package/model/contracts/regression/setup/scientific evidence;preserve file.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/calibration_phase5b3c_threshold.json",
+      "sha256": "c731bf66614d8f40af93b3499cfcae864aa42aa64b0420d1b824a38c1b7cbec9",
+      "current_location": "D:\\Face-Recognition-System\\reports\\calibration_phase5b3c_threshold.json",
+      "handoff_relative_location": "reports/calibration_phase5b3c_threshold.json",
+      "purpose": "Required runtime/package/model/contracts/regression/setup/scientific evidence;preserve file.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/dataset_phase5b3a_inventory.json",
+      "sha256": "453a3ebc34787ac3f55d76d57e925e693a38bdbd0d2eee67c91b13ec3ce7f55d",
+      "current_location": "D:\\Face-Recognition-System\\reports\\dataset_phase5b3a_inventory.json",
+      "handoff_relative_location": "reports/dataset_phase5b3a_inventory.json",
+      "purpose": "Required runtime/package/model/contracts/regression/setup/scientific evidence;preserve file.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/dataset_phase5b3a_leakage_audit.json",
+      "sha256": "c7eaca591baae77d96c2759e09a4cad78b579b193685faed9742805ea8daa673",
+      "current_location": "D:\\Face-Recognition-System\\reports\\dataset_phase5b3a_leakage_audit.json",
+      "handoff_relative_location": "reports/dataset_phase5b3a_leakage_audit.json",
+      "purpose": "Required runtime/package/model/contracts/regression/setup/scientific evidence;preserve file.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/environment.json",
+      "sha256": "c9ec99c40e8e41810e005d735a3f2c9b339886d20c99e8083b3e1740fd0d4983",
+      "current_location": "D:\\Face-Recognition-System\\reports\\environment.json",
+      "handoff_relative_location": "reports/environment.json",
+      "purpose": "Required runtime/package/model/contracts/regression/setup/scientific evidence;preserve file.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/evaluation_phase5b3a_protocol.json",
+      "sha256": "20aa279becd54d8aaaa2ba0bbc14d3d304f57723cc5348f51c510f066925b99c",
+      "current_location": "D:\\Face-Recognition-System\\reports\\evaluation_phase5b3a_protocol.json",
+      "handoff_relative_location": "reports/evaluation_phase5b3a_protocol.json",
+      "purpose": "Frozen protocol source_documents/verbatim JSON source;retain exact scientific protocol.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/evaluation_phase5b3a_summary.json",
+      "sha256": "e767c993d10607dbb53724da022219f86e9a39bd816376c214ccf34f5f03e838",
+      "current_location": "D:\\Face-Recognition-System\\reports\\evaluation_phase5b3a_summary.json",
+      "handoff_relative_location": "reports/evaluation_phase5b3a_summary.json",
+      "purpose": "Frozen source_documents hash anchor and audit facts;do not replace original with a paraphrase.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/evaluation_phase5b3b_freeze_summary.json",
+      "sha256": "fdbd0d0ca6b9b80b8ab957cd42d51d4507e5a42acb541c16ceb4e56e64214789",
+      "current_location": "D:\\Face-Recognition-System\\reports\\evaluation_phase5b3b_freeze_summary.json",
+      "handoff_relative_location": "reports/evaluation_phase5b3b_freeze_summary.json",
+      "purpose": "Freeze completion/checksum manifest and supporting helper/test bindings;important reproducibility evidence.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/evaluation_pipeline_profile.json",
+      "sha256": "9a42c0f3c8d4261e54304123746441254e8fea225abdc2a1e8c6084dbb3d9f1f",
+      "current_location": "D:\\Face-Recognition-System\\reports\\evaluation_pipeline_profile.json",
+      "handoff_relative_location": "reports/evaluation_pipeline_profile.json",
+      "purpose": "Required runtime/package/model/contracts/regression/setup/scientific evidence;preserve file.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/evaluation_protocol_frozen.json",
+      "sha256": "44999ad9fa6acbe9223efb0aa3cc7931d749bfd3b78169915baa926576877a98",
+      "current_location": "D:\\Face-Recognition-System\\reports\\evaluation_protocol_frozen.json",
+      "handoff_relative_location": "reports/evaluation_protocol_frozen.json",
+      "purpose": "Required runtime/package/model/contracts/regression/setup/scientific evidence;preserve file.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/evaluation_split_frozen.json",
+      "sha256": "236440d55178e2c5459390010576dc369412f7ea7b455d99c7c153a3d66295d7",
+      "current_location": "D:\\Face-Recognition-System\\reports\\evaluation_split_frozen.json",
+      "handoff_relative_location": "reports/evaluation_split_frozen.json",
+      "purpose": "Required runtime/package/model/contracts/regression/setup/scientific evidence;preserve file.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/final_phase5b3d_metrics.json",
+      "sha256": "991c91b8b6c13e19e98b3708015c58e090242433eb46b19a3c8f2d4592a92661",
+      "current_location": "D:\\Face-Recognition-System\\reports\\final_phase5b3d_metrics.json",
+      "handoff_relative_location": "reports/final_phase5b3d_metrics.json",
+      "purpose": "Scientific final metrics linked by independent protocol;retain result bytes rather than only a narrative extraction.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/final_phase5b3d_results.json",
+      "sha256": "9ee292741f2a9891bc117a277870105940d181745bce71ba8415f21c4edb01ca",
+      "current_location": "D:\\Face-Recognition-System\\reports\\final_phase5b3d_results.json",
+      "handoff_relative_location": "reports/final_phase5b3d_results.json",
+      "purpose": "Required runtime/package/model/contracts/regression/setup/scientific evidence;preserve file.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/phase5b5a_implementation_plan.json",
+      "sha256": "8727e40f03e59f48bc30940bbedf685758954e58e4db4c9799c9456522a643fa",
+      "current_location": "D:\\Face-Recognition-System\\reports\\phase5b5a_implementation_plan.json",
+      "handoff_relative_location": "reports/phase5b5a_implementation_plan.json",
+      "purpose": "Approved plan SHA pinned by V2 protocol;contains precise selector objective and provenance.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/phase5b5b_calibration.json",
+      "sha256": "32e60684aa37e1a9b6dd46bf9e0eb1b17582b96ddf5f8f2adc6e5a72ea3005e3",
+      "current_location": "D:\\Face-Recognition-System\\reports\\phase5b5b_calibration.json",
+      "handoff_relative_location": "reports/phase5b5b_calibration.json",
+      "purpose": "Required runtime/package/model/contracts/regression/setup/scientific evidence;preserve file.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/phase5b5b_protocol.json",
+      "sha256": "f81b575c2971340a831a8a08b490070fd2dfdf311503b72169b4777fd450b134",
+      "current_location": "D:\\Face-Recognition-System\\reports\\phase5b5b_protocol.json",
+      "handoff_relative_location": "reports/phase5b5b_protocol.json",
+      "purpose": "Required runtime/package/model/contracts/regression/setup/scientific evidence;preserve file.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/phase5b5c/evaluation_approval.json",
+      "sha256": "96533aed5d71d14793349782593f088be882adf56f7560d923dacb0302ca0249",
+      "current_location": "D:\\Face-Recognition-System\\reports\\phase5b5c\\evaluation_approval.json",
+      "handoff_relative_location": "reports/phase5b5c/evaluation_approval.json",
+      "purpose": "Required runtime/package/model/contracts/regression/setup/scientific evidence;preserve file.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/phase5b5c/independent_dataset_manifest.json",
+      "sha256": "697ff36755be85c2257f30726ba2a4256e1c15b9151d3bae08093129a45d57df",
+      "current_location": "D:\\Face-Recognition-System\\reports\\phase5b5c\\independent_dataset_manifest.json",
+      "handoff_relative_location": "reports/phase5b5c/independent_dataset_manifest.json",
+      "purpose": "Required runtime/package/model/contracts/regression/setup/scientific evidence;preserve file.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/phase5b5c/independent_evaluation_protocol.json",
+      "sha256": "f62f6c1347ff5c125a8800e679240592da8b195fcf387fe40551234ea98df00f",
+      "current_location": "D:\\Face-Recognition-System\\reports\\phase5b5c\\independent_evaluation_protocol.json",
+      "handoff_relative_location": "reports/phase5b5c/independent_evaluation_protocol.json",
+      "purpose": "Required runtime/package/model/contracts/regression/setup/scientific evidence;preserve file.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/phase5b5c/independent_v1_v2_results.json",
+      "sha256": "ba288350862ecf09a7a976279a584bc72aca7d14022470466f18e961a8f7a2a7",
+      "current_location": "D:\\Face-Recognition-System\\reports\\phase5b5c\\independent_v1_v2_results.json",
+      "handoff_relative_location": "reports/phase5b5c/independent_v1_v2_results.json",
+      "purpose": "Required runtime/package/model/contracts/regression/setup/scientific evidence;preserve file.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/phase5b5c/independent_validation.json",
+      "sha256": "f90bd3b24d8a91fbaa77f5b98f19345db05f4d688a9e5d7d81b989e924f08984",
+      "current_location": "D:\\Face-Recognition-System\\reports\\phase5b5c\\independent_validation.json",
+      "handoff_relative_location": "reports/phase5b5c/independent_validation.json",
+      "purpose": "Independent evaluation validation,coverage,shared score replay,execution counts and limitations;not process-only.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/phase5b5c/public_dataset_provenance.json",
+      "sha256": "17839e9d59d1dcee4efc9612d3bc7cf86242122f9bcc7a67d02c745d6de5761a",
+      "current_location": "D:\\Face-Recognition-System\\reports\\phase5b5c\\public_dataset_provenance.json",
+      "handoff_relative_location": "reports/phase5b5c/public_dataset_provenance.json",
+      "purpose": "Required runtime/package/model/contracts/regression/setup/scientific evidence;preserve file.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    },
+    {
+      "original_relative_path": "reports/phase5b7/smoke_test_results.json",
+      "sha256": "44b34988a30a0aea6a3cd3193ac9517a5302f18c0155271d20471dd019b3e5a9",
+      "current_location": "D:\\Face-Recognition-System\\reports\\phase5b7\\smoke_test_results.json",
+      "handoff_relative_location": "reports/phase5b7/smoke_test_results.json",
+      "purpose": "Required runtime/package/model/contracts/regression/setup/scientific evidence;preserve file.",
+      "verification": "SHA256 against preserved original;do not rewrite."
+    }
+  ],
+  "archived_originals": [
+    {
+      "original_relative_path": "ENROLLMENT.md",
+      "sha256": "129060833d6ad04e4b1ec707dead2f2bd6e85a47416530a501d40111174be423",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\ENROLLMENT.md",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "ENROLLMENT.md"
+    },
+    {
+      "original_relative_path": "ENVIRONMENT.md",
+      "sha256": "4215e7c3fa514a512313bdecd8b4b443e88ab15cd9d0ecd4d7d4160a9793c204",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\ENVIRONMENT.md",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "ENVIRONMENT.md"
+    },
+    {
+      "original_relative_path": "RECOGNITION.md",
+      "sha256": "2c74db033380474887db48ad15d80fdf9a5236dfb08d5f9d439423c0a834279b",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\RECOGNITION.md",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "RECOGNITION.md"
+    },
+    {
+      "original_relative_path": "RECOGNITION_RUNTIME.md",
+      "sha256": "c14a93f9da353fb9c7f43963f72dacebb6ee621ff053e2447de41be4d5bbf618",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\RECOGNITION_RUNTIME.md",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "RECOGNITION_RUNTIME.md"
+    },
+    {
+      "original_relative_path": ".work/install-report.json",
+      "sha256": "54270b3c8e9ce817ba5797536f9b688863dd4d7a3dd9a970dd3265a44fa78cf8",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\.work\\install-report.json",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": ".work/install-report.json"
+    },
+    {
+      "original_relative_path": ".work/resolution.json",
+      "sha256": "90a99ce28eae788c01c2f18bfaa8c203991caba3dbfa24c4ef312e490d1a3265",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\.work\\resolution.json",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": ".work/resolution.json"
+    },
+    {
+      "original_relative_path": "reports/adapter.log",
+      "sha256": "a604e45c7230e6026c3c5e91222a20610aebde4e063091e3bb44c8f7f3351a6b",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\adapter.log",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/adapter.log"
+    },
+    {
+      "original_relative_path": "reports/calibration_phase5b3c_summary.md",
+      "sha256": "658a10ae232ee2559e7f7a53fc0f349731b9227745ece7b024dfb3e94f616fa3",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\calibration_phase5b3c_summary.md",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "reports/calibration_phase5b3c_summary.md"
+    },
+    {
+      "original_relative_path": "reports/calibration_phase5b3c_validation.log",
+      "sha256": "28f23376aaeabb984659cf96ee0f22e18ff6ce60f72b97affec8ba574282b1f8",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\calibration_phase5b3c_validation.log",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "reports/calibration_phase5b3c_validation.log"
+    },
+    {
+      "original_relative_path": "reports/embedding.log",
+      "sha256": "cca6b28928e886ef11ca0117c8b3f1b0391a1fdce699e792e6d756715862092f",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\embedding.log",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/embedding.log"
+    },
+    {
+      "original_relative_path": "reports/enrollment_phase5b2a.log",
+      "sha256": "58143020ee8f2f0d94152552acdb44203c3c977a18ba4e6cc1eca69356c01408",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\enrollment_phase5b2a.log",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/enrollment_phase5b2a.log"
+    },
+    {
+      "original_relative_path": "reports/enrollment_phase5b2a_final.log",
+      "sha256": "8dc5aabfb30adfc7080ce0957c14f5f665e3c38f28d1999c748d029edea5e295",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\enrollment_phase5b2a_final.log",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/enrollment_phase5b2a_final.log"
+    },
+    {
+      "original_relative_path": "reports/enrollment_phase5b2a_summary.json",
+      "sha256": "ae82e2af5682d27aa141b07c65690210d9d0a45a0861b80bfd16bcfda9a2c5c8",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\enrollment_phase5b2a_summary.json",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "reports/enrollment_phase5b2a_summary.json"
+    },
+    {
+      "original_relative_path": "reports/evaluation_phase5b3b_validation.log",
+      "sha256": "a2bfa3e273e4b45f11ceb982a3a5168302f82305e68ba531e601ec7f296468a7",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\evaluation_phase5b3b_validation.log",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "reports/evaluation_phase5b3b_validation.log"
+    },
+    {
+      "original_relative_path": "reports/facenet.log",
+      "sha256": "95b1f7ea765da2de79f552115dd22be506b75a4096c43e910c3f5c691b47a42a",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\facenet.log",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/facenet.log"
+    },
+    {
+      "original_relative_path": "reports/final_phase5b3d_summary.md",
+      "sha256": "b21f28f8af7ccbe5c57ed85467158d4d119dfcca6042d6cabb1ff6d168f31c89",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\final_phase5b3d_summary.md",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "reports/final_phase5b3d_summary.md"
+    },
+    {
+      "original_relative_path": "reports/final_phase5b3d_validation.log",
+      "sha256": "bac35278273772bb968576d6e24cccb2d0901f6d58275566c91442df55582b86",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\final_phase5b3d_validation.log",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "reports/final_phase5b3d_validation.log"
+    },
+    {
+      "original_relative_path": "reports/installed-packages.json",
+      "sha256": "3ecea7a40f886e8a28f7f3a5c425700d5e0326d6f0299fe819d22a84f9d1a5c8",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\installed-packages.json",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "reports/installed-packages.json"
+    },
+    {
+      "original_relative_path": "reports/mtcnn.log",
+      "sha256": "675b5609d6193ebb78eb763f1023e1073d229dd0e6ae8eebec9f233a2ba25a2e",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\mtcnn.log",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/mtcnn.log"
+    },
+    {
+      "original_relative_path": "reports/phase5b2a_adapter.log",
+      "sha256": "9a4952b765b2b073b196720ac292132f4a8b39d190cdeb0eb0c4a9973b203f06",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b2a_adapter.log",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5b2a_adapter.log"
+    },
+    {
+      "original_relative_path": "reports/phase5b2a_embedding.log",
+      "sha256": "646209ec198d87d610352e40e3a934b62f6a12ad20efee285d91654dc4f188ce",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b2a_embedding.log",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5b2a_embedding.log"
+    },
+    {
+      "original_relative_path": "reports/phase5b2a_facenet.log",
+      "sha256": "44d9f2ae11cddd98e914a914549b99c64ae186a172d79cb9501cdca8be01d993",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b2a_facenet.log",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5b2a_facenet.log"
+    },
+    {
+      "original_relative_path": "reports/phase5b2a_mtcnn.log",
+      "sha256": "cc830e2dcacc81b7aa9ac0330d909b1c5c9de5b026616aa7488f85a04f9831e1",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b2a_mtcnn.log",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5b2a_mtcnn.log"
+    },
+    {
+      "original_relative_path": "reports/phase5b2b_adapter.log",
+      "sha256": "eeb7e5532b2831aa69739c07b87090d46c8e92121b533bcfa2b25d58c5115ab7",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b2b_adapter.log",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5b2b_adapter.log"
+    },
+    {
+      "original_relative_path": "reports/phase5b2b_embedding.log",
+      "sha256": "34907c6e31adb90eba2fac131302f7c27dfed9e9f72c412d9c092f69bd91dc73",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b2b_embedding.log",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5b2b_embedding.log"
+    },
+    {
+      "original_relative_path": "reports/phase5b2b_enrollment.log",
+      "sha256": "9ff53eb0f11502b70251e02b72d86cf055e1575886501477855e346561eaaca2",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b2b_enrollment.log",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5b2b_enrollment.log"
+    },
+    {
+      "original_relative_path": "reports/phase5b2b_facenet.log",
+      "sha256": "d474737c0f97f870253d5e43898e97930a12b51133e1b2635c91377e311490b3",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b2b_facenet.log",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5b2b_facenet.log"
+    },
+    {
+      "original_relative_path": "reports/phase5b2b_mtcnn.log",
+      "sha256": "8fee27276d2227da0626e3ad97f7f4f633b428523af1f12d1f82a7fd7fcf76d2",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b2b_mtcnn.log",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5b2b_mtcnn.log"
+    },
+    {
+      "original_relative_path": "reports/phase5b4_readiness_summary.json",
+      "sha256": "ff919e584858c2958c264f146f36d20d96a97a10e4d36000381e8b1902f8b2c0",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b4_readiness_summary.json",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5b4_readiness_summary.json"
+    },
+    {
+      "original_relative_path": "reports/phase5b4_threshold_strategy_comparison.json",
+      "sha256": "118b7475434bb56e0d39dc2428c99f926aaf513b91f1387bec6b1598aa0d765d",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b4_threshold_strategy_comparison.json",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "reports/phase5b4_threshold_strategy_comparison.json"
+    },
+    {
+      "original_relative_path": "reports/phase5b4_threshold_strategy_review.md",
+      "sha256": "bfb5cc588963869b4ae59f6185b34cf97a27e267f35a7fa86701639ddef42e07",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b4_threshold_strategy_review.md",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "reports/phase5b4_threshold_strategy_review.md"
+    },
+    {
+      "original_relative_path": "reports/phase5b5a_data_audit.md",
+      "sha256": "246e89e1dc8e117caeebb98c712a3affc335642722236a2fed2e7a29bc773245",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b5a_data_audit.md",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "reports/phase5b5a_data_audit.md"
+    },
+    {
+      "original_relative_path": "reports/phase5b5a_threshold_v2_design.md",
+      "sha256": "ac6278d5574b1d2830b310087e3f842d8ea3f72ae19ca6b1fedb4e354fffa727",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b5a_threshold_v2_design.md",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "reports/phase5b5a_threshold_v2_design.md"
+    },
+    {
+      "original_relative_path": "reports/phase5b5b_summary.md",
+      "sha256": "522310079a9e005d44a0cdb1e8126b1a77e021892d7ec7215039e7ba3e8f711d",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b5b_summary.md",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "reports/phase5b5b_summary.md"
+    },
+    {
+      "original_relative_path": "reports/recognition_phase5b2b.log",
+      "sha256": "0eb73a9bc37ab4db78924834569c33df305f8388ce030f3bb70f7e085766d516",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\recognition_phase5b2b.log",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/recognition_phase5b2b.log"
+    },
+    {
+      "original_relative_path": "reports/recognition_phase5b2b_summary.json",
+      "sha256": "9258d91f031d7ca18b54cc6ee77fc914d2342689791e71feb06c9d15338063c7",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\recognition_phase5b2b_summary.json",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "reports/recognition_phase5b2b_summary.json"
+    },
+    {
+      "original_relative_path": "reports/verification-summary.json",
+      "sha256": "615b59c66b554e563c3a92695e9a31e981e8f03c22def26e1e39b2960d124a98",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\verification-summary.json",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "reports/verification-summary.json"
+    },
+    {
+      "original_relative_path": "reports/phase5b5c/dataset_intake_plan.md",
+      "sha256": "caae65d7655c8529c3b1976cd60800d7593c1e5ac35e3d7cfc4fa2133289d019",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b5c\\dataset_intake_plan.md",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5b5c/dataset_intake_plan.md"
+    },
+    {
+      "original_relative_path": "reports/phase5b5c/data_availability_audit.json",
+      "sha256": "cd38cfb12beee1e9e78b51062771da654860af833d5b77a1a3ae2f3002fd1c27",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b5c\\data_availability_audit.json",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "reports/phase5b5c/data_availability_audit.json"
+    },
+    {
+      "original_relative_path": "reports/phase5b5c/evaluation_preservation_audit.json",
+      "sha256": "6357ac38c2f0982870eb117021b31b873f697563b2942f5132de6a1701013ea3",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b5c\\evaluation_preservation_audit.json",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5b5c/evaluation_preservation_audit.json"
+    },
+    {
+      "original_relative_path": "reports/phase5b5c/independent_v1_v2_comparison.md",
+      "sha256": "b4ba49bbf0f732ebdc3c963d828f7a47f8076da6d1ff7db8a2a4915c6fd8b530",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b5c\\independent_v1_v2_comparison.md",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "reports/phase5b5c/independent_v1_v2_comparison.md"
+    },
+    {
+      "original_relative_path": "reports/phase5b5c/preservation_audit.json",
+      "sha256": "7db381a45a394150718471727f9e45fa6c12056c8c71e9238042789a6c704e25",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b5c\\preservation_audit.json",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5b5c/preservation_audit.json"
+    },
+    {
+      "original_relative_path": "reports/phase5b5c/readiness_summary.md",
+      "sha256": "0147045b12ba2bcd1b2e09d726231cdfcab453e5c49544b497b4faa55a254ede",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b5c\\readiness_summary.md",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5b5c/readiness_summary.md"
+    },
+    {
+      "original_relative_path": "reports/phase5b5c/threshold_decision.md",
+      "sha256": "32579a154bdd20cf5bb3b7d5ca6b003d8cfa8cd8026da9813809cd13eadf2195",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b5c\\threshold_decision.md",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5b5c/threshold_decision.md"
+    },
+    {
+      "original_relative_path": "reports/phase5b6/integration_summary.md",
+      "sha256": "1e429d2f6d5e0262c7bd2dfe13de8afda2de7cacde33403b1c2c18a0d0960f6d",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b6\\integration_summary.md",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5b6/integration_summary.md"
+    },
+    {
+      "original_relative_path": "reports/phase5b6/preservation_audit.json",
+      "sha256": "3682866921a1cdc7e388ee5c98dbecb150acb8de8719225e55de983edcbc552e",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b6\\preservation_audit.json",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5b6/preservation_audit.json"
+    },
+    {
+      "original_relative_path": "reports/phase5b6/wrapper_integration_summary.md",
+      "sha256": "cc237d53f64cdfc2d02f21b7e0c3aa96acc72f23d2f155239aba8fe4f247d055",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b6\\wrapper_integration_summary.md",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "reports/phase5b6/wrapper_integration_summary.md"
+    },
+    {
+      "original_relative_path": "reports/phase5b6/wrapper_preservation_audit.json",
+      "sha256": "bcf16be334e5a06814448e1f68b7afb3f26ea0b65ab19399351364bbfd710328",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b6\\wrapper_preservation_audit.json",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5b6/wrapper_preservation_audit.json"
+    },
+    {
+      "original_relative_path": "reports/phase5b6/wrapper_validation.json",
+      "sha256": "56457f7c480942d550facbceee6554d8aaa9389b5f288c0681e01a83f37f9e3b",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b6\\wrapper_validation.json",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "reports/phase5b6/wrapper_validation.json"
+    },
+    {
+      "original_relative_path": "reports/phase5b7/preservation_audit.json",
+      "sha256": "005bccf9b406e3ae7298fce252452aeaaaaeb1a4b7505c5852e8ad47a791dcf0",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b7\\preservation_audit.json",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5b7/preservation_audit.json"
+    },
+    {
+      "original_relative_path": "reports/phase5b7/smoke_test_summary.md",
+      "sha256": "560e9247c4644db90b5f056899d36e99ae9945b3deef6e30d850e3867fbb5660",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b7\\smoke_test_summary.md",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "reports/phase5b7/smoke_test_summary.md"
+    },
+    {
+      "original_relative_path": "reports/phase5c/cleanup_inventory.json",
+      "sha256": "b6a1c6095e54ec0ad6d2938f445bbfa930f47f68de86100b537bcedb25fb5565",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5c\\cleanup_inventory.json",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5c/cleanup_inventory.json"
+    },
+    {
+      "original_relative_path": "reports/phase5c/cleanup_proposal.md",
+      "sha256": "005fa2dcda92fed03e5dfe080be771e384ab4da9af73dfa67ad013a25bdec3aa",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5c\\cleanup_proposal.md",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5c/cleanup_proposal.md"
+    },
+    {
+      "original_relative_path": "reports/phase5c/preservation_baseline.json",
+      "sha256": "c5936087918b610b6c923036a750ae9f0b1ff0f92c612a8cd7f56e2b9ebb8384",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5c\\preservation_baseline.json",
+      "purpose": "Process-only or superseded generated artifact;no live runtime/test imports found.Byte backup retains historical trace.",
+      "restore_relative_path": "reports/phase5c/preservation_baseline.json"
+    },
+    {
+      "original_relative_path": "reports/phase5c/ui_handoff_readiness.md",
+      "sha256": "2c70bea6cb25858eba3480fa8474bb5ea882bb2f03dd53281bf425b92c89d56b",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5c\\ui_handoff_readiness.md",
+      "purpose": "Mixed operational/scientific information or reference/hash dependency;only remove working copy after listed migration/reference gates.",
+      "restore_relative_path": "reports/phase5c/ui_handoff_readiness.md"
+    },
+    {
+      "original_relative_path": "scripts/evaluation_protocol_freeze.py",
+      "sha256": "6599b1a07269a4b76e611ac3c8ef48391c583eaab3a57303be9d8f482ba78d04",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\scripts\\evaluation_protocol_freeze.py",
+      "purpose": "Offline research reproduction component;not imported by retained runtime or five important runtime test modules.Archive as a coherent original-byte research bundle,never permanent destruction.",
+      "restore_relative_path": "scripts/evaluation_protocol_freeze.py"
+    },
+    {
+      "original_relative_path": "scripts/phase5b5b_calibrate_threshold_v2.py",
+      "sha256": "bef3d52ac183f2b10e8148a20818b718496827a8af4e0b2deee57e66d229fecd",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\scripts\\phase5b5b_calibrate_threshold_v2.py",
+      "purpose": "Offline research reproduction component;not imported by retained runtime or five important runtime test modules.Archive as a coherent original-byte research bundle,never permanent destruction.",
+      "restore_relative_path": "scripts/phase5b5b_calibrate_threshold_v2.py"
+    },
+    {
+      "original_relative_path": "scripts/run_final_evaluation.py",
+      "sha256": "7a7333d73a53c78bd08889e3236910c0466ac2d67fb5f2b1427d221386892b2d",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\scripts\\run_final_evaluation.py",
+      "purpose": "Offline research reproduction component;not imported by retained runtime or five important runtime test modules.Archive as a coherent original-byte research bundle,never permanent destruction.",
+      "restore_relative_path": "scripts/run_final_evaluation.py"
+    },
+    {
+      "original_relative_path": "scripts/run_threshold_calibration.py",
+      "sha256": "d5a651c57dfb9fcb51b1054c205c828c834935a249f60e256beededf04e91955",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\scripts\\run_threshold_calibration.py",
+      "purpose": "Offline research reproduction component;not imported by retained runtime or five important runtime test modules.Archive as a coherent original-byte research bundle,never permanent destruction.",
+      "restore_relative_path": "scripts/run_threshold_calibration.py"
+    },
+    {
+      "original_relative_path": "tests/test_evaluation_protocol_freeze.py",
+      "sha256": "81e7b4ddc3559894db301d607fd07f2c3ac6cc9a218ca080319fa55a36319513",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\tests\\test_evaluation_protocol_freeze.py",
+      "purpose": "Offline research reproduction component;not imported by retained runtime or five important runtime test modules.Archive as a coherent original-byte research bundle,never permanent destruction.",
+      "restore_relative_path": "tests/test_evaluation_protocol_freeze.py"
+    },
+    {
+      "original_relative_path": "tests/test_final_evaluation.py",
+      "sha256": "177ee9495a59c5bcde013d62862c6569c5be7b99728db7761399b74cc1703d79",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\tests\\test_final_evaluation.py",
+      "purpose": "Offline research reproduction component;not imported by retained runtime or five important runtime test modules.Archive as a coherent original-byte research bundle,never permanent destruction.",
+      "restore_relative_path": "tests/test_final_evaluation.py"
+    },
+    {
+      "original_relative_path": "tests/test_phase5b5b_threshold_v2.py",
+      "sha256": "455fe1bc21aacf65c844066492307f22e928338811a35d3b90c4ccd5be8b8417",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\tests\\test_phase5b5b_threshold_v2.py",
+      "purpose": "Offline research reproduction component;not imported by retained runtime or five important runtime test modules.Archive as a coherent original-byte research bundle,never permanent destruction.",
+      "restore_relative_path": "tests/test_phase5b5b_threshold_v2.py"
+    },
+    {
+      "original_relative_path": "tests/test_threshold_calibration.py",
+      "sha256": "29de287354144e1f574ad91e870accd614134c33af65524f3a1efb18c218ff1a",
+      "archive_locator": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\tests\\test_threshold_calibration.py",
+      "purpose": "Offline research reproduction component;not imported by retained runtime or five important runtime test modules.Archive as a coherent original-byte research bundle,never permanent destruction.",
+      "restore_relative_path": "tests/test_threshold_calibration.py"
+    }
+  ],
+  "other_original_file_resolution": "Archive manifest includesall original project/source files,including oldsource/README hashes.Current files may intentionally differ only as recorded in final_handoff_manifest.",
+  "thresholds": {
+    "V1": {
+      "decimal": 0.925533688089963,
+      "hex": "0x1.d9df8d3362a3cp-1"
+    },
+    "V2": {
+      "decimal": 0.665513450766159,
+      "hex": "0x1.54be2dd42d71dp-1"
+    }
+  },
+  "approved_decision": {
+    "recommendation": "RECOMMEND_V2",
+    "criteria": {
+      "enrollment_complete": true,
+      "query_coverage_complete": true,
+      "known_strictly_improved": true,
+      "unknown_false_accept_zero_and_nonincreasing": true,
+      "known_wrong_ID_zero_and_nonincreasing": true,
+      "technical_regression_passed": true
+    },
+    "baseline_unchanged": "V1",
+    "runtime_update_authorized": false,
+    "evidence_scope": "LIMITED_INDEPENDENT_EVIDENCE"
+  },
+  "independent_evidence": {
+    "source": "reports/phase5b5c/independent_v1_v2_results.json",
+    "planned_counts": {
+      "images": 45,
+      "identities": 10,
+      "known_identities": 5,
+      "unknown_identities": 5,
+      "enrollment": 15,
+      "genuine_queries": 15,
+      "unknown_queries": 15,
+      "queries": 30,
+      "gallery_size": 5
+    },
+    "metrics": {
+      "V1": {
+        "counts": {
+          "A": 10,
+          "R": 5,
+          "W": 0,
+          "UA": 0,
+          "UR": 15,
+          "FK": 0,
+          "FU": 0,
+          "K0": 15,
+          "U0": 15,
+          "nK": 15,
+          "nU": 15,
+          "G": 5
+        },
+        "balanced_E2E": 0.8333333333333333,
+        "coverage": {
+          "numerator": 30,
+          "denominator": 30,
+          "value": 1.0,
+          "percent": 100.0
+        },
+        "per_identity": {
+          "FEI:001": {
+            "planned": 3,
+            "valid": 3,
+            "failures": 0,
+            "outcomes": {
+              "known_correct": 2,
+              "known_rejected": 1
+            },
+            "correct": 2
+          },
+          "FEI:002": {
+            "planned": 3,
+            "valid": 3,
+            "failures": 0,
+            "outcomes": {
+              "known_correct": 2,
+              "known_rejected": 1
+            },
+            "correct": 2
+          },
+          "FEI:003": {
+            "planned": 3,
+            "valid": 3,
+            "failures": 0,
+            "outcomes": {
+              "known_correct": 2,
+              "known_rejected": 1
+            },
+            "correct": 2
+          },
+          "FEI:004": {
+            "planned": 3,
+            "valid": 3,
+            "failures": 0,
+            "outcomes": {
+              "known_correct": 2,
+              "known_rejected": 1
+            },
+            "correct": 2
+          },
+          "FEI:005": {
+            "planned": 3,
+            "valid": 3,
+            "failures": 0,
+            "outcomes": {
+              "known_correct": 2,
+              "known_rejected": 1
+            },
+            "correct": 2
+          },
+          "FEI:006": {
+            "planned": 3,
+            "valid": 3,
+            "failures": 0,
+            "outcomes": {
+              "unknown_rejected": 3
+            },
+            "correct": 3
+          },
+          "FEI:007": {
+            "planned": 3,
+            "valid": 3,
+            "failures": 0,
+            "outcomes": {
+              "unknown_rejected": 3
+            },
+            "correct": 3
+          },
+          "FEI:008": {
+            "planned": 3,
+            "valid": 3,
+            "failures": 0,
+            "outcomes": {
+              "unknown_rejected": 3
+            },
+            "correct": 3
+          },
+          "FEI:009": {
+            "planned": 3,
+            "valid": 3,
+            "failures": 0,
+            "outcomes": {
+              "unknown_rejected": 3
+            },
+            "correct": 3
+          },
+          "FEI:010": {
+            "planned": 3,
+            "valid": 3,
+            "failures": 0,
+            "outcomes": {
+              "unknown_rejected": 3
+            },
+            "correct": 3
+          }
+        }
+      },
+      "V2": {
+        "counts": {
+          "A": 15,
+          "R": 0,
+          "W": 0,
+          "UA": 0,
+          "UR": 15,
+          "FK": 0,
+          "FU": 0,
+          "K0": 15,
+          "U0": 15,
+          "nK": 15,
+          "nU": 15,
+          "G": 5
+        },
+        "balanced_E2E": 1.0,
+        "coverage": {
+          "numerator": 30,
+          "denominator": 30,
+          "value": 1.0,
+          "percent": 100.0
+        },
+        "per_identity": {
+          "FEI:001": {
+            "planned": 3,
+            "valid": 3,
+            "failures": 0,
+            "outcomes": {
+              "known_correct": 3
+            },
+            "correct": 3
+          },
+          "FEI:002": {
+            "planned": 3,
+            "valid": 3,
+            "failures": 0,
+            "outcomes": {
+              "known_correct": 3
+            },
+            "correct": 3
+          },
+          "FEI:003": {
+            "planned": 3,
+            "valid": 3,
+            "failures": 0,
+            "outcomes": {
+              "known_correct": 3
+            },
+            "correct": 3
+          },
+          "FEI:004": {
+            "planned": 3,
+            "valid": 3,
+            "failures": 0,
+            "outcomes": {
+              "known_correct": 3
+            },
+            "correct": 3
+          },
+          "FEI:005": {
+            "planned": 3,
+            "valid": 3,
+            "failures": 0,
+            "outcomes": {
+              "known_correct": 3
+            },
+            "correct": 3
+          },
+          "FEI:006": {
+            "planned": 3,
+            "valid": 3,
+            "failures": 0,
+            "outcomes": {
+              "unknown_rejected": 3
+            },
+            "correct": 3
+          },
+          "FEI:007": {
+            "planned": 3,
+            "valid": 3,
+            "failures": 0,
+            "outcomes": {
+              "unknown_rejected": 3
+            },
+            "correct": 3
+          },
+          "FEI:008": {
+            "planned": 3,
+            "valid": 3,
+            "failures": 0,
+            "outcomes": {
+              "unknown_rejected": 3
+            },
+            "correct": 3
+          },
+          "FEI:009": {
+            "planned": 3,
+            "valid": 3,
+            "failures": 0,
+            "outcomes": {
+              "unknown_rejected": 3
+            },
+            "correct": 3
+          },
+          "FEI:010": {
+            "planned": 3,
+            "valid": 3,
+            "failures": 0,
+            "outcomes": {
+              "unknown_rejected": 3
+            },
+            "correct": 3
+          }
+        }
+      }
+    },
+    "differing_queries": [
+      "1-10.jpg",
+      "2-10.jpg",
+      "3-10.jpg",
+      "4-10.jpg",
+      "5-10.jpg"
+    ],
+    "limitations": [
+      "45 source images,10 dependent identity clusters,only5 Unknown identities/15 Unknown queries; one query changes stratum rate by about6.67 percentage points.",
+      "Gallery5 differs from historical gallery3; report this; do not pool datasets.",
+      "No pretraining VGGFace2 identity isolation proof, no real-person FEI/IMM mapping, no visual near-duplicate verification.",
+      "No production-grade/universal-optimum/webcam claim; no image augmentation/threshold fitting/finalV1 reuse."
+    ]
+  },
+  "V2_selection": {
+    "source": "reports/phase5b5b_calibration.json",
+    "rules": {
+      "G": "min genuine true-ID scores",
+      "N": "max known-impostor and unknown-impostor scores",
+      "base_candidates": "{-1,1} union all63 scores union nextafter(score,+inf)<=1",
+      "comparison": "score>=threshold accept;score<threshold reject",
+      "eligible": "(N,G] binary64; A>=A1,UA<=UA1,accepted K/U impostor pairs<=v1",
+      "failure": "STOP on incomplete/invalid/failed records;no omission or reinference",
+      "final_or_reserve_fit": false,
+      "interior_candidates": "float(exact Fraction midpoint(N,G)) nearest ties-even, plus both nextafter neighbors in[-1,1]",
+      "known_ids": [
+        "IMM:01",
+        "IMM:05",
+        "IMM:06"
+      ],
+      "numeric": "finite IEEE754 binary64[-1,1];Fraction.from_float for exact arithmetic",
+      "pair_scores": 63,
+      "planned_known": 6,
+      "planned_unknown": 15,
+      "positive_genuine_headroom_required": true,
+      "positive_margin_required": true,
+      "priority": [
+        "max exact balanced E2E",
+        "max exact min(G-t,t-N)",
+        "max exact G-t",
+        "lower numeric t"
+      ],
+      "production_promotion": false,
+      "signed_zero": "+0",
+      "unknown_ids": [
+        "IMM:07",
+        "IMM:08",
+        "IMM:09"
+      ]
+    },
+    "saved_result_summary": {
+      "candidate_count": 131,
+      "constraints_passed": true,
+      "selected_threshold": 0.665513450766159,
+      "selected_threshold_exact_decimal": "0.66551345076615897600191829042159952223300933837890625",
+      "selected_threshold_hex": "0x1.54be2dd42d71dp-1",
+      "status": "GO_DEVELOPMENT_PROTOTYPE"
+    },
+    "scope": "Preserved development/calibration-only evidence;not a new fit."
+  },
+  "model_provenance": {
+    "source_document": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\facenet\\models\\README.md",
+    "source_document_sha256": "9a84d205a7625ca1ea685a38dfd2bd10258d10257a315c7af3f7e08065abac55",
+    "publisher": "Axelera,VoyagerSDKv1.9.0",
+    "artifact_url": "https://media.axelera.ai/artifacts/model_cards/weights/face_recognition/facenet.onnx",
+    "publisher_MD5": "04028f41a6781c49cb7e98de92e96bc1",
+    "local_SHA256": "f6688ba6c95465fac18df53fdf8e094048fa3f1dd2c09f1cc6dd734a1c8dedf8",
+    "interpretation": "Architecture/VGGFace2 andlicense notices preserve thepublisher declarations recorded inoriginal documentation;no new training-history/legal verification."
+  },
+  "regression_provenance": {
+    "wrapper_historical_source": "D:\\Face-Recognition-Archives\\phase5c3_stage2_20261102T123214Z_0ae0102924\\payload\\projects\\main\\reports\\phase5b6\\wrapper_validation.json",
+    "smoke_historical_source": "reports/phase5b7/smoke_test_results.json",
+    "historical_scopes": "110 wrapper/bounded regression and6 real smoke calls were historical results,not thisStage2 execution.New results appearonly in final_handoff_manifest."
+  },
+  "FEI_payload_included": false,
+  "new_calibration_or_evaluation": false
+}

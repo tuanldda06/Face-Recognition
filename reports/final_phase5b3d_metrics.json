@@ -1,0 +1,292 @@
+{
+  "metrics": {
+    "FAR_pair_K": {
+      "denominator": 12,
+      "numerator": 0,
+      "status": "OK",
+      "value": 0.0
+    },
+    "FAR_pair_U": {
+      "denominator": 60,
+      "numerator": 0,
+      "status": "OK",
+      "value": 0.0
+    },
+    "FNIR_rank1": {
+      "denominator": 6,
+      "numerator": 3,
+      "status": "OK",
+      "value": 0.5
+    },
+    "FPIR": {
+      "denominator": 20,
+      "numerator": 0,
+      "status": "OK",
+      "value": 0.0
+    },
+    "FPIR_E2E": {
+      "denominator": 20,
+      "numerator": 0,
+      "status": "OK",
+      "value": 0.0
+    },
+    "FRR_pair": {
+      "denominator": 6,
+      "numerator": 3,
+      "status": "OK",
+      "value": 0.5
+    },
+    "TAR_pair": {
+      "denominator": 6,
+      "numerator": 3,
+      "status": "OK",
+      "value": 0.5
+    },
+    "TPIR_E2E": {
+      "denominator": 6,
+      "numerator": 3,
+      "status": "OK",
+      "value": 0.5
+    },
+    "TPIR_rank1": {
+      "denominator": 6,
+      "numerator": 3,
+      "status": "OK",
+      "value": 0.5
+    },
+    "balanced_E2E": 0.75,
+    "balanced_conditional": 0.75,
+    "counts": {
+      "A": 3,
+      "G": 3,
+      "K0": 6,
+      "R": 3,
+      "U0": 20,
+      "UA": 0,
+      "UR": 20,
+      "W": 0,
+      "known_closed_set_wrong_identity": 0,
+      "nK": 6,
+      "nU": 20
+    },
+    "failure_accounting": "Failures never credited as unknown rejection; planned K0=6/U0=20 fixed; zero denominator -> N/A",
+    "failure_counts": {
+      "adapter_failure": 0,
+      "alignment_failure": 0,
+      "detection_failure": 0,
+      "embedding_failure": 0,
+      "multiple_faces": 0,
+      "zero_face": 0
+    },
+    "genuine_distribution": {
+      "count": 6,
+      "max": 0.9376254047028485,
+      "mean": 0.9140874112037065,
+      "min": 0.8757624974441192,
+      "quantiles": {
+        "0": 0.8757624974441192,
+        "0.25": 0.8971858101786605,
+        "0.5": 0.9254189972445706,
+        "0.75": 0.9307476163832222,
+        "1": 0.9376254047028485
+      },
+      "std_population": 0.023290607449864997
+    },
+    "known_coverage": {
+      "denominator": 6,
+      "numerator": 6,
+      "status": "OK",
+      "value": 1.0
+    },
+    "known_failure_or_miss": {
+      "denominator": 6,
+      "numerator": 3,
+      "status": "OK",
+      "value": 0.5
+    },
+    "known_impostor_distribution": {
+      "count": 12,
+      "max": 0.24266566315315974,
+      "mean": 0.021380845898754438,
+      "min": -0.16410969675704187,
+      "quantiles": {
+        "0": -0.16410969675704187,
+        "0.25": -0.08104349658971029,
+        "0.5": -0.03685427415046494,
+        "0.75": 0.17481007407883958,
+        "1": 0.24266566315315974
+      },
+      "std_population": 0.1362986885888916
+    },
+    "known_rejection_rate": {
+      "denominator": 6,
+      "numerator": 3,
+      "status": "OK",
+      "value": 0.5
+    },
+    "known_wrong_accepted": {
+      "denominator": 6,
+      "numerator": 0,
+      "status": "OK",
+      "value": 0.0
+    },
+    "per_identity": {
+      "IMM:10": {
+        "correct": 1,
+        "planned": 2,
+        "valid": 2
+      },
+      "IMM:11": {
+        "correct": 2,
+        "planned": 2,
+        "valid": 2
+      },
+      "IMM:12": {
+        "correct": 0,
+        "planned": 2,
+        "valid": 2
+      },
+      "IMM:13": {
+        "correct": 5,
+        "planned": 5,
+        "valid": 5
+      },
+      "IMM:14": {
+        "correct": 5,
+        "planned": 5,
+        "valid": 5
+      },
+      "IMM:15": {
+        "correct": 5,
+        "planned": 5,
+        "valid": 5
+      },
+      "IMM:16": {
+        "correct": 5,
+        "planned": 5,
+        "valid": 5
+      }
+    },
+    "processing_by_group": {
+      "genuine_query": {
+        "alignment_success": {
+          "denominator": 6,
+          "numerator": 6,
+          "status": "OK",
+          "value": 1.0
+        },
+        "embedding_success": {
+          "denominator": 6,
+          "numerator": 6,
+          "status": "OK",
+          "value": 1.0
+        },
+        "failure_counts": {
+          "adapter_failure": 0,
+          "alignment_failure": 0,
+          "detection_failure": 0,
+          "embedding_failure": 0,
+          "multiple_faces": 0,
+          "zero_face": 0
+        },
+        "multiple_face_rate": {
+          "denominator": 6,
+          "numerator": 0,
+          "status": "OK",
+          "value": 0.0
+        },
+        "planned": 6,
+        "valid": 6,
+        "zero_face_rate": {
+          "denominator": 6,
+          "numerator": 0,
+          "status": "OK",
+          "value": 0.0
+        }
+      },
+      "unknown_query": {
+        "alignment_success": {
+          "denominator": 20,
+          "numerator": 20,
+          "status": "OK",
+          "value": 1.0
+        },
+        "embedding_success": {
+          "denominator": 20,
+          "numerator": 20,
+          "status": "OK",
+          "value": 1.0
+        },
+        "failure_counts": {
+          "adapter_failure": 0,
+          "alignment_failure": 0,
+          "detection_failure": 0,
+          "embedding_failure": 0,
+          "multiple_faces": 0,
+          "zero_face": 0
+        },
+        "multiple_face_rate": {
+          "denominator": 20,
+          "numerator": 0,
+          "status": "OK",
+          "value": 0.0
+        },
+        "planned": 20,
+        "valid": 20,
+        "zero_face_rate": {
+          "denominator": 20,
+          "numerator": 0,
+          "status": "OK",
+          "value": 0.0
+        }
+      }
+    },
+    "scope": "frozen-threshold final evaluation; no tuning",
+    "threshold": 0.925533688089963,
+    "threshold_hex": "0x1.d9df8d3362a3cp-1",
+    "top1_identity_accuracy": {
+      "denominator": 6,
+      "numerator": 6,
+      "status": "OK",
+      "value": 1.0
+    },
+    "unknown_correct_rejection_yield": {
+      "denominator": 20,
+      "numerator": 20,
+      "status": "OK",
+      "value": 1.0
+    },
+    "unknown_coverage": {
+      "denominator": 20,
+      "numerator": 20,
+      "status": "OK",
+      "value": 1.0
+    },
+    "unknown_impostor_distribution": {
+      "count": 60,
+      "max": 0.35795337142532907,
+      "mean": 0.09222077398325942,
+      "min": -0.19658616463794695,
+      "quantiles": {
+        "0": -0.19658616463794695,
+        "0.25": 0.010867586602702773,
+        "0.5": 0.11571507759167204,
+        "0.75": 0.17930142762919976,
+        "1": 0.35795337142532907
+      },
+      "std_population": 0.11439514072265033
+    },
+    "unknown_rejection_rate": {
+      "denominator": 20,
+      "numerator": 20,
+      "status": "OK",
+      "value": 1.0
+    }
+  },
+  "phase": "5B.3D",
+  "protocol_version": "imm-mtcnn-open-set-frozen/1",
+  "selected_threshold": 0.925533688089963,
+  "selected_threshold_hex": "0x1.d9df8d3362a3cp-1",
+  "status": "PASS_FINAL_EVALUATION_COMPLETED",
+  "threshold_artifact_sha256": "c731bf66614d8f40af93b3499cfcae864aa42aa64b0420d1b824a38c1b7cbec9"
+}

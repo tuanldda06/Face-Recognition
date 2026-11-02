@@ -1,0 +1,116 @@
+{
+  "approved_plan_sha256": "8727e40f03e59f48bc30940bbedf685758954e58e4db4c9799c9456522a643fa",
+  "candidate_helper_sha256": "6599b1a07269a4b76e611ac3c8ef48391c583eaab3a57303be9d8f482ba78d04",
+  "designation": "DEVELOPMENT_ONLY_NOT_INDEPENDENTLY_VALIDATED",
+  "expected_sha256": {
+    "reports/calibration_phase5b3c_results.json": "39a56a3f211a72f457c434c4f402063e4cca0940a16f123b4866a8d0d437a035",
+    "reports/calibration_phase5b3c_threshold.json": "c731bf66614d8f40af93b3499cfcae864aa42aa64b0420d1b824a38c1b7cbec9",
+    "reports/evaluation_pipeline_profile.json": "9a42c0f3c8d4261e54304123746441254e8fea225abdc2a1e8c6084dbb3d9f1f",
+    "reports/evaluation_protocol_frozen.json": "44999ad9fa6acbe9223efb0aa3cc7931d749bfd3b78169915baa926576877a98",
+    "reports/evaluation_split_frozen.json": "236440d55178e2c5459390010576dc369412f7ea7b455d99c7c153a3d66295d7",
+    "reports/phase5b5a_data_audit.md": "246e89e1dc8e117caeebb98c712a3affc335642722236a2fed2e7a29bc773245",
+    "reports/phase5b5a_threshold_v2_design.md": "ac6278d5574b1d2830b310087e3f842d8ea3f72ae19ca6b1fedb4e354fffa727"
+  },
+  "freeze_timestamp": "2026-11-02T01:16:59+07:00",
+  "input_artifact": "reports/calibration_phase5b3c_results.json",
+  "limitations": [
+    "Reused21 calibration queries/6 identities only",
+    "No independent v2 evaluation; no generalization improvement claim",
+    "Positive observed margin is not population FA/FR guarantee"
+  ],
+  "model_version": "{\"aggregation\":\"mean_float64_then_L2_to_float32\",\"aligned_face\":[160,160,3],\"alignment\":\"MTCNN_5pt_similarity_ArcFace112_scaled160_alignTrue\",\"assets_and_source_sha256\":{\"MTCNN/detection/bounding_box.py\":\"bb1d63c42fec67f79b81e7a3c79ea3c7f63f523e891252ac27e24089e821a079\",\"MTCNN/detection/image_pyramid.py\":\"785e711dec10d4ee2332d9a633fc726d7c09d52767cad1aea15c4a69240df047\",\"MTCNN/model_loader.py\":\"a4950fb34e906a39209bc8b39470cb2d170c602d40bf4859ace160ffbad2a8b8\",\"MTCNN/models/onet.py\":\"1e2af79f85c54919ab5d06853b33f3ae1163b5fd6e067edcc24e6f2255284fc4\",\"MTCNN/models/pnet.py\":\"b5afc63ebce752c04fc185db1b69ac197badf6147f7c2e6a4218d07fe0880835\",\"MTCNN/models/rnet.py\":\"ebff53e9a15caf16e469e6bfa9a51de90e120a18637271e8fe9094107a0c45d5\",\"MTCNN/mtcnn.py\":\"25e4ea8ec74853c2c640d42953529d377449469172d0c2262c5c621a33c8cd87\",\"MTCNN/preprocessing/face_alignment.py\":\"e1f3d740b1270e49d039a65fb7dd2195e9d521dd6c230dcb54dddda27a3def54\",\"MTCNN/preprocessing/image_processing.py\":\"8072f6047aa68a12650c05b27ee4eb67df880701e486108763f692bade023541\",\"MTCNN/weights/onet.pt\":\"165bfbe42940416ccfb977545cf0e976d5bf321f67083ae2aaaa5c764280118d\",\"MTCNN/weights/pnet.pt\":\"a2a71925e0b9996a42f63e47efc1ca19043e69558b5c523b978d611dfae49c8f\",\"MTCNN/weights/rnet.pt\":\"bbb937de72efc9ef83b186c49f5f558467a1d7e3453a8ece0d71a886633f6a86\",\"integration/enrollment_pipeline.py\":\"b463eca899c9082ce97b6ab1643134551430bf19f3058beddbb17401bdb815d3\",\"integration/mtcnn_adapter.py\":\"9630a72da0c52c978cbbf7893c8ab872d1fcd5ca29714e19d17f37602f96a338\",\"models/facenet.onnx\":\"f6688ba6c95465fac18df53fdf8e094048fa3f1dd2c09f1cc6dd734a1c8dedf8\",\"src/facenet_recognition/contracts.py\":\"76180ff655f813d056986d734b06da3e7e1b24c4bec5ad50a676dc55370da0c6\",\"src/facenet_recognition/enrollment.py\":\"c5d0f17b30ffd253565f81ef6e7532af8ab56a8895265f6b660b9137f7115801\",\"src/facenet_recognition/facenet_model.py\":\"714532b51b3701d3b82e25b6286d6bfe6a4032638ce10aa99331d06db9a9620e\",\"src/facenet_recognition/matching.py\":\"ef5579f23ca4675a8a5cd6d502ce9de54400b08f5b3e349324103eca1afba84c\"},\"detector\":{\"batch_size\":256,\"device\":\"cpu\",\"factor\":0.709,\"min_face_size\":20.0,\"thresholds\":[0.6,0.7,0.7]},\"embedding\":\"512_float32_L2_float64_norm\",\"execution\":\"MTCNN_CPU;OpenCV_DNN_BACKEND_OPENCV_TARGET_CPU\",\"facenet_preprocessing\":\"(pixel-127.5)/128.0;NCHW;RGB\",\"input\":\"RGB_uint8_HWC\",\"runtime\":{\"Pillow\":\"12.2.0\",\"numpy\":\"2.1.3\",\"opencv-python\":\"4.10.0.84\",\"torch\":\"2.12.1+cpu\"},\"schema\":\"facenet-mtcnn-enrollment/1\"}",
+  "model_version_sha256": "26f1432e29721a4d1e881164a62db603a968a5aa3c0e505afcba29c59668d99b",
+  "new_file_names_authorization": "Phase5B.5B user requires phase5b5b_ prefix; same five file roles approved in5A",
+  "no_final_fit_or_validation": true,
+  "production_config_changed": false,
+  "protocol_version": "threshold-v2-development/1",
+  "rollback_reference": "reports/calibration_phase5b3c_threshold.json",
+  "rules": {
+    "G": "min genuine true-ID scores",
+    "N": "max known-impostor and unknown-impostor scores",
+    "base_candidates": "{-1,1} union all63 scores union nextafter(score,+inf)<=1",
+    "comparison": "score>=threshold accept;score<threshold reject",
+    "eligible": "(N,G] binary64; A>=A1,UA<=UA1,accepted K/U impostor pairs<=v1",
+    "failure": "STOP on incomplete/invalid/failed records;no omission or reinference",
+    "final_or_reserve_fit": false,
+    "interior_candidates": "float(exact Fraction midpoint(N,G)) nearest ties-even, plus both nextafter neighbors in[-1,1]",
+    "known_ids": [
+      "IMM:01",
+      "IMM:05",
+      "IMM:06"
+    ],
+    "numeric": "finite IEEE754 binary64[-1,1];Fraction.from_float for exact arithmetic",
+    "pair_scores": 63,
+    "planned_known": 6,
+    "planned_unknown": 15,
+    "positive_genuine_headroom_required": true,
+    "positive_margin_required": true,
+    "priority": [
+      "max exact balanced E2E",
+      "max exact min(G-t,t-N)",
+      "max exact G-t",
+      "lower numeric t"
+    ],
+    "production_promotion": false,
+    "signed_zero": "+0",
+    "unknown_ids": [
+      "IMM:07",
+      "IMM:08",
+      "IMM:09"
+    ]
+  },
+  "schema_version": "phase5b5b-protocol/1",
+  "selector_sha256": "bef3d52ac183f2b10e8148a20818b718496827a8af4e0b2deee57e66d229fecd",
+  "status": "FROZEN",
+  "strategy_id": "calibration-maxmin-margin/2",
+  "tests_sha256": "455fe1bc21aacf65c844066492307f22e928338811a35d3b90c4ccd5be8b8417",
+  "validation_before_freeze": {
+    "new_tests_synthetic_only": true,
+    "real_inference_run": false,
+    "regression_exit_code": 0,
+    "regression_passed": 113,
+    "regression_subtests_passed": 201,
+    "scope_skipped": [
+      {
+        "node": "D:\\Facenet-Recognition\\tests\\test_enrollment.py::TestEnrollment::test_fresh_import_has_no_io_or_inference_dependencies",
+        "reason": "Subprocess import-only check omitted from bounded in-process guard run"
+      },
+      {
+        "node": "D:\\Facenet-Recognition\\tests\\test_matching.py::TestMatching::test_fresh_import_has_no_business_io_or_heavy_dependencies",
+        "reason": "Subprocess import-only check omitted from bounded in-process guard run"
+      },
+      {
+        "node": "D:\\Facenet-Recognition\\tests\\test_recognition.py::TestRecognition::test_import_does_not_access_assets_load_model_or_connect_sqlite",
+        "reason": "Subprocess import-only check omitted from bounded in-process guard run"
+      },
+      {
+        "node": "D:\\Face-Recognition-System\\tests\\test_mtcnn_adapter.py::TestAdapter::test_import_and_call_have_no_io_inference_or_sqlite_dependencies",
+        "reason": "Subprocess import-only check omitted from bounded in-process guard run"
+      },
+      {
+        "reason": "setUp initializes real SQLite;database RAM codec/metadata exercised by existing enrollment unit and new v2 unit",
+        "suite": "test_database.py::TestDatabase/TestCrudNotebookRegression"
+      },
+      {
+        "reason": "Reads real SQLite;outside no-database prototype scope",
+        "suite": "TestBaselineRegression"
+      },
+      {
+        "reason": "Registry fixtures create real SQLite;core interfaces covered by pure source tests instead",
+        "suite": "TestEnrollmentPipeline/TestRecognitionPipeline"
+      },
+      {
+        "reason": "Real images/models/inference or SQLite forbidden",
+        "suite": "TestRealEnrollment/TestRealRecognition/TestEndToEndEmbedding/TestRealMTCNN/TestNotebookRegression/TestMatchingNotebookRegression/TestRecognitionNotebookRegression/TestEnrollmentNotebookRegression"
+      },
+      {
+        "reason": "Full-source integrity tests decode images;not executed",
+        "suite": "test_evaluation_protocol_freeze.py full suite"
+      }
+    ],
+    "selected_existing_nodes": 109,
+    "sqlite_created": false,
+    "unit_exit_code": 0,
+    "unit_passed": 69
+  }
+}

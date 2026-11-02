@@ -1,0 +1,284 @@
+{
+  "protocol_version": "imm-mtcnn-open-set-design/1",
+  "design_status": "COMPLETE",
+  "split_status": "NOT_FINALIZED",
+  "purpose": "Exploratory only; no performance or threshold computed in Phase 5B.3A.",
+  "finalization_gates": [
+    "Approve exploratory data reuse, identity assignment, and threshold objective.",
+    "A blind generalization claim needs a genuinely untouched approved dataset; all local cohorts have historical exposure.",
+    "Bind manifest and runtime profile hashes before future inference."
+  ],
+  "assignment": {
+    "calibration": {
+      "known": [
+        "IMM:01",
+        "IMM:05",
+        "IMM:06"
+      ],
+      "unknown": [
+        "IMM:07",
+        "IMM:08",
+        "IMM:09"
+      ]
+    },
+    "final_evaluation": {
+      "known": [
+        "IMM:10",
+        "IMM:11",
+        "IMM:12"
+      ],
+      "unknown": [
+        "IMM:13",
+        "IMM:14",
+        "IMM:15",
+        "IMM:16"
+      ]
+    }
+  },
+  "counts": {
+    "calibration": {
+      "enrollment": 9,
+      "genuine_query": 6,
+      "unknown_query": 15
+    },
+    "final_evaluation": {
+      "enrollment": 9,
+      "genuine_query": 6,
+      "unknown_query": 20
+    }
+  },
+  "eligible_common_image_types": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "reserve_image_type": 6,
+  "reserve_count": 8,
+  "fold": {
+    "primary": "primary_0",
+    "random_seed": null,
+    "ordering": "Explicit identity slots; numeric image type then source path.",
+    "optional_sensitivity": "13 cyclic rotations of sorted identities into 3 calibration-known, 3 calibration-unknown, 3 final-known, 4 final-unknown slots. Not run/finalized; repeated data are not independent."
+  },
+  "source_identity_policy": "IMM:NN is a provenance reference, preserving original labels/paths. Known/unknown is relative to each new gallery, not a relabeling of people.",
+  "candidate_integrity": {
+    "valid_exploratory_partition": true,
+    "validation_errors": [],
+    "not_a_blind_final_test": true
+  },
+  "expected_counts_if_all_valid": {
+    "calibration": {
+      "gallery_identities": 3,
+      "known_queries": 6,
+      "unknown_queries": 15,
+      "genuine_pairs": 6,
+      "known_impostor_pairs": 12,
+      "unknown_impostor_pairs": 45,
+      "total_comparisons": 63
+    },
+    "final_evaluation": {
+      "gallery_identities": 3,
+      "known_queries": 6,
+      "unknown_queries": 20,
+      "genuine_pairs": 6,
+      "known_impostor_pairs": 12,
+      "unknown_impostor_pairs": 60,
+      "total_comparisons": 78
+    }
+  },
+  "manifest_schema": {
+    "required": [
+      "protocol_version",
+      "dataset_id",
+      "root_alias",
+      "source_relative_path",
+      "source_sha256",
+      "pixel_sha256",
+      "dataset_identity_reference",
+      "source_identity_label",
+      "fold",
+      "stage",
+      "role",
+      "known_status",
+      "model_version_id",
+      "split_rule_id"
+    ],
+    "roles": [
+      "enrollment",
+      "genuine_query",
+      "unknown_query"
+    ],
+    "stages": [
+      "calibration",
+      "final_evaluation"
+    ],
+    "root_aliases": {
+      "facenet": "D:\\Facenet-Recognition",
+      "mtcnn": "D:\\MTCNN",
+      "integrated": "D:\\Face-Recognition-System"
+    },
+    "source_eligibility": "Original readable JPEG RGB uint8 only; no ASF-PNG/fixture substitution.",
+    "example_only": {
+      "protocol_version": "imm-mtcnn-open-set-design/1",
+      "dataset_id": "IMM-local-73",
+      "root_alias": "facenet",
+      "source_relative_path": "data/sample_faces/person_01/01-1m.jpg",
+      "source_sha256": "8d80606a0a8bde37c87fab0ca9f7853fc885b0beea8fa22e6ae67f36ce904f8f",
+      "pixel_sha256": "659594011deea2faed7a0b0ff964afffc1e4fe655341a30d3ccf2a535400031d",
+      "dataset_identity_reference": "IMM:01",
+      "source_identity_label": "person_01",
+      "fold": "primary_0",
+      "stage": "calibration",
+      "role": "enrollment",
+      "known_status": "known",
+      "model_version_id": "26f1432e29721a4d1e881164a62db603a968a5aa3c0e505afcba29c59668d99b",
+      "split_rule_id": "common-five-primary-0"
+    }
+  },
+  "future_pipeline": {
+    "alignment": "Approved MTCNN size160 alignTrue -> adapter -> FaceNet -> SQLite.",
+    "gallery": "Three fixed types1-3 per known identity. Abort primary fold if any enrollment fails; no replacements or silent gallery shrinkage.",
+    "query_failure": "0 or >1 faces, failed alignment or invalid embedding => explicit failure, never credit as unknown rejection. Retain planned denominators.",
+    "infrastructure_failure": "Schema/version/model/IO errors abort fold, not recognition outcomes.",
+    "registry": "Separate temporary calibration and final galleries, never ASF baseline."
+  },
+  "threshold_design": {
+    "executed": false,
+    "operational_threshold": null,
+    "objective": "Maximize 0.5*(known correct accepts / planned known queries + unknown correct rejects / planned unknown queries), calibration only.",
+    "candidates": "{-1,1} plus calibration top1 scores plus nextafter(score,+infinity) within [-1,1]; grouped ties.",
+    "tie_break": "Higher threshold on equal objective.",
+    "matching": ">= threshold; equal score IDs ascending.",
+    "freeze": "Exact float.hex threshold + profile SHA + manifest SHA + objective/denominators before final inference.",
+    "alternatives": [
+      "Prespecified empirical FPIR cap then maximize TPIR; sparse evidence with 15 unknown queries.",
+      "Pairwise EER only as secondary verification summary, not identification objective."
+    ],
+    "gates": "Complete gallery and at least one valid known and unknown calibration query, otherwise NOT_ESTIMABLE."
+  },
+  "uncertainty": {
+    "sampling_unit": "Identity clusters, not comparisons.",
+    "final_unknown_resolution": "1/20=5pp if all valid; 4 identity clusters only.",
+    "known_query_resolution": "1/6=16.67pp if all valid.",
+    "low_far_or_webcam_claim_supported": false,
+    "visual_near_duplicates": "NOT VERIFIED"
+  },
+  "verification": {
+    "checks_passed": 23,
+    "checks": [
+      {
+        "name": "73 raw records / 13 labeled identities",
+        "pass": true
+      },
+      {
+        "name": "all raw readable RGB uint8 480x640 JPEG",
+        "pass": true
+      },
+      {
+        "name": "raw byte hashes unique",
+        "pass": true
+      },
+      {
+        "name": "raw decoded pixel hashes unique",
+        "pass": true
+      },
+      {
+        "name": "source/ASF/processed/fixture integrity",
+        "pass": true
+      },
+      {
+        "name": "ASF: 71 seven-field / 2 ten-field",
+        "pass": true
+      },
+      {
+        "name": "ASF headers and hosts",
+        "pass": true
+      },
+      {
+        "name": "153 image files readable",
+        "pass": true
+      },
+      {
+        "name": "71 existing ASF-PNG outputs",
+        "pass": true
+      },
+      {
+        "name": "two exact duplicate groups are fixture copies",
+        "pass": true
+      },
+      {
+        "name": "pixel duplicate groups match byte duplicate groups",
+        "pass": true
+      },
+      {
+        "name": "65 common-five images",
+        "pass": true
+      },
+      {
+        "name": "8 sixth-image reserves",
+        "pass": true
+      },
+      {
+        "name": "candidate leakage validation",
+        "pass": true
+      },
+      {
+        "name": "calibration: 9/6/15",
+        "pass": true
+      },
+      {
+        "name": "final: 9/6/20",
+        "pass": true
+      },
+      {
+        "name": "determinism under reversed input",
+        "pass": true
+      },
+      {
+        "name": "negative: reused source hash",
+        "pass": true
+      },
+      {
+        "name": "negative: reused pixels",
+        "pass": true
+      },
+      {
+        "name": "negative: cross-stage identity",
+        "pass": true
+      },
+      {
+        "name": "negative: known/unknown overlap",
+        "pass": true
+      },
+      {
+        "name": "negative: insufficient enrollment",
+        "pass": true
+      },
+      {
+        "name": "two ASF-failed JPEGs retained as final unknown",
+        "pass": true
+      }
+    ]
+  },
+  "model_version_reference": {
+    "sha256": "26f1432e29721a4d1e881164a62db603a968a5aa3c0e505afcba29c59668d99b",
+    "schema": "facenet-mtcnn-enrollment/1",
+    "detector_config": {
+      "device": "cpu",
+      "min_face_size": 20,
+      "factor": 0.709,
+      "thresholds": [
+        0.6,
+        0.7,
+        0.7
+      ],
+      "batch_size": 256
+    },
+    "reference_only": true,
+    "models_loaded": false,
+    "inference_executed": false,
+    "must_match_future_actual_detector": true
+  }
+}
