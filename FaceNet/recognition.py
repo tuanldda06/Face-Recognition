@@ -1,3 +1,12 @@
+"""Điều phối nhận diện ảnh đã alignment, giữ luồng của notebook 10.
+
+Caller cung cấp model đã nạp và registry trong RAM. Nếu dùng SQLite, caller gọi
+database.load_registered_embeddings(db_path, expected_model_version) trước;
+reader kiểm tra version và chỉ đọc. Registry truyền trực tiếp không mang metadata
+version: caller chịu trách nhiệm về cấu hình embedding/alignment tương thích.
+Không mặc định registry IMM/ASF tương thích MTCNN. Threshold luôn tường minh.
+Module không tự nạp model, đọc database, sửa ảnh hoặc thực hiện I/O nghiệp vụ.
+"""
 
 from __future__ import annotations
 

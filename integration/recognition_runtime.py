@@ -5,7 +5,7 @@ from pathlib import Path
 
 import numpy as np
 
-from facenet_recognition.matching import validate_threshold
+from FaceNet.matching import validate_threshold
 from . import recognition_pipeline
 
 V2_CONTROLLED_THRESHOLD = float.fromhex("0x1.54be2dd42d71dp-1")

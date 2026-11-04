@@ -1,4 +1,8 @@
+"""Tính template enrollment trong RAM, giữ nguyên hàm notebook 05/06.
 
+Chỉ nhận embedding đã trích xuất. Không đọc ảnh, gọi model, mở SQLite hoặc thực
+hiện I/O. Số embedding N > 0; chính sách 3 ảnh thuộc split/reader ở tầng khác.
+"""
 
 from __future__ import annotations
 

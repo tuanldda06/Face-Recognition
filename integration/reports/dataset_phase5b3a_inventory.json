@@ -1,0 +1,4552 @@
+{
+  "phase": "5B.3A",
+  "scope": "Only the three named project roots, excluding .venv/.git/cache; not entire D drive.",
+  "source": "IMM technical report / existing source manifests; OpenIMAJ download history retained.",
+  "published_full_dataset": {
+    "identities": 40,
+    "images": 240,
+    "images_per_identity": 6,
+    "source": "https://www2.imm.dtu.dk/pubdb/edoc/imm3160.pdf",
+    "not_local_availability_evidence": true
+  },
+  "local_imm": {
+    "identities": 13,
+    "raw_jpeg": 73,
+    "asf": 73,
+    "asf_aligned_png": 71,
+    "full_dataset_local": false,
+    "raw_images_per_identity": {
+      "IMM:01": 5,
+      "IMM:05": 5,
+      "IMM:06": 5,
+      "IMM:07": 5,
+      "IMM:08": 5,
+      "IMM:09": 6,
+      "IMM:10": 6,
+      "IMM:11": 6,
+      "IMM:12": 6,
+      "IMM:13": 6,
+      "IMM:14": 6,
+      "IMM:15": 6,
+      "IMM:16": 6
+    }
+  },
+  "group_summary": {
+    "imm_known_asf_png": {
+      "images": 25,
+      "dimensions": {
+        "160x160x3": 25
+      },
+      "actual_formats": {
+        "PNG": 25
+      },
+      "readable": 25,
+      "use_in_primary_evaluation": false,
+      "local_directories": [
+        "D:\\Facenet-Recognition\\data\\processed_faces_imm\\person_01",
+        "D:\\Facenet-Recognition\\data\\processed_faces_imm\\person_02",
+        "D:\\Facenet-Recognition\\data\\processed_faces_imm\\person_03",
+        "D:\\Facenet-Recognition\\data\\processed_faces_imm\\person_04",
+        "D:\\Facenet-Recognition\\data\\processed_faces_imm\\person_05"
+      ],
+      "dataset_name": "IMM Face Database",
+      "source": "Existing IMM source manifests; DTU report https://www2.imm.dtu.dk/pubdb/edoc/imm3160.pdf",
+      "identity_count": 5,
+      "images_per_identity": {
+        "IMM:01": 5,
+        "IMM:05": 5,
+        "IMM:06": 5,
+        "IMM:07": 5,
+        "IMM:08": 5
+      },
+      "identity_label_convention": "person_01..05 are aliases for IMM 01/05/06/07/08, not consecutive IMM IDs",
+      "identity_label_status": "Consistent with source manifests and ASF hosts; no visual identity verification or automatic relabeling",
+      "image_state": "Derived ASF-aligned PNG; same source identity and photo",
+      "role_suitability": {
+        "enrollment": "Excluded: ASF alignment incompatible with primary MTCNN evaluation",
+        "genuine_query": "Excluded: ASF alignment incompatible with primary MTCNN evaluation",
+        "unknown_impostor_query": "Excluded: ASF alignment incompatible with primary MTCNN evaluation"
+      },
+      "exact_duplicate_within_group": false,
+      "identical_decoded_pixels_within_group": false,
+      "cross_group_relationship": "One-to-one source/ASF-derived relationships, not independent photos; see leakage report"
+    },
+    "imm_known_raw": {
+      "images": 25,
+      "dimensions": {
+        "480x640x3": 25
+      },
+      "actual_formats": {
+        "JPEG": 25
+      },
+      "readable": 25,
+      "use_in_primary_evaluation": true,
+      "local_directories": [
+        "D:\\Facenet-Recognition\\data\\sample_faces\\person_01",
+        "D:\\Facenet-Recognition\\data\\sample_faces\\person_02",
+        "D:\\Facenet-Recognition\\data\\sample_faces\\person_03",
+        "D:\\Facenet-Recognition\\data\\sample_faces\\person_04",
+        "D:\\Facenet-Recognition\\data\\sample_faces\\person_05"
+      ],
+      "dataset_name": "IMM Face Database",
+      "source": "Existing IMM source manifests; DTU report https://www2.imm.dtu.dk/pubdb/edoc/imm3160.pdf",
+      "identity_count": 5,
+      "images_per_identity": {
+        "IMM:01": 5,
+        "IMM:05": 5,
+        "IMM:06": 5,
+        "IMM:07": 5,
+        "IMM:08": 5
+      },
+      "identity_label_convention": "person_01..05 are aliases for IMM 01/05/06/07/08, not consecutive IMM IDs",
+      "identity_label_status": "Consistent with source manifests and ASF hosts; no visual identity verification or automatic relabeling",
+      "image_state": "Original JPEG; future MTCNN alignment required",
+      "role_suitability": {
+        "enrollment": "Candidate after deterministic split; unknown requires exclusion from corresponding gallery",
+        "genuine_query": "Candidate after deterministic split; unknown requires exclusion from corresponding gallery",
+        "unknown_impostor_query": "Candidate after deterministic split; unknown requires exclusion from corresponding gallery"
+      },
+      "exact_duplicate_within_group": false,
+      "identical_decoded_pixels_within_group": false,
+      "cross_group_relationship": "One-to-one source/ASF-derived relationships, not independent photos; see leakage report"
+    },
+    "imm_unknown_asf_png": {
+      "images": 46,
+      "dimensions": {
+        "160x160x3": 46
+      },
+      "actual_formats": {
+        "PNG": 46
+      },
+      "readable": 46,
+      "use_in_primary_evaluation": false,
+      "local_directories": [
+        "D:\\Facenet-Recognition\\data\\processed_unknown_faces_imm\\imm_09",
+        "D:\\Facenet-Recognition\\data\\processed_unknown_faces_imm\\imm_10",
+        "D:\\Facenet-Recognition\\data\\processed_unknown_faces_imm\\imm_11",
+        "D:\\Facenet-Recognition\\data\\processed_unknown_faces_imm\\imm_12",
+        "D:\\Facenet-Recognition\\data\\processed_unknown_faces_imm\\imm_13",
+        "D:\\Facenet-Recognition\\data\\processed_unknown_faces_imm\\imm_14",
+        "D:\\Facenet-Recognition\\data\\processed_unknown_faces_imm\\imm_15",
+        "D:\\Facenet-Recognition\\data\\processed_unknown_faces_imm\\imm_16"
+      ],
+      "dataset_name": "IMM Face Database",
+      "source": "Existing IMM source manifests; DTU report https://www2.imm.dtu.dk/pubdb/edoc/imm3160.pdf",
+      "identity_count": 8,
+      "images_per_identity": {
+        "IMM:09": 6,
+        "IMM:10": 6,
+        "IMM:11": 6,
+        "IMM:12": 6,
+        "IMM:13": 6,
+        "IMM:14": 5,
+        "IMM:15": 5,
+        "IMM:16": 6
+      },
+      "identity_label_convention": "unknown_imm_NN matches original IMM NN",
+      "identity_label_status": "Consistent with source manifests and ASF hosts; no visual identity verification or automatic relabeling",
+      "image_state": "Derived ASF-aligned PNG; same source identity and photo",
+      "role_suitability": {
+        "enrollment": "Excluded: ASF alignment incompatible with primary MTCNN evaluation",
+        "genuine_query": "Excluded: ASF alignment incompatible with primary MTCNN evaluation",
+        "unknown_impostor_query": "Excluded: ASF alignment incompatible with primary MTCNN evaluation"
+      },
+      "exact_duplicate_within_group": false,
+      "identical_decoded_pixels_within_group": false,
+      "cross_group_relationship": "One-to-one source/ASF-derived relationships, not independent photos; see leakage report"
+    },
+    "imm_unknown_raw": {
+      "images": 48,
+      "dimensions": {
+        "480x640x3": 48
+      },
+      "actual_formats": {
+        "JPEG": 48
+      },
+      "readable": 48,
+      "use_in_primary_evaluation": true,
+      "local_directories": [
+        "D:\\Facenet-Recognition\\data\\unknown_faces_imm\\imm_09",
+        "D:\\Facenet-Recognition\\data\\unknown_faces_imm\\imm_10",
+        "D:\\Facenet-Recognition\\data\\unknown_faces_imm\\imm_11",
+        "D:\\Facenet-Recognition\\data\\unknown_faces_imm\\imm_12",
+        "D:\\Facenet-Recognition\\data\\unknown_faces_imm\\imm_13",
+        "D:\\Facenet-Recognition\\data\\unknown_faces_imm\\imm_14",
+        "D:\\Facenet-Recognition\\data\\unknown_faces_imm\\imm_15",
+        "D:\\Facenet-Recognition\\data\\unknown_faces_imm\\imm_16"
+      ],
+      "dataset_name": "IMM Face Database",
+      "source": "Existing IMM source manifests; DTU report https://www2.imm.dtu.dk/pubdb/edoc/imm3160.pdf",
+      "identity_count": 8,
+      "images_per_identity": {
+        "IMM:09": 6,
+        "IMM:10": 6,
+        "IMM:11": 6,
+        "IMM:12": 6,
+        "IMM:13": 6,
+        "IMM:14": 6,
+        "IMM:15": 6,
+        "IMM:16": 6
+      },
+      "identity_label_convention": "unknown_imm_NN matches original IMM NN",
+      "identity_label_status": "Consistent with source manifests and ASF hosts; no visual identity verification or automatic relabeling",
+      "image_state": "Original JPEG; future MTCNN alignment required",
+      "role_suitability": {
+        "enrollment": "Candidate after deterministic split; unknown requires exclusion from corresponding gallery",
+        "genuine_query": "Candidate after deterministic split; unknown requires exclusion from corresponding gallery",
+        "unknown_impostor_query": "Candidate after deterministic split; unknown requires exclusion from corresponding gallery"
+      },
+      "exact_duplicate_within_group": false,
+      "identical_decoded_pixels_within_group": false,
+      "cross_group_relationship": "One-to-one source/ASF-derived relationships, not independent photos; see leakage report"
+    },
+    "integration_test_fixture": {
+      "images": 2,
+      "dimensions": {
+        "409x666x4": 1,
+        "160x160x3": 1
+      },
+      "actual_formats": {
+        "PNG": 2
+      },
+      "readable": 2,
+      "use_in_primary_evaluation": false,
+      "local_directories": [
+        "D:\\Face-Recognition-System\\tests\\fixtures"
+      ],
+      "dataset_name": "MTCNN local artifacts / integration fixtures",
+      "source": "Existing MTCNN project / tests/fixtures/MANIFEST.json where available",
+      "identity_count": null,
+      "images_per_identity": null,
+      "identity_label_status": "NOT VERIFIED; requires manual review and provenance before identity evaluation",
+      "image_state": "Test fixture byte copies, not independent samples",
+      "role_suitability": {
+        "enrollment": "Excluded until manual identity/provenance review",
+        "genuine_query": "Excluded until manual identity/provenance review",
+        "unknown_impostor_query": "Excluded until manual identity/provenance review"
+      },
+      "duplicate_assessment": "Two exact/decoded-pixel groups connect demo and aligned face_1 to the two integration fixtures; see leakage report"
+    },
+    "mtcnn_aligned_output_unlabeled": {
+      "images": 5,
+      "dimensions": {
+        "160x160x3": 5
+      },
+      "actual_formats": {
+        "PNG": 5
+      },
+      "readable": 5,
+      "use_in_primary_evaluation": false,
+      "local_directories": [
+        "D:\\MTCNN\\aligned_faces"
+      ],
+      "dataset_name": "MTCNN local artifacts / integration fixtures",
+      "source": "Existing MTCNN project / tests/fixtures/MANIFEST.json where available",
+      "identity_count": null,
+      "images_per_identity": null,
+      "identity_label_status": "NOT VERIFIED; requires manual review and provenance before identity evaluation",
+      "image_state": "Claimed MTCNN-aligned output, no source/identity manifest",
+      "role_suitability": {
+        "enrollment": "Excluded until manual identity/provenance review",
+        "genuine_query": "Excluded until manual identity/provenance review",
+        "unknown_impostor_query": "Excluded until manual identity/provenance review"
+      },
+      "duplicate_assessment": "Two exact/decoded-pixel groups connect demo and aligned face_1 to the two integration fixtures; see leakage report"
+    },
+    "mtcnn_unlabeled_demo_image": {
+      "images": 1,
+      "dimensions": {
+        "409x666x4": 1
+      },
+      "actual_formats": {
+        "PNG": 1
+      },
+      "readable": 1,
+      "use_in_primary_evaluation": false,
+      "local_directories": [
+        "D:\\MTCNN\\MTCNN"
+      ],
+      "dataset_name": "MTCNN local artifacts / integration fixtures",
+      "source": "Existing MTCNN project / tests/fixtures/MANIFEST.json where available",
+      "identity_count": null,
+      "images_per_identity": null,
+      "identity_label_status": "NOT VERIFIED; requires manual review and provenance before identity evaluation",
+      "image_state": "Demo/output with unverified identity/provenance",
+      "role_suitability": {
+        "enrollment": "Excluded until manual identity/provenance review",
+        "genuine_query": "Excluded until manual identity/provenance review",
+        "unknown_impostor_query": "Excluded until manual identity/provenance review"
+      },
+      "duplicate_assessment": "Two exact/decoded-pixel groups connect demo and aligned face_1 to the two integration fixtures; see leakage report"
+    },
+    "unverified_demo_output": {
+      "images": 1,
+      "dimensions": {
+        "675x1200x3": 1
+      },
+      "actual_formats": {
+        "JPEG": 1
+      },
+      "readable": 1,
+      "use_in_primary_evaluation": false,
+      "local_directories": [
+        "D:\\MTCNN"
+      ],
+      "dataset_name": "MTCNN local artifacts / integration fixtures",
+      "source": "Existing MTCNN project / tests/fixtures/MANIFEST.json where available",
+      "identity_count": null,
+      "images_per_identity": null,
+      "identity_label_status": "NOT VERIFIED; requires manual review and provenance before identity evaluation",
+      "image_state": "Demo/output with unverified identity/provenance",
+      "role_suitability": {
+        "enrollment": "Excluded until manual identity/provenance review",
+        "genuine_query": "Excluded until manual identity/provenance review",
+        "unknown_impostor_query": "Excluded until manual identity/provenance review"
+      },
+      "duplicate_assessment": "Two exact/decoded-pixel groups connect demo and aligned face_1 to the two integration fixtures; see leakage report"
+    }
+  },
+  "image_file_count": 153,
+  "all_images_readable": true,
+  "label_policy": "Original labels retained; IMM:NN references resolved from manifest/filename and checked against data/README.md mapping. No automatic relabeling.",
+  "original_identity_labels": [
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_01/01-1m.jpg",
+      "source_sha256": "8d80606a0a8bde37c87fab0ca9f7853fc885b0beea8fa22e6ae67f36ce904f8f",
+      "dataset_identity_reference": "IMM:01",
+      "original_label": "person_01",
+      "image_type": 1,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_01/01-2m.jpg",
+      "source_sha256": "9fbc04cc45863bfaa34b32d257994c72b8e002838e7a72dcd2ca1271755e9f80",
+      "dataset_identity_reference": "IMM:01",
+      "original_label": "person_01",
+      "image_type": 2,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_01/01-3m.jpg",
+      "source_sha256": "f0c21950fe4923120d0841e25b09952a1ee5fad9c5c218aade1c546f819e1543",
+      "dataset_identity_reference": "IMM:01",
+      "original_label": "person_01",
+      "image_type": 3,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_01/01-4m.jpg",
+      "source_sha256": "d4562dd289cdc32c6c5b1138d5a31431c9dc9307715046eff07538f01f9609b7",
+      "dataset_identity_reference": "IMM:01",
+      "original_label": "person_01",
+      "image_type": 4,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_01/01-5m.jpg",
+      "source_sha256": "d5ce081787f87b796a96f15411286842538bd11d8bd7afea93e1e0851e84d6b0",
+      "dataset_identity_reference": "IMM:01",
+      "original_label": "person_01",
+      "image_type": 5,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_02/05-1m.jpg",
+      "source_sha256": "163a2495887ee5d6048fd5ad5230a10fd526f77971939888d029171781e88e6b",
+      "dataset_identity_reference": "IMM:05",
+      "original_label": "person_02",
+      "image_type": 1,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_02/05-2m.jpg",
+      "source_sha256": "575e23f15384632e0236ea32dda7894f93919b389fe5d272b521a72ba8ff5bc9",
+      "dataset_identity_reference": "IMM:05",
+      "original_label": "person_02",
+      "image_type": 2,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_02/05-3m.jpg",
+      "source_sha256": "5fd6e05b85ad1ac9e5ca857a1e46ab43befc4ae3e977d1dd2c88a0b9b64dd6cf",
+      "dataset_identity_reference": "IMM:05",
+      "original_label": "person_02",
+      "image_type": 3,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_02/05-4m.jpg",
+      "source_sha256": "86e6a83e83220f2a2ebd10ab99426a0968d70c9adf957a17d1717b6092ccbae1",
+      "dataset_identity_reference": "IMM:05",
+      "original_label": "person_02",
+      "image_type": 4,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_02/05-5m.jpg",
+      "source_sha256": "b8e504057fe7296cc9b5044a87f7c35e7780bc89f56c98179aa9facdfd14cd79",
+      "dataset_identity_reference": "IMM:05",
+      "original_label": "person_02",
+      "image_type": 5,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_03/06-1m.jpg",
+      "source_sha256": "5838c33ad2b71b4d37d92572b785e2ae622b8edfdc4524958901ec0946a2242d",
+      "dataset_identity_reference": "IMM:06",
+      "original_label": "person_03",
+      "image_type": 1,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_03/06-2m.jpg",
+      "source_sha256": "68fb924f13dcfeab307eb81e734d7227a65bf01d3f6d3c6746714e536468297f",
+      "dataset_identity_reference": "IMM:06",
+      "original_label": "person_03",
+      "image_type": 2,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_03/06-3m.jpg",
+      "source_sha256": "cfd96a2d61cf893a3ca409c43569229764b830da337715ef818cebb1c8413480",
+      "dataset_identity_reference": "IMM:06",
+      "original_label": "person_03",
+      "image_type": 3,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_03/06-4m.jpg",
+      "source_sha256": "5c9085746325d3fc0d7057878c30adb1ae62f4dcaf3a0712e919c1a2335c0571",
+      "dataset_identity_reference": "IMM:06",
+      "original_label": "person_03",
+      "image_type": 4,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_03/06-5m.jpg",
+      "source_sha256": "cd32975f028e43a293727cd1d8d9532a66ca7603f3f84ab69cd26e9335c7dcaa",
+      "dataset_identity_reference": "IMM:06",
+      "original_label": "person_03",
+      "image_type": 5,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_04/07-1m.jpg",
+      "source_sha256": "6c63588f0e614cd389b2e2095620f6cac834a55304f73948250e9a903b038e2d",
+      "dataset_identity_reference": "IMM:07",
+      "original_label": "person_04",
+      "image_type": 1,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_04/07-2m.jpg",
+      "source_sha256": "e77d4cf8d921ea9389c45277029fb623cdda9a658b66590a172c4083f06799f9",
+      "dataset_identity_reference": "IMM:07",
+      "original_label": "person_04",
+      "image_type": 2,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_04/07-3m.jpg",
+      "source_sha256": "ba713bca0b8ba4c2fe872b92aea3fa03d2393f99eadedfde1983b16c7a8ee15f",
+      "dataset_identity_reference": "IMM:07",
+      "original_label": "person_04",
+      "image_type": 3,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_04/07-4m.jpg",
+      "source_sha256": "72d30c713aadc7d409a049b9621a6ad643826dcc068bbb3e08f409b0183d1cda",
+      "dataset_identity_reference": "IMM:07",
+      "original_label": "person_04",
+      "image_type": 4,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_04/07-5m.jpg",
+      "source_sha256": "2413aec652d86e5e1509391654bb0b0d0c2e79a3bd2b808cb8eb91454fe72ba0",
+      "dataset_identity_reference": "IMM:07",
+      "original_label": "person_04",
+      "image_type": 5,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_05/08-1f.jpg",
+      "source_sha256": "058e2c53bfa6b2495c591f1039ffe27c3c7512db41e90cabb6d4f950c7e11349",
+      "dataset_identity_reference": "IMM:08",
+      "original_label": "person_05",
+      "image_type": 1,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_05/08-2f.jpg",
+      "source_sha256": "f43b61a4f31b02d4d94b4937ae20f3a34a0e93582791da5ff7979ce0d6ded8e6",
+      "dataset_identity_reference": "IMM:08",
+      "original_label": "person_05",
+      "image_type": 2,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_05/08-3f.jpg",
+      "source_sha256": "6610d0329f62e7f8600fceaa509cec539416b00eb0bccb520c74d255977d2882",
+      "dataset_identity_reference": "IMM:08",
+      "original_label": "person_05",
+      "image_type": 3,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_05/08-4f.jpg",
+      "source_sha256": "717301e0a23d4f2cb655f88bfc55e4d6e6a17f20ca0cb471b8b408a38513b3f8",
+      "dataset_identity_reference": "IMM:08",
+      "original_label": "person_05",
+      "image_type": 4,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_05/08-5f.jpg",
+      "source_sha256": "b40b43dcfde77c6c425c6ecf1e3ef7ad5bf736805d8aef56c58c2b25d37ae95c",
+      "dataset_identity_reference": "IMM:08",
+      "original_label": "person_05",
+      "image_type": 5,
+      "historical_partition": "known_gallery_3_query_2"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_09/09-1m.jpg",
+      "source_sha256": "f5b4312cbc22b3daef94c87deb19cb220baeb3bae2a2b83cb27e0e910fe44147",
+      "dataset_identity_reference": "IMM:09",
+      "original_label": "unknown_imm_09",
+      "image_type": 1,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_09/09-2m.jpg",
+      "source_sha256": "60cdfb298c1af545fac95e5fb6e4a0651ea54e83da5bba9679099cbd63958704",
+      "dataset_identity_reference": "IMM:09",
+      "original_label": "unknown_imm_09",
+      "image_type": 2,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_09/09-3m.jpg",
+      "source_sha256": "c2e490f1af9c0bcccb1584efe5baea5b0fda730585cb4f5f335f13752e6d2e15",
+      "dataset_identity_reference": "IMM:09",
+      "original_label": "unknown_imm_09",
+      "image_type": 3,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_09/09-4m.jpg",
+      "source_sha256": "cbfd4f9c6662c3ace07ac0797d02be52872953c9acaa5c445459cba87fab5130",
+      "dataset_identity_reference": "IMM:09",
+      "original_label": "unknown_imm_09",
+      "image_type": 4,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_09/09-5m.jpg",
+      "source_sha256": "04ac0db7b93eb59c2f02ef688c445fb0ab56cc700bedf060ec3bd080eef39140",
+      "dataset_identity_reference": "IMM:09",
+      "original_label": "unknown_imm_09",
+      "image_type": 5,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_09/09-6m.jpg",
+      "source_sha256": "1e5f0a234e2376afd964e220fd1943d5c3e081d68eea5247baa4ae0951071988",
+      "dataset_identity_reference": "IMM:09",
+      "original_label": "unknown_imm_09",
+      "image_type": 6,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_10/10-1m.jpg",
+      "source_sha256": "bb27f1fe17e6c2ba1b3d2089dd914097e34213c4df76bcacc6b3ea0621830f7e",
+      "dataset_identity_reference": "IMM:10",
+      "original_label": "unknown_imm_10",
+      "image_type": 1,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_10/10-2m.jpg",
+      "source_sha256": "cf2121032725a6a5c927bcac52281e8ec4865b23812c8ac15c9af7bfa0388f0e",
+      "dataset_identity_reference": "IMM:10",
+      "original_label": "unknown_imm_10",
+      "image_type": 2,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_10/10-3m.jpg",
+      "source_sha256": "7909e5f2cd0200c56d9ff44479fc11715c29cfcdb21618e776daa46fb97a3e1e",
+      "dataset_identity_reference": "IMM:10",
+      "original_label": "unknown_imm_10",
+      "image_type": 3,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_10/10-4m.jpg",
+      "source_sha256": "6119f83202cce5c9b76a9d9979d047a0fb169bbb9bf9e3ff82ca548a6741b1ae",
+      "dataset_identity_reference": "IMM:10",
+      "original_label": "unknown_imm_10",
+      "image_type": 4,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_10/10-5m.jpg",
+      "source_sha256": "49469ef5c8e3840770d72a3ffd6155738fd5b4c247ab090b9ea699848770a2b7",
+      "dataset_identity_reference": "IMM:10",
+      "original_label": "unknown_imm_10",
+      "image_type": 5,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_10/10-6m.jpg",
+      "source_sha256": "ee56e9bbebebe370400aeeb3957f2d37f1e033ec1df098489d2d0aa964fd20df",
+      "dataset_identity_reference": "IMM:10",
+      "original_label": "unknown_imm_10",
+      "image_type": 6,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_11/11-1m.jpg",
+      "source_sha256": "79f78214d7e469bee667b26704e28ebe5a2a2a34a21b4ed6f2628cb1f8005366",
+      "dataset_identity_reference": "IMM:11",
+      "original_label": "unknown_imm_11",
+      "image_type": 1,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_11/11-2m.jpg",
+      "source_sha256": "d532a72aebe782bc354036ed8c0af9b27a25268a80b1132d22c0d9ce83410884",
+      "dataset_identity_reference": "IMM:11",
+      "original_label": "unknown_imm_11",
+      "image_type": 2,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_11/11-3m.jpg",
+      "source_sha256": "f5e3b4bd4c8100e1d2493f30db95da3c3fec17f9b80b53009ec0bcca64c9bb84",
+      "dataset_identity_reference": "IMM:11",
+      "original_label": "unknown_imm_11",
+      "image_type": 3,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_11/11-4m.jpg",
+      "source_sha256": "2822fd7bd1bb22d2feb52d0fcb208a0246ede2f9a2d6616618b0c1f4f31a0869",
+      "dataset_identity_reference": "IMM:11",
+      "original_label": "unknown_imm_11",
+      "image_type": 4,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_11/11-5m.jpg",
+      "source_sha256": "a29e745342e42d6f2c5acf03013cf9be9ca38e87fe539f8c2425c69d5d02540b",
+      "dataset_identity_reference": "IMM:11",
+      "original_label": "unknown_imm_11",
+      "image_type": 5,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_11/11-6m.jpg",
+      "source_sha256": "02445b64e3a1e8bf7de4470290d78df3dd4e537a9dd64055c351b90f349816a4",
+      "dataset_identity_reference": "IMM:11",
+      "original_label": "unknown_imm_11",
+      "image_type": 6,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_12/12-1f.jpg",
+      "source_sha256": "3936428acdecb53c7fc313c145f7f3add2c2b89e5a0510727bd8ac0f175f12cc",
+      "dataset_identity_reference": "IMM:12",
+      "original_label": "unknown_imm_12",
+      "image_type": 1,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_12/12-2f.jpg",
+      "source_sha256": "d74f8fee38945fbfd47f56052e5dd86ca926811a1ce7e77fcfde4b4e06069a36",
+      "dataset_identity_reference": "IMM:12",
+      "original_label": "unknown_imm_12",
+      "image_type": 2,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_12/12-3f.jpg",
+      "source_sha256": "9dc85a2212ce1906c2810375a106a6914c0e2de97f9d4dd7aafb663a5744aff5",
+      "dataset_identity_reference": "IMM:12",
+      "original_label": "unknown_imm_12",
+      "image_type": 3,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_12/12-4f.jpg",
+      "source_sha256": "17d310e7fda51aa6d385cb9a8bc2748a9624b9090844b317ea505e32130cbe06",
+      "dataset_identity_reference": "IMM:12",
+      "original_label": "unknown_imm_12",
+      "image_type": 4,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_12/12-5f.jpg",
+      "source_sha256": "a29f76ca152c9bd183ac3934eb0be6144ebc2f0ec41556424cdc64276a8daf30",
+      "dataset_identity_reference": "IMM:12",
+      "original_label": "unknown_imm_12",
+      "image_type": 5,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_12/12-6f.jpg",
+      "source_sha256": "95f42d0d208951f82c6a470c6b4a00b963d11cfb053e1e7b0f84d24de2875a61",
+      "dataset_identity_reference": "IMM:12",
+      "original_label": "unknown_imm_12",
+      "image_type": 6,
+      "historical_partition": "calibration"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_13/13-1m.jpg",
+      "source_sha256": "8f8cfaecaecf5ed8d4d239a058f7e959a45b286fed3c765739eab6aae30ee379",
+      "dataset_identity_reference": "IMM:13",
+      "original_label": "unknown_imm_13",
+      "image_type": 1,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_13/13-2m.jpg",
+      "source_sha256": "987fe897cd348f1e0f963335f9d0820c0c8ed3dd3b071c371a81800971dd596e",
+      "dataset_identity_reference": "IMM:13",
+      "original_label": "unknown_imm_13",
+      "image_type": 2,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_13/13-3m.jpg",
+      "source_sha256": "3cfd2097ba61d926956bd4918c955e31a693755f26ce05fbfd4fa38cdea7b567",
+      "dataset_identity_reference": "IMM:13",
+      "original_label": "unknown_imm_13",
+      "image_type": 3,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_13/13-4m.jpg",
+      "source_sha256": "e4c0bedda11c9859ce4af6b146434f5d8146d4f0bab90a78dbee877aa8dde700",
+      "dataset_identity_reference": "IMM:13",
+      "original_label": "unknown_imm_13",
+      "image_type": 4,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_13/13-5m.jpg",
+      "source_sha256": "7ab0c72e713ca25ecb73044f7deb1fe0ee619d31ba7a9eab75c7e7f9c53e1112",
+      "dataset_identity_reference": "IMM:13",
+      "original_label": "unknown_imm_13",
+      "image_type": 5,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_13/13-6m.jpg",
+      "source_sha256": "4f035207bd7903237328319966e508dce2f71659f93a676eac89d2579897775c",
+      "dataset_identity_reference": "IMM:13",
+      "original_label": "unknown_imm_13",
+      "image_type": 6,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_14/14-1f.jpg",
+      "source_sha256": "e89c843715f9c3b75818bbde4df315dc9a58d9def35aa77c349d0b25af415a12",
+      "dataset_identity_reference": "IMM:14",
+      "original_label": "unknown_imm_14",
+      "image_type": 1,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_14/14-2f.jpg",
+      "source_sha256": "67d107560ef236ef4ac90093f57738e314be28306effa142536cafed8d4427da",
+      "dataset_identity_reference": "IMM:14",
+      "original_label": "unknown_imm_14",
+      "image_type": 2,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_14/14-3f.jpg",
+      "source_sha256": "16d2efd0c0c5f08f8b18f8d04c75287984b37c4a9f9f37a350c8f38abda267dd",
+      "dataset_identity_reference": "IMM:14",
+      "original_label": "unknown_imm_14",
+      "image_type": 3,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_14/14-4f.jpg",
+      "source_sha256": "ced5cc2c2689bd9c735aa47ec00af8343cacc881024f3f198ad9b981029aa815",
+      "dataset_identity_reference": "IMM:14",
+      "original_label": "unknown_imm_14",
+      "image_type": 4,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_14/14-5f.jpg",
+      "source_sha256": "493534bfa0c0cc2903f3cbb8949b957634e532aa9743c2c2f1c1c24f25001968",
+      "dataset_identity_reference": "IMM:14",
+      "original_label": "unknown_imm_14",
+      "image_type": 5,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_14/14-6f.jpg",
+      "source_sha256": "24e84820090bb114abe77ea84a88f48680bc1ce74d7435e72ca46d8a0e115a5f",
+      "dataset_identity_reference": "IMM:14",
+      "original_label": "unknown_imm_14",
+      "image_type": 6,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_15/15-1f.jpg",
+      "source_sha256": "f046e989a5e2b5bcd609064a2f8104e3afbbea08d1b9037c4128eadb0a92dba8",
+      "dataset_identity_reference": "IMM:15",
+      "original_label": "unknown_imm_15",
+      "image_type": 1,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_15/15-2f.jpg",
+      "source_sha256": "9c03b676a5001348f0de4d34f68a4a46a1ac751d1aefc33a9ac24d37b2bdce49",
+      "dataset_identity_reference": "IMM:15",
+      "original_label": "unknown_imm_15",
+      "image_type": 2,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_15/15-3f.jpg",
+      "source_sha256": "20edfbbc6942837f3fce1a4fd4604d6a264a4c9e5bbc32b66f2ac8cfcbcdb4a7",
+      "dataset_identity_reference": "IMM:15",
+      "original_label": "unknown_imm_15",
+      "image_type": 3,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_15/15-4f.jpg",
+      "source_sha256": "fd06206a89dc8517725b442908b7a57aabdea2b9f86c8b447196fbc8e4722f7b",
+      "dataset_identity_reference": "IMM:15",
+      "original_label": "unknown_imm_15",
+      "image_type": 4,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_15/15-5f.jpg",
+      "source_sha256": "74f015f6d71ab8908c65b01a3dbd22ea168424e5f5be35858d8dcc55af9240b2",
+      "dataset_identity_reference": "IMM:15",
+      "original_label": "unknown_imm_15",
+      "image_type": 5,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_15/15-6f.jpg",
+      "source_sha256": "fa117b493a97bf55e60404cddf7119cd1f0e4bb25e476ea96a735c45be5d757d",
+      "dataset_identity_reference": "IMM:15",
+      "original_label": "unknown_imm_15",
+      "image_type": 6,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_16/16-1m.jpg",
+      "source_sha256": "dc12e29ca4678a782d775547104564adf1842b3319ebf7b3bcea4f333f79c645",
+      "dataset_identity_reference": "IMM:16",
+      "original_label": "unknown_imm_16",
+      "image_type": 1,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_16/16-2m.jpg",
+      "source_sha256": "e7106e40599f527568b0e3c5249fe1282d9faafaf89d014d951a5d2516b44ccf",
+      "dataset_identity_reference": "IMM:16",
+      "original_label": "unknown_imm_16",
+      "image_type": 2,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_16/16-3m.jpg",
+      "source_sha256": "b660c6ce9fce49c7ec8698f6da3c84d2aca306d7c0ecf5416b578f5612d873bf",
+      "dataset_identity_reference": "IMM:16",
+      "original_label": "unknown_imm_16",
+      "image_type": 3,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_16/16-4m.jpg",
+      "source_sha256": "997248a43a1954c7a60e9f5636cd99726d21630f38bd30dad6ba988a5d07690a",
+      "dataset_identity_reference": "IMM:16",
+      "original_label": "unknown_imm_16",
+      "image_type": 4,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_16/16-5m.jpg",
+      "source_sha256": "034a954c89e67cd247c9fd00d7621611639b6d7aa3e0e88f0e4a2a138d2ca1b2",
+      "dataset_identity_reference": "IMM:16",
+      "original_label": "unknown_imm_16",
+      "image_type": 5,
+      "historical_partition": "evaluation"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_16/16-6m.jpg",
+      "source_sha256": "3036ac5f0d2015aa54d1d75c1a4f1eea70c616399de98da5b90baca1dc9c53bb",
+      "dataset_identity_reference": "IMM:16",
+      "original_label": "unknown_imm_16",
+      "image_type": 6,
+      "historical_partition": "evaluation"
+    }
+  ],
+  "images": [
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_01/01-1m.png",
+      "sha256": "0e6059f0c45dc98825eeb5ce74d89f9f4c4e431ce91eefb69f98898f84748c33",
+      "bytes": 53060,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "7206af4298ec94e062dc6a7be718eac64536434ac77a22bf2af587f2f57cebbf",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_01/01-2m.png",
+      "sha256": "09b22ba2a988f5f62e08d250a097c744fc157e662d556e26e7dada26df21840e",
+      "bytes": 53021,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "599318075a5c0ea4143a4b9ba1614434a8effde870ae8a8ed380340a00981504",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_01/01-3m.png",
+      "sha256": "5b636c28f322a8ee592e2c090534f19cd3bcc2f6781005e342c161ffa4092709",
+      "bytes": 52198,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "5b26ef0ae7fcf4b7281650db39108991b6898ddfb52e7f769ccc8a61d0c9d08c",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_01/01-4m.png",
+      "sha256": "d5981ee54a39cd8dc7f118e20f911ab0265c05c6f466f1c32dac0ac8b27a3f25",
+      "bytes": 51125,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "530f0ef8e4e05014c0ab2053f9d1d3efc16e8ffa1f27df21e266eb0ab60f14c5",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_01/01-5m.png",
+      "sha256": "d56e7225a0de3dc2a0d0001164d99bf2e19fc407c0ac6fc2bd7b63dcc0b0a82f",
+      "bytes": 55826,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "ad654b44120e5447ed05e646ecb1f7a603dfa2a8247dbe4acc35338de5ab3ac1",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_02/05-1m.png",
+      "sha256": "8ebde2449271656c17bf81e587719ce0b238dafcd6299274158c8c77b3c2b018",
+      "bytes": 49367,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "1fa4ce7adc0f695846ba81db319809d255d05a895895ec088e5cb3f0d6d20c17",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_02/05-2m.png",
+      "sha256": "2e2947bd9c1712498cf7286c25c08e69024ae69309c067d2107f68724944ed03",
+      "bytes": 49232,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "9b8fb777ffd9d0b9c98aaf6c3a157bc73baed37b5e6c872eae30493f9cb46658",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_02/05-3m.png",
+      "sha256": "f7d1c88ee44489d087f720d9a1cf5b842542352744854f73d9f59745cc37c747",
+      "bytes": 48991,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "46ad226f8ed8f525b192400124292d1fb8b7c78c8b0d48a738754d3a6bf661ab",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_02/05-4m.png",
+      "sha256": "6311c23db6e5f037deddefd0d4309f3f88a6f85bf97038000f048764e4259276",
+      "bytes": 48916,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "4890cf590950b334a65fbacc1b34a08b2caafbae1fa75f552e025f4a0800f611",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_02/05-5m.png",
+      "sha256": "cc13027939396b1a4e07802db54fc813edb2934e241d6f221fdcb051d2cda7d8",
+      "bytes": 51845,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "623e343ea05dd904b34fa2c3d20c07e5d0bd50c23363afdc4bdf6523d3df7294",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_03/06-1m.png",
+      "sha256": "c9c9018e401b8101c2c3122805e47b4253285f9f6fc6ac1fb8e6ad32feb92c25",
+      "bytes": 48203,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "f828d1e52c5452d406437c8ad123b8df2a99ce825ebcb1aacfc022ebac28024a",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_03/06-2m.png",
+      "sha256": "107c0e823603f01b944555575eeb2d83624de3be05cc0544d8d912ac155fde42",
+      "bytes": 48565,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "60a9be7d38e421fcaa4ac3dbfb6d058fa05ac82bba32b72e9c24cb973a9950c0",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_03/06-3m.png",
+      "sha256": "daffda0ed858416f19427d08b0b7751b872572cdf152c98e3f8e04176ede2c1b",
+      "bytes": 47988,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "f32b3b952cbcb1963784c62e2cbe1df1fc69100effd8494a2c0a717e695f5f05",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_03/06-4m.png",
+      "sha256": "9ac85ee5ef0c7b0a4fc30f76596776232058fd667908a9fb78eb99cbe283ffdc",
+      "bytes": 47900,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "bba77eab476b1eeb4371690313d51c7cc1313c300e469d5f4e64718fc5ed2591",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_03/06-5m.png",
+      "sha256": "8537c11c4a3dd2431147cdcad81c2a118d56ee4fa37887fe3898e19d6ddbfa10",
+      "bytes": 51159,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "c8fcaee3f821679d241630561233486a4f5f7ed6108cfc66469b43586c335f77",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_04/07-1m.png",
+      "sha256": "e0c708af1106db94363b379a1a96928ebd65cd4b6f9a51078379a28967def1cd",
+      "bytes": 49625,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "a02686f5368ee146872ce7166c5a66d2e293e52b39c93f7790b1122061cfdb5b",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_04/07-2m.png",
+      "sha256": "c34e34c198fa14c7fdd9f80ad4eb77bf04c127c2de59a76f1cdb327abd74ab05",
+      "bytes": 50395,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "6f15558cabf32c86d1acabd598508964dbd83db0506acdcdfbccd624aeb10664",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_04/07-3m.png",
+      "sha256": "d9bae21c40031e80f842282e1638206aeecc2fa6101e78fcb054ad0528f4f3a9",
+      "bytes": 49832,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "0e724c891a09a3eb2b15ee07f03ecf4899eeb292fad18fcd653b33d678fb5838",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_04/07-4m.png",
+      "sha256": "4690e70fb8edd4183ab38bf22956b97239907a90c11b87ac6551a90a6e174f05",
+      "bytes": 49603,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "541b86fc508f23fdc0869eabc421f5a24de3b3196ad5d3347980fab067147f1e",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_04/07-5m.png",
+      "sha256": "6b864f5b558195c9c243721f532299e211108ea0adabc1a576bfedbdbb9877f4",
+      "bytes": 50883,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "17d5570dc18820893104e30f49fb19bc6e55d58238597aa239e0af68dba0ac25",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_05/08-1f.png",
+      "sha256": "71f363ee795b7a2b938a7979fed397dd4425590bd213841cfb5d0aab2eb0689c",
+      "bytes": 50302,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "515ddd5e3842980f42d13e847081af54ebb6c90611006cacec490e12c5e8d482",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_05/08-2f.png",
+      "sha256": "640168265ec6555ca3a666cef0e9bb337f4a9d3604b73175bd08c40c1addfa70",
+      "bytes": 50351,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "067fa3b8b13ac4e3205346f06500b94266befe196fc4fbd09ddc98c2ef887c9a",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_05/08-3f.png",
+      "sha256": "63357bdd0da204a2fac076ad792af894e177eb051bc5a98f205391d821d982c3",
+      "bytes": 49188,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "31760eba7b98ad22a655a501deb386f0941cfebef87b1eb96ac7e3b943c68629",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_05/08-4f.png",
+      "sha256": "a0a37595162fea071ae3fcfb60b432de25775b07ccd47bab8138be3ee86c6a4c",
+      "bytes": 49262,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "804659e61147f767b8443c437f1edd4e1a83cdede16cae4c45c2a01cd18cd784",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/person_05/08-5f.png",
+      "sha256": "e20aa9b6d8e0bb14eb221400d15b7b01e8e38c3b6848cd8252d04169ddb732d1",
+      "bytes": 51758,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "04e8f47e7dbc3e40eeecadea7a810bf33fc6e71bd777200c0f43b5ad8a87ae97",
+      "actual_format": "PNG",
+      "category": "imm_known_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_09/09-1m.png",
+      "sha256": "05a0a412cb2e38825d7ec49ac49f69431754b9724fbd4782eedd649afa09ac53",
+      "bytes": 48964,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "8b2df3f23c63270b1b145a0fd15cd44ba325dafb0e716015f542a15987af3295",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_09/09-2m.png",
+      "sha256": "94066221e6f939b2227f154b27b9bd85434775f76666dedd1119b4989b829c60",
+      "bytes": 49417,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "1f0039256399fd52e4a8cb99e80011223c8473d37a1c1a6436b3d4590e027a21",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_09/09-3m.png",
+      "sha256": "aa2ec16839a43c5838413676471a324a9f6573fdea42714815116b47b3c379fa",
+      "bytes": 48079,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "88c1a27b9e43ae978c7ca0b0429810c269bdd1145944c1aef4dfa859bb707a03",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_09/09-4m.png",
+      "sha256": "011e9109bea011f6e5e39d772eb4a5afe55c2ca14e3cc3a9f4f674665c0e463c",
+      "bytes": 47591,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "5295d026a127caeb950829d9d6efaf095db05c668fe98e5c60d9ff04eabc2c58",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_09/09-5m.png",
+      "sha256": "ce6263bd9487e95463481612198c26cd18f79731d3eb8fef9de7077e17546400",
+      "bytes": 49612,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "4d5654a7e03371dbf12f3c075ffe193ebd832bc7b8d94a57ad0602b05c9daa08",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_09/09-6m.png",
+      "sha256": "2efd1e3a44105c4b763d56ac7a449c5373eda7e5a56963a4826c98f0f37570ab",
+      "bytes": 49484,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "bcf14bf12d898a4b9b05f04ba48b76888fde2cc7dca50db21b71da6bdc288ea5",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_10/10-1m.png",
+      "sha256": "20aff6b82e94d2560f9f6c31660fa6ee62dd2bc0d5996d1f279641109ea0da7a",
+      "bytes": 49386,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "a2083c407614a088a97966885b4d7917fcb252a48aa9c1e314d66b6779ba150f",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_10/10-2m.png",
+      "sha256": "2ad5b998bbea065a57f815e036a5372f27a0b7dc6a4796a6a04eb2f414996fea",
+      "bytes": 49176,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "c643ded2200618ace775cdb6c57d07df7a5883c414d5651e9bdfc16d6a0ac200",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_10/10-3m.png",
+      "sha256": "4ae780a6a8f6b885d74269ff1053f9da6d170525a3d92c6dbf2ec99f4012bf3f",
+      "bytes": 47673,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "1c8b39df0340c7ba05c1481aa678b7eb8bd289d0f9258396c1ccda3fa2704f15",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_10/10-4m.png",
+      "sha256": "e92937d2a67879cad443a84ed8cc0a93aaed5110a47e68c081db04cd0b783433",
+      "bytes": 47562,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "372292e98ff45eba688484b1fc935a98986ff5d8c3b2bf57fc9adfa83b7e9b54",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_10/10-5m.png",
+      "sha256": "30d2b4a2f1e0e87c1233032dc8fd6d5c31757ffbda9265a7259de79acfa1a3fa",
+      "bytes": 48781,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "1c72a782f1e1778528718d58da3df6c2df8d854d52cb7fb97adb1a41ced0e42e",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_10/10-6m.png",
+      "sha256": "6bcf495e5e125e9e83e123d97e80e0829bcd6778ab2684c5495cf8d485c3c27e",
+      "bytes": 47722,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "e59a3fcda8187831b62c110a0184093d4f2dc9ce985da86de9fa7244edc4dc0c",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_11/11-1m.png",
+      "sha256": "fae6540dbf87b389d95d9a394e8d340d6cc8b94d739368e80b574af0a89d72e6",
+      "bytes": 47318,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "1c1ddb8c76ff9bdf6d98362b265ce6da85e21b0f4f5703743b3c7a62e9a98bde",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_11/11-2m.png",
+      "sha256": "06d0c80d7c759baf0f1563526a2312d41d11d92cef51629c02c57a49b422277c",
+      "bytes": 47673,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "398ae42252ad746c83ae1a5c53dcc3ce9a09f1d1eec4ede0d10da02cdb32b8fc",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_11/11-3m.png",
+      "sha256": "d6acda4384f91de82041e2204a2fd2a3c909c7eed4163ea3ef3b37d3acc9d828",
+      "bytes": 46837,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "05318bfc3195a4aa1092fe05f1fd9e07e2e34a4a103e71c9de5d9fb755fe0b23",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_11/11-4m.png",
+      "sha256": "4d52cdd15f69ffa427b7d7ce0c978267ad2da9522180da6d53cb860154033f68",
+      "bytes": 46527,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "46c3bf09c6fbaa353323c62e35c2dc7d66f8234f5caa8f9b098c562af3f3fe6b",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_11/11-5m.png",
+      "sha256": "84354f8ed40d1babd4fb322dc9e98f2bf74b359fdef2686e8228853658eda870",
+      "bytes": 49205,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "5bcd82171b8ff84541fd0c3fa4a5c024c30797176f6145730dce124828db5cc5",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_11/11-6m.png",
+      "sha256": "93062d40f12a9765eb2afa1b8bfa697ff748fe79035ae399ca9e79bb95cb5c29",
+      "bytes": 47804,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "20eb6354fd65b45c53b093f6f8956228eb8847fdb285a3ab701cf21a0852be31",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_12/12-1f.png",
+      "sha256": "36ae989a2b9170332a0a894eb52cd8e656bb14f371acbe72031db6152b044e00",
+      "bytes": 51074,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "8c2cbc1392c9d32d7f7bc1e38f046c4d9c94c787aa89efe37aac98a50a6b3eed",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_12/12-2f.png",
+      "sha256": "6811e5953f18b92e4269bcfb62e68a6dc160b8b0d1c6f01e5df196c782f95759",
+      "bytes": 51432,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "d61b1176f1b366e1c65fdd80ccacadc3440e4e3cde6c27dd8785be13ca3e7b6c",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_12/12-3f.png",
+      "sha256": "e231a3a9ecdfd4406ada9950a74dc37ca25251289883c3dca9c97329f5a4cbac",
+      "bytes": 49000,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "c28c12e499546218dd71078d801b5f30b9e79d1eb97731e7ffbbca4dd146fbe7",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_12/12-4f.png",
+      "sha256": "de9c53c1d32074c0f4ce319863a37379bd2627f2e520b9643b180cddb8641764",
+      "bytes": 49115,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "46c01929554bbcaa9c570045777fa62356c277f4178d64732e69bd0b9f18f2cb",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_12/12-5f.png",
+      "sha256": "69d0fc79bfda51defd969a32741ee0ed269bf3e9056b0adb9c4b9c23931186c3",
+      "bytes": 51970,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "ea265a334490f3f0936750f47000ad50d0d3d9353eef8522979d03a512f569c4",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_12/12-6f.png",
+      "sha256": "466b4a67a49f2808a6cd625a1330dac141ca6c6fad3e6873a87c11ae8c58ea26",
+      "bytes": 50887,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "502abdf56e7e25df3144e62ddbe7d0d2c819bce42af730650db61e257089cf7c",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_13/13-1m.png",
+      "sha256": "a4b1a48e9ec48051d97019a13daf72f58faaefd51496f59d67f11e03f5305459",
+      "bytes": 48235,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "28ded4c8e18319dbc78a1c36384871ec42d59fc8ab7431eba72560c703842e38",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_13/13-2m.png",
+      "sha256": "8e1a2efce9fb478ee517eb68e8fc579ae444fdc25905f0b1cff2e850bcb6152c",
+      "bytes": 49349,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "a8cc2c49146960cde6867024e30113f80d5eac40ae51759ac95e77cf42677f72",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_13/13-3m.png",
+      "sha256": "88849ffc0afa7fa6d8712c3cabdc2f5bbefaaec91dd77ca4579b733478440684",
+      "bytes": 47633,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "cbf8f68dbb76adfe962d669b2ef7186126c5149ef68fbd097d949bbe6fd29ce7",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_13/13-4m.png",
+      "sha256": "f27769fb7ed87f6822933ed4d651b93fe7f862957ca208838fd4a5636c9c1c60",
+      "bytes": 47365,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "d03eb5bb762acd3197c8053a00281600709219ac0532f667662c187d3c21a931",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_13/13-5m.png",
+      "sha256": "a3dec4756b5658cc51c1a4d377d07f5726bbe70b57fdb36129f217d128606461",
+      "bytes": 51076,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "6c9c6be8cf23dafb64795d2c9f87b9a0faaa312a2e85832ba6bc3d54f0cdbb52",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_13/13-6m.png",
+      "sha256": "6872a43a3f2e37a46a694af0db5357661270d27d49afdc6b4f97d58f22c0e107",
+      "bytes": 48063,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "745b93bb05c4be993ef1f974fff40ebba57428f7d6f5361c7e8d4a26e50c61c1",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_14/14-1f.png",
+      "sha256": "521f458b5a42a322aafab2b3db4d26fd7954ca35c97e36bcd7c8ac3a7585848e",
+      "bytes": 48224,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "6b175122c18ec5f7ac299f95fb9f82db1c7f13f5b10e434bcb29737898046625",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_14/14-2f.png",
+      "sha256": "b3a9506ab4579f0c3d63084857c54d1b4e847c2677273ca67ace5ebd06af110e",
+      "bytes": 48987,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "8b123906e520c6a13644972ba8427d423d175c1369dce98a7d3d8998adb8a6e4",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_14/14-3f.png",
+      "sha256": "e21eff785ed392088cbb07c48788fdeaa243e941fbd90a4b8280c0fbf46bebe7",
+      "bytes": 47711,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "b09e5fd6e74d4d7b1acd30233d60738591d5f0a3298c42723992da2ebda2e601",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_14/14-4f.png",
+      "sha256": "5b2ba24c397ced265c17868531489c1b15bd18c5bf2eaf6f861e23d14d71dedc",
+      "bytes": 47305,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "62f5355ac5bd43a88e67d6abc44206d3a8525e851f8584353cf44caedd344975",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_14/14-6f.png",
+      "sha256": "d246784b6aa14bb0a8435a50d54f3cbe25ff3756395a280a24e675444dea3c73",
+      "bytes": 49579,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "64f49fa1233372d048436f7fb2603eb20710334051d284c984a657a9979b7e5d",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_15/15-1f.png",
+      "sha256": "65ca065b06230d97dfb343e2eb186ec1de92f448018fc5360e85070ec77cb79e",
+      "bytes": 46080,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "ac88e8f27f5c337787c99dc3ea952dce9bea55c809139ce95cb05b34ab9e2a81",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_15/15-2f.png",
+      "sha256": "d2bb0ae83079700ddd2311f98aa980b0ff4c83f2b67602d6470f264828bd445a",
+      "bytes": 46805,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "8816f6c7527ce6bb1dd5c3f7d535f6842845037e2ebe6aa98ba3033798f3165c",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_15/15-3f.png",
+      "sha256": "b8182735033b3ee289ed61cff87f1310ea4bb855d7ea2bf632be1ad898861a58",
+      "bytes": 46873,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "ad658665478a09613003957d0a4f2c659bff2b7db3c0fa0ec44db95533e503e9",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_15/15-4f.png",
+      "sha256": "621fca2a7c635069b2c0c7e09b86fedc0b2fbb6c492fad497991e3dcd90e00df",
+      "bytes": 45903,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "ac0c3b7be443e79384ce368f35362adf5b15b4d33a490dea7574e142df75f815",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_15/15-6f.png",
+      "sha256": "098acce77f426ee97ad775ca41deb9e2ff78de3acd61ec2a3b21eadeba8c82b9",
+      "bytes": 48368,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "4f3493dda72c7b7d9845fb106c679ce9a72e6c098ca77a870c65c5096ac125e9",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_16/16-1m.png",
+      "sha256": "8691a9d27783b2cca34404c1b411b4b44e5445b4de49bc17df019924066dfde7",
+      "bytes": 48679,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "d91a119fee7e5b3707af0e179fe80db69f95e2cc0e48d0c3993f6c1d7b393f4f",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_16/16-2m.png",
+      "sha256": "d3745af9477fbb5e4a1e511586fdcf83c246e6ab75edc7a6e11926cd1dcf68eb",
+      "bytes": 48111,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "7620d841eddfabdab18911476e97dbce092843ea3bf218ebdeb5efbbddc21bd3",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_16/16-3m.png",
+      "sha256": "9bc7ed3150e042730c05a26803059a7b67b48e5c5593e5d18b26c7852692e4a3",
+      "bytes": 48184,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "ce0ca3c8412c3f0c7b9ebc3274c2b87fd1643c1264a9964a6383ce6200330c19",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_16/16-4m.png",
+      "sha256": "22feb91d160a6a992bfe789c122472b29fb0f56e1b492a95aba64675ddaf9afc",
+      "bytes": 47326,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "92721526599b2376f9d83ffb1925aa2741462d3e12c1de58f46625c66271ffb7",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_16/16-5m.png",
+      "sha256": "9613efb301fb480b8224e77c47f39da15c9a600fdf5b5c767ace8cf290ba4d11",
+      "bytes": 51275,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "b78cbd4190d60ac64afabc530139fadce73e78e9e75a87528a115173e20b7107",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/imm_16/16-6m.png",
+      "sha256": "714f10bd3455e78a4ab10093fe291ee9cfd4aee3a5d666550436b91784880ba1",
+      "bytes": 47789,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "72d7fdfaecc93a392994fa7e0b43b26f42f64aab14d92a7be23e42dc2393b203",
+      "actual_format": "PNG",
+      "category": "imm_unknown_asf_png"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_01/01-1m.jpg",
+      "sha256": "8d80606a0a8bde37c87fab0ca9f7853fc885b0beea8fa22e6ae67f36ce904f8f",
+      "bytes": 115058,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "659594011deea2faed7a0b0ff964afffc1e4fe655341a30d3ccf2a535400031d",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_01/01-2m.jpg",
+      "sha256": "9fbc04cc45863bfaa34b32d257994c72b8e002838e7a72dcd2ca1271755e9f80",
+      "bytes": 114118,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "fec09b357ed19a9b73a1d4bfb66bff6594e33689c1c0532eedf8749117ff845b",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_01/01-3m.jpg",
+      "sha256": "f0c21950fe4923120d0841e25b09952a1ee5fad9c5c218aade1c546f819e1543",
+      "bytes": 113072,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "3ad119d2ce0dccbbba90d2b244fab2a0b1851d9cccb8d033874efa7e608b391b",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_01/01-4m.jpg",
+      "sha256": "d4562dd289cdc32c6c5b1138d5a31431c9dc9307715046eff07538f01f9609b7",
+      "bytes": 110484,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "6f54dc2bd789c52119876585d3d93fcee2e2de55c73bb9fcc8b1eaa89b22cf13",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_01/01-5m.jpg",
+      "sha256": "d5ce081787f87b796a96f15411286842538bd11d8bd7afea93e1e0851e84d6b0",
+      "bytes": 129191,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "a382214d67e18f52c1995621beee0d26d958069840ba80c92cc8fcc03a2aa6f7",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_02/05-1m.jpg",
+      "sha256": "163a2495887ee5d6048fd5ad5230a10fd526f77971939888d029171781e88e6b",
+      "bytes": 114447,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "d982d61ee958ba1bef1730e9e4c288aeda4705483a0266be9442e607cde22009",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_02/05-2m.jpg",
+      "sha256": "575e23f15384632e0236ea32dda7894f93919b389fe5d272b521a72ba8ff5bc9",
+      "bytes": 114443,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "8a41091ccd18731659a2ff3575a2a746b9ba5aeb4bf29c5a74da4c8d4bb8db3a",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_02/05-3m.jpg",
+      "sha256": "5fd6e05b85ad1ac9e5ca857a1e46ab43befc4ae3e977d1dd2c88a0b9b64dd6cf",
+      "bytes": 114943,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "89bb7b0f7baa138e94ab10e505fc98e9d790f67d973691c6f1acf5b50bc4e17a",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_02/05-4m.jpg",
+      "sha256": "86e6a83e83220f2a2ebd10ab99426a0968d70c9adf957a17d1717b6092ccbae1",
+      "bytes": 114771,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "98016e2bfee55e86820f179debddf533b97043888a57199a729985249a211c1f",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_02/05-5m.jpg",
+      "sha256": "b8e504057fe7296cc9b5044a87f7c35e7780bc89f56c98179aa9facdfd14cd79",
+      "bytes": 120745,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "b9d5f7cbca7a5e8e280309b8a675110634b6df1c684328ceeb1239b5e38a7f87",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_03/06-1m.jpg",
+      "sha256": "5838c33ad2b71b4d37d92572b785e2ae622b8edfdc4524958901ec0946a2242d",
+      "bytes": 109259,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "d3e61aa4377b06da647f3e03ec8965ab1e286bcabd631adecd9460bd0b6564aa",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_03/06-2m.jpg",
+      "sha256": "68fb924f13dcfeab307eb81e734d7227a65bf01d3f6d3c6746714e536468297f",
+      "bytes": 109145,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "6995f8891553ade91c9de170789987972de3350135968ab5632f6acd33bdec54",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_03/06-3m.jpg",
+      "sha256": "cfd96a2d61cf893a3ca409c43569229764b830da337715ef818cebb1c8413480",
+      "bytes": 106741,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "47b32c447afea4ca071a73444497f616b80cd6af88a26925d9ba367b07b513e0",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_03/06-4m.jpg",
+      "sha256": "5c9085746325d3fc0d7057878c30adb1ae62f4dcaf3a0712e919c1a2335c0571",
+      "bytes": 108877,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "7a3784bea8bb25e85b43d6de0765a6fcce24b2bd8e3dd28ec7917a48d123aab0",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_03/06-5m.jpg",
+      "sha256": "cd32975f028e43a293727cd1d8d9532a66ca7603f3f84ab69cd26e9335c7dcaa",
+      "bytes": 114115,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "f6059acf8290c12035105453e7de0d3fb8589868e1ab5bbaf66368c3724e5a1f",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_04/07-1m.jpg",
+      "sha256": "6c63588f0e614cd389b2e2095620f6cac834a55304f73948250e9a903b038e2d",
+      "bytes": 119793,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "fa43cc4df9bbf5438d5b4af37155acc53419dc77343155c1ddf02c08ab87dae3",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_04/07-2m.jpg",
+      "sha256": "e77d4cf8d921ea9389c45277029fb623cdda9a658b66590a172c4083f06799f9",
+      "bytes": 120959,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "36727f5905c8796974ea41ab94d42c2648ca57aac052c5e3c95690e1607ed4e2",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_04/07-3m.jpg",
+      "sha256": "ba713bca0b8ba4c2fe872b92aea3fa03d2393f99eadedfde1983b16c7a8ee15f",
+      "bytes": 121852,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "ed2f4134ac18f2ecf34070f324de7cee4b9bf91ed7741cc7af5b88ebd58548af",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_04/07-4m.jpg",
+      "sha256": "72d30c713aadc7d409a049b9621a6ad643826dcc068bbb3e08f409b0183d1cda",
+      "bytes": 121788,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "cc89bb9e92c6debeef9d31530bf404cfa732f711b075be95effbf233cc6116cc",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_04/07-5m.jpg",
+      "sha256": "2413aec652d86e5e1509391654bb0b0d0c2e79a3bd2b808cb8eb91454fe72ba0",
+      "bytes": 117256,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "da7d2fcfe3c1f0313bf2c6211ea407d70cec01c8ab227be6acd0a06889ebe117",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_05/08-1f.jpg",
+      "sha256": "058e2c53bfa6b2495c591f1039ffe27c3c7512db41e90cabb6d4f950c7e11349",
+      "bytes": 119598,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "772a00bd88808c2c33d29af2a18fd6d9b215a6dedd54da0198d8e23ae4505926",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_05/08-2f.jpg",
+      "sha256": "f43b61a4f31b02d4d94b4937ae20f3a34a0e93582791da5ff7979ce0d6ded8e6",
+      "bytes": 117099,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "c8dde5493f2f45e1271e76607841fd55fd1422cfec39107d388a0ac24701fe3c",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_05/08-3f.jpg",
+      "sha256": "6610d0329f62e7f8600fceaa509cec539416b00eb0bccb520c74d255977d2882",
+      "bytes": 119147,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "509ec4e5e41524264d0c41ded3ebe47899c9a214c9206e4c8794ab0744054821",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_05/08-4f.jpg",
+      "sha256": "717301e0a23d4f2cb655f88bfc55e4d6e6a17f20ca0cb471b8b408a38513b3f8",
+      "bytes": 117376,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "ab2b8468eedd25816ec4881f4445dab7369906e51cf4515b7182d5a549ad0a13",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_05/08-5f.jpg",
+      "sha256": "b40b43dcfde77c6c425c6ecf1e3ef7ad5bf736805d8aef56c58c2b25d37ae95c",
+      "bytes": 115134,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "d742848ed8fc311397279be5f6e3cc4e7c65ce4d3df7327d72c801e0b8dc199c",
+      "actual_format": "JPEG",
+      "category": "imm_known_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_09/09-1m.jpg",
+      "sha256": "f5b4312cbc22b3daef94c87deb19cb220baeb3bae2a2b83cb27e0e910fe44147",
+      "bytes": 115414,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "d6317ef2393d905441f1923d5afd4f6250d643bca18f205a933931ab17dc9bca",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_09/09-2m.jpg",
+      "sha256": "60cdfb298c1af545fac95e5fb6e4a0651ea54e83da5bba9679099cbd63958704",
+      "bytes": 115071,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "66ffa8fe112cf0cf86b4237f3ab3e0daeb4b957d95e43ca3b3d0c88098a43652",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_09/09-3m.jpg",
+      "sha256": "c2e490f1af9c0bcccb1584efe5baea5b0fda730585cb4f5f335f13752e6d2e15",
+      "bytes": 114896,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "f0ac2d5d767c2814569030aae3e872ad857245ed36ca0c122c7f26b436838a1d",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_09/09-4m.jpg",
+      "sha256": "cbfd4f9c6662c3ace07ac0797d02be52872953c9acaa5c445459cba87fab5130",
+      "bytes": 114277,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "cd8ed13bbbcb2dda07ae5b05dccb2a9e5a4d21c01c71cd3acec70b111d732ccf",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_09/09-5m.jpg",
+      "sha256": "04ac0db7b93eb59c2f02ef688c445fb0ab56cc700bedf060ec3bd080eef39140",
+      "bytes": 108954,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "de876bb557193d7b9b9da70d4dcf849d6e24d0199fb4a63e98df30d2b558b548",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_09/09-6m.jpg",
+      "sha256": "1e5f0a234e2376afd964e220fd1943d5c3e081d68eea5247baa4ae0951071988",
+      "bytes": 108444,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "d1ef3f28583650d63cd4afafc8bf2141198303cf4a8a0e0a23922b5fe298fdaa",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_10/10-1m.jpg",
+      "sha256": "bb27f1fe17e6c2ba1b3d2089dd914097e34213c4df76bcacc6b3ea0621830f7e",
+      "bytes": 116340,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "747b6602579b8e4fa9d81bc0e272d5dd085b4dd5ab9db9738649fb0d6c6b4a34",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_10/10-2m.jpg",
+      "sha256": "cf2121032725a6a5c927bcac52281e8ec4865b23812c8ac15c9af7bfa0388f0e",
+      "bytes": 115284,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "fa6033871666848683287e4f8625fb77422967f41d910d0aa51dd159bed9d24b",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_10/10-3m.jpg",
+      "sha256": "7909e5f2cd0200c56d9ff44479fc11715c29cfcdb21618e776daa46fb97a3e1e",
+      "bytes": 113171,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "6c4d42f2c48dad32ff50ec1f466a720c6d289ae4eb5b8309f9a64851b2b3e2f4",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_10/10-4m.jpg",
+      "sha256": "6119f83202cce5c9b76a9d9979d047a0fb169bbb9bf9e3ff82ca548a6741b1ae",
+      "bytes": 114469,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "66120cfabc96a45b561c97231c46280040bee9ff85cafa2d10682942ecc0afb1",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_10/10-5m.jpg",
+      "sha256": "49469ef5c8e3840770d72a3ffd6155738fd5b4c247ab090b9ea699848770a2b7",
+      "bytes": 104617,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "169c35ad57c51ca6ee449ecefba8a418fec9bca7847476d42650a0086e14bef1",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_10/10-6m.jpg",
+      "sha256": "ee56e9bbebebe370400aeeb3957f2d37f1e033ec1df098489d2d0aa964fd20df",
+      "bytes": 114234,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "dac62a981beefc495d7e4dcdd4ad2e234b5f10be699c4c0817c82cc14f3a0927",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_11/11-1m.jpg",
+      "sha256": "79f78214d7e469bee667b26704e28ebe5a2a2a34a21b4ed6f2628cb1f8005366",
+      "bytes": 108117,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "25284a7cbd76dc4cf8d70238290a903c06ad82cf1edb8b03f4f1e663b735f82a",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_11/11-2m.jpg",
+      "sha256": "d532a72aebe782bc354036ed8c0af9b27a25268a80b1132d22c0d9ce83410884",
+      "bytes": 108687,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "4cb09adc56a1befa3d7047314cbcd4f2a3434ac5d7999841b024a7995a0460f6",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_11/11-3m.jpg",
+      "sha256": "f5e3b4bd4c8100e1d2493f30db95da3c3fec17f9b80b53009ec0bcca64c9bb84",
+      "bytes": 108611,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "3c71fa2387f6a92f659ffd03079554e79345006c6c4b662778e20a4bb958c818",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_11/11-4m.jpg",
+      "sha256": "2822fd7bd1bb22d2feb52d0fcb208a0246ede2f9a2d6616618b0c1f4f31a0869",
+      "bytes": 108292,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "43b6172818c4a594e3acaa4ba441d184402e4525f286222595fb5ee448a425a0",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_11/11-5m.jpg",
+      "sha256": "a29e745342e42d6f2c5acf03013cf9be9ca38e87fe539f8c2425c69d5d02540b",
+      "bytes": 109172,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "225159c9ca4620b2729d664de5110f45461f69ea689deea10fce1cd91f09ec10",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_11/11-6m.jpg",
+      "sha256": "02445b64e3a1e8bf7de4470290d78df3dd4e537a9dd64055c351b90f349816a4",
+      "bytes": 108996,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "20e2481c1e001affc0a9a3b10db8a8805ae9f6a46f31d0f6a7f31efe1affb1bc",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_12/12-1f.jpg",
+      "sha256": "3936428acdecb53c7fc313c145f7f3add2c2b89e5a0510727bd8ac0f175f12cc",
+      "bytes": 121317,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "fd87bb9999b4bda3daaac74407e1dae0aa5dedef38021178557b038d8c4ff163",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_12/12-2f.jpg",
+      "sha256": "d74f8fee38945fbfd47f56052e5dd86ca926811a1ce7e77fcfde4b4e06069a36",
+      "bytes": 121477,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "d8e41e71a3bf229c956994d333dbd9a42f25bf847f48a11d41fd0705f3a1c057",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_12/12-3f.jpg",
+      "sha256": "9dc85a2212ce1906c2810375a106a6914c0e2de97f9d4dd7aafb663a5744aff5",
+      "bytes": 123550,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "a96008fe15b1cbb4c87ae18a8298f673bc45ba88d450d2100c70624d6445da6f",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_12/12-4f.jpg",
+      "sha256": "17d310e7fda51aa6d385cb9a8bc2748a9624b9090844b317ea505e32130cbe06",
+      "bytes": 121742,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "ad10bc2a5e95af7dfebd644f5f91efa5cbc189b5e104247a56e823c0e29398ee",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_12/12-5f.jpg",
+      "sha256": "a29f76ca152c9bd183ac3934eb0be6144ebc2f0ec41556424cdc64276a8daf30",
+      "bytes": 119991,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "fc9536c1523e7ae8a6f7905d0fbb73f5194802b11b8948fcb45bd6c5498a9a95",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_12/12-6f.jpg",
+      "sha256": "95f42d0d208951f82c6a470c6b4a00b963d11cfb053e1e7b0f84d24de2875a61",
+      "bytes": 119115,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "d1cd958f8d41e2ef28afa08fc1c1e895b8dfa30ba82821d05d6c2ee4a491d587",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_13/13-1m.jpg",
+      "sha256": "8f8cfaecaecf5ed8d4d239a058f7e959a45b286fed3c765739eab6aae30ee379",
+      "bytes": 110847,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "238dc9987ac49adbe59513757536f0b563f8954595b086c0ba6e99a1909ffa33",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_13/13-2m.jpg",
+      "sha256": "987fe897cd348f1e0f963335f9d0820c0c8ed3dd3b071c371a81800971dd596e",
+      "bytes": 113028,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "5de29a1b3f3f2fd3aaeeb7e7c36cf2a4b5a4bda456813bcacea138c23812cb14",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_13/13-3m.jpg",
+      "sha256": "3cfd2097ba61d926956bd4918c955e31a693755f26ce05fbfd4fa38cdea7b567",
+      "bytes": 110278,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "8eeaf7d5f0245645b8bb384d851e6dfd033a5a7cecb46847eff047cd3477b889",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_13/13-4m.jpg",
+      "sha256": "e4c0bedda11c9859ce4af6b146434f5d8146d4f0bab90a78dbee877aa8dde700",
+      "bytes": 109497,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "d655e5dcc1e93b1b700ecc1cd8e1683f8778e8379da7cf65398619034445a47d",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_13/13-5m.jpg",
+      "sha256": "7ab0c72e713ca25ecb73044f7deb1fe0ee619d31ba7a9eab75c7e7f9c53e1112",
+      "bytes": 114522,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "255912328add2496f2f8ced55d363102c29252015eb845ca326a034715d11a6d",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_13/13-6m.jpg",
+      "sha256": "4f035207bd7903237328319966e508dce2f71659f93a676eac89d2579897775c",
+      "bytes": 112582,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "e62d5ca847152b8ba926da2b2faa138609353d29eaf6d938a232ff7efd7b0bf8",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_14/14-1f.jpg",
+      "sha256": "e89c843715f9c3b75818bbde4df315dc9a58d9def35aa77c349d0b25af415a12",
+      "bytes": 107326,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "2bf26c2e2bf4dba9cafdce296d60b8e228a826f31d726e808712505f66da302e",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_14/14-2f.jpg",
+      "sha256": "67d107560ef236ef4ac90093f57738e314be28306effa142536cafed8d4427da",
+      "bytes": 109288,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "093c5442f4aa368f9f709882a8f80373528190c6c66c39c6631306350823d26a",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_14/14-3f.jpg",
+      "sha256": "16d2efd0c0c5f08f8b18f8d04c75287984b37c4a9f9f37a350c8f38abda267dd",
+      "bytes": 108467,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "a13106ecd17bdd911b0209da6a721292b1209912c4863bf7fc8e350047f9657b",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_14/14-4f.jpg",
+      "sha256": "ced5cc2c2689bd9c735aa47ec00af8343cacc881024f3f198ad9b981029aa815",
+      "bytes": 108236,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "c62bb5391a5ed6bbeb79f214d3d467c8079dcd3a1df00f40a0f09ce1c3c4c32c",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_14/14-5f.jpg",
+      "sha256": "493534bfa0c0cc2903f3cbb8949b957634e532aa9743c2c2f1c1c24f25001968",
+      "bytes": 107485,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "5416789f1d24e3396abd17d1a8e132ed893cbfaf6548f1d0baa2e11d01c6e333",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_14/14-6f.jpg",
+      "sha256": "24e84820090bb114abe77ea84a88f48680bc1ce74d7435e72ca46d8a0e115a5f",
+      "bytes": 110527,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "383120a624e449733aabaff4dbf41f040ea80dd32f24427a85d111a0d8820d52",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_15/15-1f.jpg",
+      "sha256": "f046e989a5e2b5bcd609064a2f8104e3afbbea08d1b9037c4128eadb0a92dba8",
+      "bytes": 102500,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "8bdd5fc97a8c221e7968d3d844ad4b74af16994257e1cd07c7ec47f4ab36ef5f",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_15/15-2f.jpg",
+      "sha256": "9c03b676a5001348f0de4d34f68a4a46a1ac751d1aefc33a9ac24d37b2bdce49",
+      "bytes": 107763,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "486cb7b662475c85c83e47215621e0d4df6f3192d577439a0e059bcd07637695",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_15/15-3f.jpg",
+      "sha256": "20edfbbc6942837f3fce1a4fd4604d6a264a4c9e5bbc32b66f2ac8cfcbcdb4a7",
+      "bytes": 106373,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "125ce556d2bcfec26b20219092dfd5c8749e38e47a059d05fc20153682dc6974",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_15/15-4f.jpg",
+      "sha256": "fd06206a89dc8517725b442908b7a57aabdea2b9f86c8b447196fbc8e4722f7b",
+      "bytes": 104661,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "bc80272a8ff62931e1ecfed51ae2a8a93cb08e5197d93a0da48df493c78da29e",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_15/15-5f.jpg",
+      "sha256": "74f015f6d71ab8908c65b01a3dbd22ea168424e5f5be35858d8dcc55af9240b2",
+      "bytes": 110494,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "7d0c471d0c53f4870098164739c2df75b516f2e10d794058aad89db2d8fd1ea0",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_15/15-6f.jpg",
+      "sha256": "fa117b493a97bf55e60404cddf7119cd1f0e4bb25e476ea96a735c45be5d757d",
+      "bytes": 109279,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "7a89f28e1ca57b50041d49604323008a5b0900abd2b106846d19f23ac9e980ca",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_16/16-1m.jpg",
+      "sha256": "dc12e29ca4678a782d775547104564adf1842b3319ebf7b3bcea4f333f79c645",
+      "bytes": 112737,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "c3c5c1f69682acd3284415a86c75532ff991afe95c96b195b408d637acba7948",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_16/16-2m.jpg",
+      "sha256": "e7106e40599f527568b0e3c5249fe1282d9faafaf89d014d951a5d2516b44ccf",
+      "bytes": 110713,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "e0ef6bf6a3139df91f50f2727ae98d6d20502775d4e429cdcf5910a1aafee57f",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_16/16-3m.jpg",
+      "sha256": "b660c6ce9fce49c7ec8698f6da3c84d2aca306d7c0ecf5416b578f5612d873bf",
+      "bytes": 110737,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "5af01b5b5bdd1a969a8cb9aadfb6a03fee38aa95bcda743d701c2935ee0c9e3d",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_16/16-4m.jpg",
+      "sha256": "997248a43a1954c7a60e9f5636cd99726d21630f38bd30dad6ba988a5d07690a",
+      "bytes": 110374,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "6284b40be653052582022afb230e6bd7dc5ac56c73d4d71ecde9ca0315e704ae",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_16/16-5m.jpg",
+      "sha256": "034a954c89e67cd247c9fd00d7621611639b6d7aa3e0e88f0e4a2a138d2ca1b2",
+      "bytes": 116339,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "a07f31a39b558ee51e47eca40f52ba98f3bee390aad4e56e203b1891d6509d4b",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_16/16-6m.jpg",
+      "sha256": "3036ac5f0d2015aa54d1d75c1a4f1eea70c616399de98da5b90baca1dc9c53bb",
+      "bytes": 110089,
+      "readable": true,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "fe0757b170bc59a9634d49aa56ba2c1a6d60ad64bbe4471bcf8a4c57839ce170",
+      "actual_format": "JPEG",
+      "category": "imm_unknown_raw"
+    },
+    {
+      "root": "mtcnn",
+      "relative_path": "detected.jpg",
+      "sha256": "8c7427f0c58959487e0093f31f71a54f47d34354ddcb26bcba8cdf6e7b45725b",
+      "bytes": 91795,
+      "readable": true,
+      "shape": [
+        675,
+        1200,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "c168e7a968fdf3ddd301f802ae921e79e716b1afb4cf661ad47ceb3c17db05cd",
+      "actual_format": "JPEG",
+      "category": "unverified_demo_output"
+    },
+    {
+      "root": "mtcnn",
+      "relative_path": "aligned_faces/face_1.png",
+      "sha256": "514dee2ed1d25846b5647eeea7e091a2ade42008784a40cf2fee652acd3626a1",
+      "bytes": 51256,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "2af70e83fb535d41674afa37538ee9a8bee28ba6ae700fac25480fd3206f4196",
+      "actual_format": "PNG",
+      "category": "mtcnn_aligned_output_unlabeled"
+    },
+    {
+      "root": "mtcnn",
+      "relative_path": "aligned_faces/face_2.png",
+      "sha256": "53c2121b4c07f9d184b6468fccdc64ed4e481f872c3c9ae4efefc4ba4dc9d600",
+      "bytes": 47208,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "c75638edf43e0755dfa6db3564b41f27ac742716cf5804cd6099fe1e911a9c58",
+      "actual_format": "PNG",
+      "category": "mtcnn_aligned_output_unlabeled"
+    },
+    {
+      "root": "mtcnn",
+      "relative_path": "aligned_faces/face_3.png",
+      "sha256": "66a87518a968b02520419d9d1e321b066cee6a05df6d10ddf79e0c701c9cbffa",
+      "bytes": 45923,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "acaaa4f7228f8de73a0cac9c03d58535d0f28d97026699f36e524daf425ca583",
+      "actual_format": "PNG",
+      "category": "mtcnn_aligned_output_unlabeled"
+    },
+    {
+      "root": "mtcnn",
+      "relative_path": "aligned_faces/face_4.png",
+      "sha256": "5e6b1a8ab23079160e893175c29dbfc9c03f1bb1770f1ce657eac4da8eb1eba1",
+      "bytes": 42124,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "bb27b9710ed5508ca2c9fe94bfeaea33e8955852d4ac6cf45e08bade7fbebbe9",
+      "actual_format": "PNG",
+      "category": "mtcnn_aligned_output_unlabeled"
+    },
+    {
+      "root": "mtcnn",
+      "relative_path": "aligned_faces/face_5.png",
+      "sha256": "14d663c79bfcc018034c4bfc91e105e394da1f8358dc3823d4f1ea8935900438",
+      "bytes": 38915,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "0f0c2e1d1f3ad1ec9c0da8107d4c6045f134b31b63b2cfa97c72b6674a39aba2",
+      "actual_format": "PNG",
+      "category": "mtcnn_aligned_output_unlabeled"
+    },
+    {
+      "root": "mtcnn",
+      "relative_path": "MTCNN/face.jpg",
+      "sha256": "732fded5384ebec9e394a21e738d900fd3911ea7bb9764b05decb7a4d1e58358",
+      "bytes": 566601,
+      "readable": true,
+      "shape": [
+        409,
+        666,
+        4
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGBA",
+      "pixel_sha256": "434cf0677d562c3e53d36b9d20eec125be395db2b09859a3d3f63a91a9999e71",
+      "actual_format": "PNG",
+      "category": "mtcnn_unlabeled_demo_image"
+    },
+    {
+      "root": "integrated",
+      "relative_path": "tests/fixtures/mtcnn_multi.jpg",
+      "sha256": "732fded5384ebec9e394a21e738d900fd3911ea7bb9764b05decb7a4d1e58358",
+      "bytes": 566601,
+      "readable": true,
+      "shape": [
+        409,
+        666,
+        4
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGBA",
+      "pixel_sha256": "434cf0677d562c3e53d36b9d20eec125be395db2b09859a3d3f63a91a9999e71",
+      "actual_format": "PNG",
+      "category": "integration_test_fixture"
+    },
+    {
+      "root": "integrated",
+      "relative_path": "tests/fixtures/mtcnn_single.png",
+      "sha256": "514dee2ed1d25846b5647eeea7e091a2ade42008784a40cf2fee652acd3626a1",
+      "bytes": 51256,
+      "readable": true,
+      "shape": [
+        160,
+        160,
+        3
+      ],
+      "dtype": "uint8",
+      "pixel_order": "RGB",
+      "pixel_sha256": "2af70e83fb535d41674afa37538ee9a8bee28ba6ae700fac25480fd3206f4196",
+      "actual_format": "PNG",
+      "category": "integration_test_fixture"
+    }
+  ],
+  "asf": [
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_01/01-1m.asf",
+      "sha256": "4ebd95f15ccc0ed9c77f839f1694d6781e37c01b6f04c24a874c2d5ee558e251",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "01-1m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_01/01-2m.asf",
+      "sha256": "9554903d8d6aec8899f0f45b2b82a146098d827f481f589e8d9756a9ec40a84c",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "01-2m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_01/01-3m.asf",
+      "sha256": "cd96468c138cbe9b03a1cfa7e8e0ee33afa3483073ae87eb0d288a5f8dca2449",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "01-3m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_01/01-4m.asf",
+      "sha256": "69ac5ffbffd2fb2087a73f86ce590724979c3f7cd4fe2e14b35729074fbf2e71",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "01-4m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_01/01-5m.asf",
+      "sha256": "0f44cf96967aca477bea2f13641d61b21e9ff0a032b14fdd06b390d97dcb56f9",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "01-5m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_02/05-1m.asf",
+      "sha256": "efe94b32f183f3c318fe525f9c8353a821b1339443e2ef8e9847f2e059350ecd",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "05-1m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_02/05-2m.asf",
+      "sha256": "bbd245fb188190fb83c1ce768d68ed420261e5598be3416135da4777ca663353",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "05-2m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_02/05-3m.asf",
+      "sha256": "a15ec5aac7f92738479fbc264787fc6f86fa2be4eac19ab0f4159537ae2f2480",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "05-3m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_02/05-4m.asf",
+      "sha256": "6c96342c3871c6597c85cf43f02b9295cfe360f961981e5d8df7c60de15a7164",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "05-4m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_02/05-5m.asf",
+      "sha256": "0069bfdff534cccf7e1a00c42597633cfb3ad7f87de228acb89fc9d0ab132924",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "05-5m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_03/06-1m.asf",
+      "sha256": "a4b01677f4ffdbd7534825b091490dc495cc6449fd64232b36d84e6a00558925",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "06-1m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_03/06-2m.asf",
+      "sha256": "a1901f2ec3ac56027cb4a8ae654f7e6c3102503f3e6d74270931bfd48d503100",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "06-2m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_03/06-3m.asf",
+      "sha256": "e49eabd365f41d0153364504e0ca00478a3cc3f84c141c737f6552c269efc166",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "06-3m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_03/06-4m.asf",
+      "sha256": "f9daf46ee68f52e0866fb82d73a79b902d6a7da4ea8a5fea3a967b995c3c42e0",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "06-4m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_03/06-5m.asf",
+      "sha256": "75752dadbfb4a688bf8d0f0e3b34bd70ade38b95cca1f9e6c78168136823ec63",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "06-5m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_04/07-1m.asf",
+      "sha256": "97dc54a0bcf8c3f4a515fbc7afefd143f8aae0f6a71260fdd1e71b1a87a3eabd",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "07-1m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_04/07-2m.asf",
+      "sha256": "2637450dc49ef07ce2dd86fc9ccd4d37863c5dc9a2f58012db108a0f86e0b06e",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "07-2m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_04/07-3m.asf",
+      "sha256": "6c8b9d7f683e909aeb2ec496c21074bc27bbf360855bad0266a6fdd01a2cafc2",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "07-3m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_04/07-4m.asf",
+      "sha256": "7c66274d74abce517fe7c2cf13431fc9c7c040ab0cfbd72e051eafb47ef5f7c0",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "07-4m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_04/07-5m.asf",
+      "sha256": "464a0843b48a548a1d03dbbea63d280f5035fa1194b177cc9b3d0eaf24712a01",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "07-5m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_05/08-1f.asf",
+      "sha256": "d4d3842d2d63f1d83d00bd5f582c0971a3f96c8d142fad706463c4af3e8600fd",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "08-1f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_05/08-2f.asf",
+      "sha256": "ab0b767c6e1a0c3ba858a77e94ff05e41c2812f52c80ab21d92219553024ab27",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "08-2f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_05/08-3f.asf",
+      "sha256": "cc9db148b891474f8ee78f2151c54d87faa4f8aa3917da9b279d1c8090a1ff3a",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "08-3f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_05/08-4f.asf",
+      "sha256": "c846ac6c8a13a88d91f107b9f2872635cc38696300d09a4ae7db9f8938212676",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "08-4f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/sample_faces/person_05/08-5f.asf",
+      "sha256": "4fafeab8d6a8d1334a3c89174377733558a37aa47df33628a8b93dac7a2204db",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "08-5f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_09/09-1m.asf",
+      "sha256": "471f7c8ec03842b488a47ef1b22cc030b61894aec30f4685f947897fafb4a070",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "09-1m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_09/09-2m.asf",
+      "sha256": "b27966f8121136c9b452ef608c2f165218dd6aa28e1cab45989c4f4eb38aefd0",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "09-2m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_09/09-3m.asf",
+      "sha256": "11060e2a1a3fb4f50026bdc7af92448a5b6c4e6a0ff84070b5ee812e9206e870",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "09-3m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_09/09-4m.asf",
+      "sha256": "00d0f6cdf531a2b6457fc40ed0d926e664fa7f894851b6d2569354877887a84c",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "09-4m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_09/09-5m.asf",
+      "sha256": "0a94de22f5cde3213d8367ebae994b9c1667e6fe3524f3fc058186201d82e9fb",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "09-5m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_09/09-6m.asf",
+      "sha256": "c4f8202877220064bc157b2f9a831168c55ff00fb1cbbb01c8a8f0f46af07779",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "09-6m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_10/10-1m.asf",
+      "sha256": "4a5ba8ebd0ae7e538325d9fad0c484a8446f4cc374b225bc375e87a1ad978b21",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "10-1m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_10/10-2m.asf",
+      "sha256": "d654d84c6759283616e84233a62be4f5674bb55980e26eecf5b3fafa5cf0350c",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "10-2m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_10/10-3m.asf",
+      "sha256": "f2eab4ba9d03c624c59fc5ae70cfcdfdfad337fe08ff610e461c91eb1074d4db",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "10-3m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_10/10-4m.asf",
+      "sha256": "a09b146530a957525ebae60b277af1e60af6bcb464af094d2e6e6c8a5e4b3c9d",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "10-4m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_10/10-5m.asf",
+      "sha256": "541ca8e25fcf986fe59d5096589cfb8932e89c683627451b2c5bad3fdf5cfab9",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "10-5m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_10/10-6m.asf",
+      "sha256": "268b5a10ddd0e7530c6e262c4febdda0a806575c8ccca442e060953724091cb0",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "10-6m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_11/11-1m.asf",
+      "sha256": "97c9af900fd9485baa42f3fa2008d025baa133f700a359c2734cc3603f9c55c9",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "11-1m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_11/11-2m.asf",
+      "sha256": "4f7c7c64cbe84681a263f807e3eaee64e5270b68d1b2cc247d039a41c2eb3252",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "11-2m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_11/11-3m.asf",
+      "sha256": "383931f25d8e64f4a96879cb8bdc8d1d3faa109449f3e8e328de91a987cfd27e",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "11-3m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_11/11-4m.asf",
+      "sha256": "645e74d7857580ed505f98dd122b2402580392eaec6521fa65290cb9447770da",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "11-4m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_11/11-5m.asf",
+      "sha256": "d5de953f4733ad1ddb4e1d8bc089c6e7b855e2358b2a6676d390d4dad793f328",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "11-5m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_11/11-6m.asf",
+      "sha256": "e55f371efa1002f4c0886b5d15998cdaaa5a408e8028c909e3e4f816aea33e3d",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "11-6m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_12/12-1f.asf",
+      "sha256": "bef0ef10688f718ac821368db90ae31d8a3507f6ef26ea2d014d67aae9db258d",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "12-1f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_12/12-2f.asf",
+      "sha256": "3e0af216b4a2acd1fa2c304943c8da107273bdc4c8c014688dedcc80fb6c93c1",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "12-2f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_12/12-3f.asf",
+      "sha256": "96239f686170dc0138a612378cd85a879cf3731f161d4ac3f2196bce5ff0d562",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "12-3f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_12/12-4f.asf",
+      "sha256": "0977625feaddd6e7d8bcf0a639047ce3b3d1adb35ae029dcf45b2e21db949f8e",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "12-4f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_12/12-5f.asf",
+      "sha256": "9393dce7c99bd5f2f779406d12da41e868fbf162528465e9d6b51e4844a214ca",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "12-5f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_12/12-6f.asf",
+      "sha256": "bdbf4279b8c716631e51f22dc7a365fa5d1abc79f9985f7ca50f4bdd6ab67a2f",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "12-6f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_13/13-1m.asf",
+      "sha256": "664fda69ca8a3ea879094f7af5cc2fae6fb69f14a41c98e0631ecb84c3554c5f",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "13-1m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_13/13-2m.asf",
+      "sha256": "47b1d258a8ea1e79810b33df3e5cfae9daf6d891e131cb9eaada4eaea82bc3b3",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "13-2m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_13/13-3m.asf",
+      "sha256": "8502b271ce868f8edf9b81dc340080713e72ea7425b3be0605fc002fc73a28f2",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "13-3m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_13/13-4m.asf",
+      "sha256": "2a646c86cdac72fd675f85b8e2f9c1cc5eaea3287703b0aaea281ea533367d86",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "13-4m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_13/13-5m.asf",
+      "sha256": "59725f613e7125366d038fd95403a5eb2589177b77901e8b11c5e727fe949344",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "13-5m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_13/13-6m.asf",
+      "sha256": "cf04dd3add6b78f3c7c55a1ec929ea7b6d48aa843cad248103ca992ce631a36b",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "13-6m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_14/14-1f.asf",
+      "sha256": "c280b208d1df35cda5dbce93dca43d5b7f3e4882592594366f7e71e631bd59b6",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "14-1f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_14/14-2f.asf",
+      "sha256": "a97bd0b39894d994dc79570486a53748a9f569c7dcb8b56ec6c740a940968e7c",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "14-2f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_14/14-3f.asf",
+      "sha256": "60a9622dd872b10197c81271a240c43eb1fb5a29d9b6b31627afaa8c4e2ff27d",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "14-3f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_14/14-4f.asf",
+      "sha256": "a423f5fa3d6df0cfd1a2173c27f0f3bec342d908f565b015e13dc9f78a324921",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "14-4f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_14/14-5f.asf",
+      "sha256": "4b5d43ce936973688f9e778b2808e87422d5ca1ee532d84bb7b4860b773a54c2",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        10
+      ],
+      "host_image": "14-5f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_14/14-6f.asf",
+      "sha256": "35549831befe9a4188e006e7486d0496cc09a8ddb44a298d132e11782e600cf5",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "14-6f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_15/15-1f.asf",
+      "sha256": "0427256bec5b6b6c084f80037e8a3c752ccc87bda4cc9a53a9e822f9ab9c5cf3",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "15-1f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_15/15-2f.asf",
+      "sha256": "df94d6f48d6ff6ee2358ac1739b78baa91cfdb3d17f8b7f710975c0d5a47f33c",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "15-2f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_15/15-3f.asf",
+      "sha256": "775086d3031257c4e8a29bbaf9e5711a5f9ce069386af0954846ec9fd78b0822",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "15-3f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_15/15-4f.asf",
+      "sha256": "ba80edd6863af8bf3778c53e7466bf475d6ebe5c04e5132c8ec3aca0a6517d6d",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "15-4f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_15/15-5f.asf",
+      "sha256": "eeac7600d87ba863d02ca8701eef0c9cefe6f47f85e78ed54815ef142922df29",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        10
+      ],
+      "host_image": "15-5f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_15/15-6f.asf",
+      "sha256": "4fdc77c45e8866f5aed08690656424315f088a9eb5d70a591c6d740b4a087103",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "15-6f.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_16/16-1m.asf",
+      "sha256": "1d072d59561f58f23f236b83f7feec8f421ea62f0b111582300f60f4e4aff78a",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "16-1m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_16/16-2m.asf",
+      "sha256": "b23bf8d2f5a4bf5f618c873a1a4a0b5f3f53f113a4d107f6d61f19e35f79dd10",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "16-2m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_16/16-3m.asf",
+      "sha256": "58581d34a090ee06211c4f70b0ed87d269457f0b521e9973d9d74c7564dbf7d4",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "16-3m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_16/16-4m.asf",
+      "sha256": "8662ff48f5a57ea83c71f78419d3ab709ea68469c48ad0a64935ec13ca6ee389",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "16-4m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_16/16-5m.asf",
+      "sha256": "738aac726a2cd3b0f6dcf3320b68139cc7528291d423cb8455f430a9cce1fbb0",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "16-5m.jpg"
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/imm_16/16-6m.asf",
+      "sha256": "b5fa48878eb59de7c95aae907caaf802618129644d96e0ce2a901cb6dfe3dd18",
+      "declared_points": 58,
+      "rows": 58,
+      "field_widths": [
+        7
+      ],
+      "host_image": "16-6m.jpg"
+    }
+  ],
+  "source_manifests": [
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_faces_imm/manifest.json",
+      "sha256": "055b1df42a4e87f915ad41216f03c9c24e57b218b2904ae7159a42963a3ac30e",
+      "records": 25,
+      "metadata": {
+        "dataset": "IMM Face Database",
+        "purpose": "internal educational FaceNet input preparation, not MTCNN",
+        "output_contract": "RGB uint8 (160,160,3) after reading PNG as BGR then cvtColor",
+        "parameters": {
+          "output_size": 160,
+          "crop_margin": 0.2
+        }
+      }
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/unknown_faces_imm/manifest.json",
+      "sha256": "b1d916f47410041c0b3042cb112d6b3bd9070cd59c8766af52a8b76cbae14da5",
+      "records": 48,
+      "metadata": {
+        "dataset": "IMM Face Database",
+        "purpose": "Step 4.3 exploratory open-set evaluation",
+        "source_url": "http://datasets.openimaj.org/imm_face_db.zip",
+        "publisher_report_url": "https://www.imm.dtu.dk/pubdb/edoc/imm3160.pdf",
+        "loader_reference_url": "https://openimaj.org/apidocs/org/openimaj/image/model/asm/datasets/IMMFaceDatabase.html",
+        "terms": "Education/research with citation; local project use; no public dataset upload.",
+        "citation": "Nordstrom et al. The IMM Face Database - An Annotated Dataset of 240 Face Images. DTU, 2004.",
+        "transport": "HTTP explicitly approved by user; HTTPS hostname mismatch; TLS verification was not disabled.",
+        "archive_sha256": "7c6e0647964162c600e20d3704667b92767cafc8baaf22533b8356f8332a362a",
+        "archive_size_bytes": 27259939,
+        "integrity_note": "Pinned self-computed hash from prior download, not a DTU-published checksum; does not authenticate original publisher bytes.",
+        "archive_crc": "all 481 entries passed",
+        "selection": {
+          "calibration_imm": [
+            "09",
+            "10",
+            "11",
+            "12"
+          ],
+          "evaluation_imm": [
+            "13",
+            "14",
+            "15",
+            "16"
+          ],
+          "image_types": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "fixed_before_inference": true
+        },
+        "calibration_protocol": {
+          "target_empirical_unknown_far": 0.05,
+          "threshold_grid_min": -1.0,
+          "threshold_grid_max": 1.0,
+          "threshold_grid_step": 0.01,
+          "choose": "lowest threshold with calibration FAR <= target",
+          "independent_known_calibration": false
+        }
+      }
+    },
+    {
+      "root": "facenet",
+      "relative_path": "data/processed_unknown_faces_imm/manifest.json",
+      "sha256": "9e162e18c65aa70390e201250b3ff5d73f008f36453301421c791e74e36bc9ac",
+      "records": 48,
+      "metadata": {
+        "dataset": "IMM Face Database",
+        "purpose": "Step 4.3 open-set exploratory evaluation",
+        "archive_sha256": "7c6e0647964162c600e20d3704667b92767cafc8baaf22533b8356f8332a362a",
+        "source_manifest_sha256": "b1d916f47410041c0b3042cb112d6b3bd9070cd59c8766af52a8b76cbae14da5",
+        "output_contract": "RGB uint8 (160,160,3) after BGR-to-RGB read conversion",
+        "alignment_method": "asf_eye_roll_square_v1",
+        "parameters": {
+          "output_size": 160,
+          "crop_margin": 0.2,
+          "image_left_eye": [
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28
+          ],
+          "image_right_eye": [
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        },
+        "selection": {
+          "calibration_imm": [
+            "09",
+            "10",
+            "11",
+            "12"
+          ],
+          "evaluation_imm": [
+            "13",
+            "14",
+            "15",
+            "16"
+          ],
+          "image_types": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "fixed_before_inference": true
+        },
+        "calibration_protocol": {
+          "target_empirical_unknown_far": 0.05,
+          "threshold_grid_min": -1.0,
+          "threshold_grid_max": 1.0,
+          "threshold_grid_step": 0.01,
+          "choose": "lowest threshold with calibration FAR <= target",
+          "independent_known_calibration": false
+        }
+      }
+    }
+  ],
+  "archives_found": [],
+  "integrity_errors": [],
+  "actual_vs_extension_mismatches": [
+    {
+      "root": "mtcnn",
+      "path": "MTCNN/face.jpg",
+      "actual_format": "PNG",
+      "shape": [
+        409,
+        666,
+        4
+      ]
+    },
+    {
+      "root": "integrated",
+      "path": "tests/fixtures/mtcnn_multi.jpg",
+      "actual_format": "PNG",
+      "shape": [
+        409,
+        666,
+        4
+      ]
+    }
+  ],
+  "limitations": [
+    "Identity labels are dataset-provided, not independently verified from face content.",
+    "MTCNN demo/group/crop identities are unknown; excluded pending manual provenance review.",
+    "decoded pixel hash does not prove absence of visual near-duplicates.",
+    "Original archive hash is self-computed; no DTU publisher checksum available."
+  ],
+  "pixel_hash_definition": "SHA256(canonical JSON shape/dtype/channel order + NUL + decoded RGB/RGBA/GRAY C-order bytes); no resize/alignment/EXIF transpose",
+  "root_aliases": {
+    "facenet": "D:/Facenet-Recognition",
+    "mtcnn": "D:/MTCNN",
+    "integrated": "D:/Face-Recognition-System"
+  }
+}

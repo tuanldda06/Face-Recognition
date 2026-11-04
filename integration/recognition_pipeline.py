@@ -1,4 +1,9 @@
+"""Recognition chỉ đọc: MTCNN -> adapter -> FaceNet -> registry N > 0.
 
+Tái sử dụng profile enrollment và orchestration/matching đã duyệt. Không tải
+model, tạo registry, ghi ảnh/BLOB hoặc log dữ liệu sinh trắc học. Caller phải nạp
+đúng bundled weights; cv2.Net không tự chứng minh danh tính weights đã nạp.
+"""
 
 from __future__ import annotations
 
@@ -7,11 +12,11 @@ from pathlib import Path
 
 import numpy as np
 
-from facenet_recognition import database as db
-from facenet_recognition import recognition as core
-from facenet_recognition.contracts import validate_mtcnn_output
-from facenet_recognition.facenet_model import extract_embedding
-from facenet_recognition.matching import validate_database_embedding, validate_threshold
+from FaceNet import database as db
+from FaceNet import recognition as core
+from FaceNet.contracts import validate_mtcnn_output
+from FaceNet.facenet_model import extract_embedding
+from FaceNet.matching import validate_database_embedding, validate_threshold
 from .enrollment_pipeline import build_model_version
 from .mtcnn_adapter import mtcnn_to_facenet_detections
 

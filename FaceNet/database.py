@@ -1,3 +1,8 @@
+"""SQLite persistence từ notebook 06/07; không enrollment hoặc load model.
+
+Mọi database dùng path tuyệt đối. Baseline của project chỉ được đọc; các hàm
+ghi phải dùng database riêng. Import module không mở kết nối hoặc tạo file.
+"""
 
 from __future__ import annotations
 
@@ -26,10 +31,13 @@ CREATE TABLE IF NOT EXISTS FaceDatabase (
 
 def _is_project_baseline(path: Path) -> bool:
     """Tìm baseline khi có lời gọi tường minh, không resolve asset lúc import."""
-    baseline = Path(__file__).resolve().parents[2] / "data" / "face_database_test.db"
-    return path.resolve() == baseline.resolve() or (
-        path.exists() and baseline.exists() and path.samefile(baseline)
+    baselines = (
+        Path(__file__).resolve().parents[1] / "data" / "face_database_test.db",
+        Path("D:/Facenet-Recognition/data/face_database_test.db"),
     )
+    return any(path.resolve() == baseline.resolve() or (
+        path.exists() and baseline.exists() and path.samefile(baseline)
+    ) for baseline in baselines)
 
 
 def validate_database_path(path: str | Path, *, for_write: bool = False) -> Path:

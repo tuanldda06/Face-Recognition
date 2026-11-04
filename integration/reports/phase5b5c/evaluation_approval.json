@@ -1,0 +1,47 @@
+{
+  "schema_version": "phase5b5c-explicit-evaluation-approval/1",
+  "status": "APPROVED_BY_USER",
+  "approval_source": "Latest explicit user message approving frozen evaluation protocol and all six listed decision conditions",
+  "recorded_at_local": "2026-11-02T09:28:07.975715+07:00",
+  "protocol_sha256": "f62f6c1347ff5c125a8800e679240592da8b195fcf387fe40551234ea98df00f",
+  "manifest_sha256": "697ff36755be85c2257f30726ba2a4256e1c15b9151d3bae08093129a45d57df",
+  "approved_criteria": {
+    "status": "PENDING_USER_APPROVAL_NOT_ACTIVE",
+    "known_improvement": "A_V2>A_V1 on same 15 Known planned queries",
+    "unknown_risk_cap": {
+      "allowed_false_accepts_V2": 0,
+      "denominator": 15,
+      "additional_rule": "UA_V2<=UA_V1"
+    },
+    "known_wrong_ID_cap": {
+      "allowed_wrong_ID_accepts_V2": 0,
+      "denominator": 15,
+      "additional_rule": "W_V2<=W_V1"
+    },
+    "coverage": "Identical 30 query records/scores; full 30/30 usable query coverage and all five complete enrollments for a V2 recommendation",
+    "technical_regression": "No integrity/serialization/matching/evaluation regression",
+    "tie": "RETAIN_V1 when outcomes equivalent and no unresolved data/technical limitation; avoid needless runtime change",
+    "v2_pass_label": "RECOMMEND_V2_FOR_CONTROLLED_INTEGRATION — LIMITED_INDEPENDENT_EVIDENCE; no runtime modification",
+    "criteria_fail": "RETAIN_V1 if valid complete comparison clearly fails approved requirements; INCONCLUSIVE for insufficient/ambiguous data, serious failures or missing approval",
+    "sample_risk_scope": "Zero observed errors in these 15 Unknown and 15 Known queries is a proposed small-sample criterion only, not proof of zero FAR or an approved deployment risk tolerance.",
+    "deployment_risk_tolerance": null
+  },
+  "interpretation": {
+    "known_V2_strictly_better_than_V1": true,
+    "unknown_false_accepts_V2_cap": 0,
+    "unknown_denominator": 15,
+    "known_wrong_ID_V2_cap": 0,
+    "known_denominator": 15,
+    "no_FA_or_wrong_ID_increase_vs_V1": true,
+    "complete_known_enrollment": 5,
+    "required_valid_queries": 30,
+    "same_embeddings_scores_top1": true,
+    "tie_retain_V1": true,
+    "failed_or_inconclusive_criteria_keep_V1_baseline": true
+  },
+  "execution_permission": "One controlled CPU enrollment/query evaluation using unchanged frozen inputs/pipeline; shared scores and both fixed thresholds",
+  "runtime_threshold_change_authorized": false,
+  "cleanup_phase_authorized": false,
+  "deployment_population_risk_tolerance_approved": false,
+  "frozen_protocol_modified": false
+}

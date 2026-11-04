@@ -1,0 +1,472 @@
+{
+  "schema_version": "phase5b5a-implementation-plan/1",
+  "phase": "5B.5A",
+  "status": "PASS_AUDIT_AND_DESIGN_ONLY",
+  "implementation_status": "NOT_IMPLEMENTED",
+  "approval_received_for_phase5b5b": false,
+  "decision": {
+    "prototype": "CONDITIONAL_GO_AFTER_APPROVAL_DEVELOPMENT_ONLY",
+    "operational_replacement": "NO_GO_WITH_CURRENT_EVIDENCE",
+    "independent_improvement_claim": "NO_GO_NO_NEW_INDEPENDENT_COHORT",
+    "rationale": "Saved calibration scores support a bounded reproducible selector experiment, not proof of better recognition. If independent quality gain is required before handoff, current data are insufficient: keep v1.",
+    "v2_threshold": null,
+    "v2_measured_performance": null
+  },
+  "baseline": {
+    "threshold_v1": 0.925533688089963,
+    "threshold_hex": "0x1.d9df8d3362a3cp-1",
+    "threshold_sha256": "c731bf66614d8f40af93b3499cfcae864aa42aa64b0420d1b824a38c1b7cbec9",
+    "calibration_results_sha256": "39a56a3f211a72f457c434c4f402063e4cca0940a16f123b4866a8d0d437a035",
+    "model_version_sha256": "26f1432e29721a4d1e881164a62db603a968a5aa3c0e505afcba29c59668d99b",
+    "historical_calibration_known_correct": "6/6",
+    "historical_final_known_correct": "3/6",
+    "historical_final_unknown_rejected": "20/20",
+    "historical_final_balanced_E2E": 0.75,
+    "baseline_modified": false
+  },
+  "data_audit": {
+    "scope": "Three project roots only, excluding venv/git/caches; no Internet or image-byte access",
+    "raw_imm": {
+      "identities": 13,
+      "jpeg": 73,
+      "asf": 73,
+      "full_IMM_local": false
+    },
+    "A": {
+      "identities": 6,
+      "raw_images": 30,
+      "known_ids": [
+        "IMM:01",
+        "IMM:05",
+        "IMM:06"
+      ],
+      "unknown_ids": [
+        "IMM:07",
+        "IMM:08",
+        "IMM:09"
+      ],
+      "enrollment_images": 9,
+      "genuine_queries": 6,
+      "unknown_queries": 15,
+      "development_exposure": true,
+      "threshold_calibration_eligible": "Conditional reuse under new protocol approval",
+      "independent_evaluation_eligible": false
+    },
+    "B": {
+      "identities": 7,
+      "raw_images": 35,
+      "known_ids": [
+        "IMM:10",
+        "IMM:11",
+        "IMM:12"
+      ],
+      "unknown_ids": [
+        "IMM:13",
+        "IMM:14",
+        "IMM:15",
+        "IMM:16"
+      ],
+      "v1_final_already_used": true,
+      "v2_fit_eligible": false,
+      "independent_evaluation_eligible": false
+    },
+    "C": {
+      "identities": 8,
+      "raw_images": 8,
+      "image_number": 6,
+      "ids": [
+        "IMM:09",
+        "IMM:10",
+        "IMM:11",
+        "IMM:12",
+        "IMM:13",
+        "IMM:14",
+        "IMM:15",
+        "IMM:16"
+      ],
+      "official_v1_used": false,
+      "legacy_asf_derivatives_saved_and_consumed": 8,
+      "visual_preview_history": "NOT_VERIFIED",
+      "calibration_identity_reserve_images": 1,
+      "final_identity_reserve_images": 7,
+      "prototype_fit_eligible": false,
+      "independent_evaluation_eligible": false
+    },
+    "D": {
+      "asf_derived_pngs": 71,
+      "asf_identity_count": 13,
+      "mtcnn_unlabeled_outputs_and_demo_paths": 7,
+      "fixture_copies": 2,
+      "additional_labeled_cohort_found": false,
+      "archives_found": [],
+      "npy_npz_csv_jsonl_found": [],
+      "prototype_eligible": false
+    },
+    "E": {
+      "new_cohort_verified_available": 0,
+      "additional_data_needed_for_prototype": false,
+      "additional_data_needed_for_independent_claim": true,
+      "future_requirements": [
+        "Identity labels and provenance",
+        "Use rights/consent",
+        "Pose/light/session diversity",
+        "Identity-disjoint development/calibration/independent evaluation"
+      ]
+    },
+    "permissions": "Existing manifests record internal educational/research use with citation/no public image upload. Not a new external license verification. New phase execution and any new collection/purpose require appropriate approval; no FaceNet training planned.",
+    "saved_calibration_scores": {
+      "queries": 21,
+      "scores_per_query": 3,
+      "pair_scores": 63,
+      "raw_embeddings_required": false,
+      "new_inference_required": false,
+      "new_sqlite_required": false,
+      "ceiling_effect": "v1 already6/6 Known fit acceptance; do not claim independent accuracy gain from same fit set"
+    }
+  },
+  "recommended_strategy": {
+    "id": "calibration-maxmin-margin/2",
+    "category": "B_conservative_margin",
+    "type": "SELECTION_ONLY_PROPOSAL",
+    "model_training": false,
+    "changes_to_embedding_pipeline": false,
+    "margin_source": "Pinned calibration scores only; never v1 final scores/deficits",
+    "false_accept_control": "Non-regression relative v1 on fit data: Unknown UA and both impostor pair accept counts may not increase; not a population guarantee",
+    "unmeasured_expectation": "Positive genuine calibration headroom could reduce boundary sensitivity; generalization benefit not tested",
+    "actual_margin": null,
+    "chosen_threshold": null
+  },
+  "proposed_protocol": {
+    "id": "threshold-v2-development/1",
+    "status": "DRAFT_NOT_FROZEN_FOR_EXECUTION",
+    "baseline_v1_protocol_unchanged": true,
+    "input_allowlist": [
+      "reports/calibration_phase5b3c_results.json"
+    ],
+    "input_sha256": "39a56a3f211a72f457c434c4f402063e4cca0940a16f123b4866a8d0d437a035",
+    "metadata_references": [
+      "reports/evaluation_split_frozen.json",
+      "reports/evaluation_pipeline_profile.json",
+      "reports/evaluation_protocol_frozen.json",
+      "reports/calibration_phase5b3c_threshold.json"
+    ],
+    "roles": "Known01/05/06 enroll1-3/query4-5; Unknown07/08/09 query1-5. Saved21 query records only; no enrollment rerun.",
+    "banned_fit_ids": [
+      "IMM:10",
+      "IMM:11",
+      "IMM:12",
+      "IMM:13",
+      "IMM:14",
+      "IMM:15",
+      "IMM:16"
+    ],
+    "banned_fit_data": [
+      "Finalv1 scores/results",
+      "All image6/reserve",
+      "ASF derivatives",
+      "Fixtures/demo",
+      "Unpinned input artifact"
+    ],
+    "numeric_semantics": {
+      "score_and_threshold": "IEEE754 binary64/Python float, finite [-1,1]",
+      "decision": "score>=t accept;score<t reject",
+      "signed_zero": "+0 canonical",
+      "rounding": "No decimal score rounding or float32 downcast",
+      "objective_margin_comparison": "Exact Fraction from binary64 values"
+    },
+    "definitions": {
+      "S": "All63 stored calibration pair scores",
+      "G": "min6 true-ID genuine scores",
+      "N": "max12 known-impostor plus45 unknown-impostor scores",
+      "eligible_interval": "(N,G] intersect finite binary64[-1,1]",
+      "objective": "0.5*A/6+0.5*UR/15",
+      "margin": "min(G-t,t-N)",
+      "genuine_headroom": "G-t"
+    },
+    "candidate_generation": {
+      "base": "{-1,1} union S union nextafter(s,+inf)<=1; dedupe and sort",
+      "interior": "If N<G: exact rational x=(Fraction.from_float(N)+Fraction.from_float(G))/2; t0=float(x) nearest ties-even; add t0 and its nextafter neighbors within domain",
+      "note": "Protocolv2 intentionally uses63 pair scores; unchanged existing candidate helper may be reused. No candidate or midpoint generated in5B.5A."
+    },
+    "selection_priority": [
+      "Filter non-regression guards on Known correct,Unknown accepted,and impostor accepted pair counts",
+      "Maximize exact balanced E2E",
+      "Maximize exact max-min margin",
+      "Maximize exact genuine headroom",
+      "Canonical dedupe;remaining tie lower numeric threshold"
+    ],
+    "pre_fit_gates": [
+      "Expected hash/provenance/profile match",
+      "Freeze protocol before fit",
+      "Exactly6+15 valid query records with correct slots/source references",
+      "All Known top1 correct and9 enrollment successes",
+      "Valid3 gallery scores per query;finite domain;no missing records",
+      "No final/reserve/derived input",
+      "Baseline counts consistent with pinned artifacts"
+    ],
+    "failure_policy": "Missing/null/failed record or infrastructure/hash/version error =>STOP;no silent omission/reinference/replacement. Planned denominators6/15 remain fixed.",
+    "no_go_conditions": [
+      "N>=G",
+      "No eligible candidate",
+      "No representable interior yielding positive M and H",
+      "Any non-regression guard fails",
+      "Any wrong Known top1 or failed/missing record",
+      "Any integrity/profile/source mismatch",
+      "Timebox exceeded",
+      "Requirement changes to independent proof without independent cohort"
+    ],
+    "metrics": "Reuse frozen pairwise TAR/FRR/FAR_K/FAR_U;top1/TPIR/FNIR/query FPIR/rejection/coverage/E2E;zero denominator N/A;M/H technical only.",
+    "evaluation_scope": "Development/calibration-only reuse, not independent validation. No v2 scoring on old final.",
+    "independent_evaluation_gate": "New untouched identity-disjoint labeled cohort and prespecified protocol/criteria;freeze selector/threshold/profile before test. Not available currently.",
+    "stability_alternative_status": "C variants reviewed symbolically,not chosen;no bootstrap/resampling/final sweep in bounded prototype."
+  },
+  "acceptance_criteria": [
+    "Approved5B.5B development-only scope and frozen protocolv2 before any fit",
+    "No runtime/model/DB/preprocessing/matching/profile changes;existing model_version exact",
+    "Non-regression on fit data;not an accuracy100% population target",
+    "Positive exact margin/headroom without numeric target derived from final",
+    "Synthetic unit tests and selected existing pure tests pass",
+    "Deterministic selector/artifact with exact threshold hex and input/profile/protocol/selector hashes",
+    "Preservation audit and v1 rollback verified",
+    "Reports label evidence calibration-only;no automatic promotion or claim of independent quality improvement"
+  ],
+  "future_implementation": {
+    "timebox_engineering_minutes": 180,
+    "time_estimate_type": "Planning estimate and hard scope cap, not measured execution duration",
+    "tasks": [
+      {
+        "minutes": 20,
+        "task": "Approval,input/provenance verification,freeze protocolv2"
+      },
+      {
+        "minutes": 50,
+        "task": "Scores-only selector and versioned artifact output"
+      },
+      {
+        "minutes": 40,
+        "task": "Synthetic tests plus selected existing pure tests"
+      },
+      {
+        "minutes": 30,
+        "task": "One controlled calibration fit after tests;calibration-only report"
+      },
+      {
+        "minutes": 20,
+        "task": "Preservation,rollback/handoff notes"
+      },
+      {
+        "minutes": 20,
+        "task": "Buffer;STOP if total cap exceeded"
+      }
+    ],
+    "new_files_proposed_only": [
+      "scripts/calibrate_threshold_v2.py",
+      "tests/test_threshold_v2.py",
+      "reports/threshold_v2_protocol.json",
+      "reports/threshold_v2_calibration.json",
+      "reports/threshold_v2_summary.md"
+    ],
+    "file_creation_rules": "Refuse overwrite. Do not create any future implementation file during5B.5A.",
+    "reuse": [
+      "Existing calibration score artifact",
+      "Existing frozen threshold_candidates helper",
+      "Existing matching and >= decision semantics",
+      "Existing synthetic-test patterns"
+    ],
+    "new_test_cases": [
+      "Hash/profile/provenance mismatch",
+      "Final/reserve/role/source access rejection",
+      "Score shapes/types/NaN/Inf/null/duplicates",
+      "Threshold equality/signedzero/±1/nextafter",
+      "Adjacent floats or no positive interior =>NO_GO",
+      "Exact objective and margin ties",
+      "Midpoint-neighbor rounding",
+      "FA non-regression and fixed denominators",
+      "No image/inference/SQLite path",
+      "V1 artifacts untouched",
+      "Deterministic output and rollback"
+    ],
+    "existing_tests_selected_only": [
+      "tests/test_threshold_calibration.py::test_candidate_boundaries_and_equality",
+      "tests/test_threshold_calibration.py::test_selection_exact_objective_and_highest_tie",
+      "tests/test_threshold_calibration.py::test_failure_accounting_and_pair_far_vs_query_fpir",
+      "tests/test_threshold_calibration.py::test_zero_denominator_is_na",
+      "tests/test_final_evaluation.py::test_frozen_decision_boundary_and_correctness",
+      "tests/test_final_evaluation.py::test_metrics_counts_and_far_vs_fpir"
+    ],
+    "existing_tests_not_run_now": true,
+    "no_full_inference_suite": true,
+    "no_new_packages": true,
+    "no_new_dataset_for_prototype": true,
+    "no_new_framework_or_database": true,
+    "rollback": "Keep v1 artifact/default path unchanged. Do not opt into v2 on any failure;no deletion/reset needed.",
+    "model_version_policy": "Keep embedding model_version unchanged because fingerprinted sources/assets unchanged. New selection strategy/protocol/source checksum is separate;bind artifact to existing model_version.",
+    "handoff_complexity": "One optional offline selector and one combined calibration/threshold artifact;no additional inference runtime branch. Cleanup approval/version/dependency audit remains separate."
+  },
+  "baseline_hash_evidence": [
+    {
+      "path": "reports/evaluation_split_frozen.json",
+      "sha256": "236440d55178e2c5459390010576dc369412f7ea7b455d99c7c153a3d66295d7",
+      "level": "RECORDED_EXPECTED_SHA256_MATCH",
+      "source": "User frozen checksum + existing references"
+    },
+    {
+      "path": "reports/evaluation_pipeline_profile.json",
+      "sha256": "9a42c0f3c8d4261e54304123746441254e8fea225abdc2a1e8c6084dbb3d9f1f",
+      "level": "RECORDED_EXPECTED_SHA256_MATCH",
+      "source": "User frozen checksum + existing references"
+    },
+    {
+      "path": "reports/evaluation_protocol_frozen.json",
+      "sha256": "44999ad9fa6acbe9223efb0aa3cc7931d749bfd3b78169915baa926576877a98",
+      "level": "RECORDED_EXPECTED_SHA256_MATCH",
+      "source": "User frozen checksum + existing references"
+    },
+    {
+      "path": "reports/calibration_phase5b3c_results.json",
+      "sha256": "39a56a3f211a72f457c434c4f402063e4cca0940a16f123b4866a8d0d437a035",
+      "level": "RECORDED_EXPECTED_SHA256_MATCH",
+      "source": "reports/calibration_phase5b3c_summary.md"
+    },
+    {
+      "path": "reports/calibration_phase5b3c_threshold.json",
+      "sha256": "c731bf66614d8f40af93b3499cfcae864aa42aa64b0420d1b824a38c1b7cbec9",
+      "level": "RECORDED_EXPECTED_SHA256_MATCH",
+      "source": "reports/calibration_phase5b3c_summary.md"
+    },
+    {
+      "path": "reports/calibration_phase5b3c_validation.log",
+      "sha256": "28f23376aaeabb984659cf96ee0f22e18ff6ce60f72b97affec8ba574282b1f8",
+      "level": "RECORDED_EXPECTED_SHA256_MATCH",
+      "source": "reports/calibration_phase5b3c_summary.md"
+    },
+    {
+      "path": "scripts/run_threshold_calibration.py",
+      "sha256": "d5a651c57dfb9fcb51b1054c205c828c834935a249f60e256beededf04e91955",
+      "level": "RECORDED_EXPECTED_SHA256_MATCH",
+      "source": "reports/calibration_phase5b3c_summary.md"
+    },
+    {
+      "path": "tests/test_threshold_calibration.py",
+      "sha256": "29de287354144e1f574ad91e870accd614134c33af65524f3a1efb18c218ff1a",
+      "level": "RECORDED_EXPECTED_SHA256_MATCH",
+      "source": "reports/calibration_phase5b3c_summary.md"
+    },
+    {
+      "path": "reports/final_phase5b3d_results.json",
+      "sha256": "9ee292741f2a9891bc117a277870105940d181745bce71ba8415f21c4edb01ca",
+      "level": "RECORDED_EXPECTED_SHA256_MATCH",
+      "source": "reports/final_phase5b3d_summary.md"
+    },
+    {
+      "path": "reports/final_phase5b3d_metrics.json",
+      "sha256": "991c91b8b6c13e19e98b3708015c58e090242433eb46b19a3c8f2d4592a92661",
+      "level": "RECORDED_EXPECTED_SHA256_MATCH",
+      "source": "reports/final_phase5b3d_summary.md"
+    },
+    {
+      "path": "reports/final_phase5b3d_validation.log",
+      "sha256": "bac35278273772bb968576d6e24cccb2d0901f6d58275566c91442df55582b86",
+      "level": "RECORDED_EXPECTED_SHA256_MATCH",
+      "source": "reports/final_phase5b3d_summary.md"
+    },
+    {
+      "path": "scripts/run_final_evaluation.py",
+      "sha256": "7a7333d73a53c78bd08889e3236910c0466ac2d67fb5f2b1427d221386892b2d",
+      "level": "RECORDED_EXPECTED_SHA256_MATCH",
+      "source": "reports/final_phase5b3d_summary.md"
+    },
+    {
+      "path": "tests/test_final_evaluation.py",
+      "sha256": "177ee9495a59c5bcde013d62862c6569c5be7b99728db7761399b74cc1703d79",
+      "level": "RECORDED_EXPECTED_SHA256_MATCH",
+      "source": "reports/final_phase5b3d_summary.md"
+    },
+    {
+      "path": "reports/phase5b4_threshold_strategy_review.md",
+      "sha256": "bfb5cc588963869b4ae59f6185b34cf97a27e267f35a7fa86701639ddef42e07",
+      "level": "RECORDED_EXPECTED_SHA256_MATCH",
+      "source": "reports/phase5b4_readiness_summary.json"
+    },
+    {
+      "path": "reports/phase5b4_threshold_strategy_comparison.json",
+      "sha256": "118b7475434bb56e0d39dc2428c99f926aaf513b91f1387bec6b1598aa0d765d",
+      "level": "RECORDED_EXPECTED_SHA256_MATCH",
+      "source": "reports/phase5b4_readiness_summary.json"
+    },
+    {
+      "path": "reports/phase5b4_readiness_summary.json",
+      "sha256": "ff919e584858c2958c264f146f36d20d96a97a10e4d36000381e8b1902f8b2c0",
+      "level": "FRESH_START_BASELINE_ONLY",
+      "source": "No independent earlier expected hash asserted"
+    }
+  ],
+  "current_phase_execution": {
+    "implementation": false,
+    "threshold_fit": false,
+    "new_threshold_selected": false,
+    "new_inference": false,
+    "new_evaluation": false,
+    "image_bytes_opened": false,
+    "internet": false,
+    "sqlite_created": false,
+    "new_tests_created": false,
+    "old_tests_run": false,
+    "cleanup": false,
+    "readme_modified": false,
+    "package_install": false,
+    "commit_push": false
+  },
+  "preservation": {
+    "projects": {
+      "D:\\Face-Recognition-System": {
+        "before": 91,
+        "after": 94,
+        "changed": [],
+        "removed": [],
+        "added": [
+          "reports/phase5b5a_data_audit.md",
+          "reports/phase5b5a_implementation_plan.json",
+          "reports/phase5b5a_threshold_v2_design.md"
+        ]
+      },
+      "D:\\Facenet-Recognition": {
+        "before": 257,
+        "after": 257,
+        "changed": [],
+        "removed": [],
+        "added": []
+      },
+      "D:\\MTCNN": {
+        "before": 33,
+        "after": 33,
+        "changed": [],
+        "removed": [],
+        "added": []
+      }
+    },
+    "old_files_total": 381,
+    "nonimage_files_sha256_and_metadata": 228,
+    "image_files_metadata_only": 153,
+    "fresh_image_or_pixel_hash": "NOT_VERIFIED",
+    "venv_files_metadata_only": 23161,
+    "venv_metadata_sha256_before": "5693cad67a568c57935abab5739d3e23b1a480c103d6f0859037242edf57ef06",
+    "venv_metadata_sha256_after": "5693cad67a568c57935abab5739d3e23b1a480c103d6f0859037242edf57ef06",
+    "full_venv_content_hash": "NOT_VERIFIED",
+    "scope": "Three roots;exclude venv/git/cache from per-file content inventory;no image-byte reads;no prior expected checksum fabricated",
+    "old_files_changed": [],
+    "old_files_removed": []
+  },
+  "created_this_phase": [
+    "reports/phase5b5a_data_audit.md",
+    "reports/phase5b5a_threshold_v2_design.md",
+    "reports/phase5b5a_implementation_plan.json"
+  ],
+  "other_report_sha256": {
+    "reports/phase5b5a_data_audit.md": "246e89e1dc8e117caeebb98c712a3affc335642722236a2fed2e7a29bc773245",
+    "reports/phase5b5a_threshold_v2_design.md": "ac6278d5574b1d2830b310087e3f842d8ea3f72ae19ca6b1fedb4e354fffa727"
+  },
+  "self_checksum_included": false,
+  "next_step": "Await user approval of bounded development-only design. If independent quality evidence is mandatory before handoff,NO_GO current data;keep baseline or approve a separate data plan.",
+  "created_at_local": "2026-11-02T01:00:09+07:00"
+}

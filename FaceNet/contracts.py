@@ -1,3 +1,8 @@
+"""Hợp đồng giữ nguyên từ notebook 01 và 10, không tự sửa ảnh/metadata.
+
+Validator chỉ kiểm tra cấu trúc/số học. Bên gọi chịu trách nhiệm về màu RGB,
+alignment và biên ảnh gốc; module không đổi màu, resize, clip hoặc clamp.
+"""
 
 from __future__ import annotations
 

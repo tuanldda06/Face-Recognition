@@ -1,3 +1,8 @@
+"""FaceNet ONNX trên OpenCV DNN CPU, giữ phép tính từ notebook 01–02.
+
+Không tự đọc ảnh, tìm asset, đổi màu, resize hoặc nạp model khi import.
+Model path do bên gọi cung cấp dưới dạng đường dẫn tuyệt đối.
+"""
 
 from __future__ import annotations
 

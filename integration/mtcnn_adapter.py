@@ -1,3 +1,14 @@
+"""Chuyển output MTCNN đã alignment sang hợp đồng FaceNet, chỉ xử lý trong RAM.
+
+Caller gọi extract_faces_rgb(image, result, size=160, align=True) thành công
+trước khi gọi adapter. Nếu extraction lỗi, để exception truyền lên; không gọi
+adapter với batch thiếu mặt, không fallback sang crop chưa alignment.
+
+Adapter không thể xác minh màu RGB hoặc lịch sử alignment chỉ từ pixel.
+Caller chịu trách nhiệm hai điều này. Bbox xyxy half-open được clip trên bản
+sao vào [0,W] x [0,H]. Landmarks âm được lược bỏ có chủ đích vì là metadata
+tùy chọn; không clamp. Ảnh output có bộ nhớ riêng, giữ pixel và thứ tự đầu vào.
+"""
 
 from __future__ import annotations
 
@@ -5,7 +16,7 @@ from typing import TYPE_CHECKING
 
 import numpy as np
 
-from facenet_recognition.contracts import validate_mtcnn_output
+from FaceNet.contracts import validate_mtcnn_output
 
 if TYPE_CHECKING:
     from MTCNN.mtcnn import DetectionResult

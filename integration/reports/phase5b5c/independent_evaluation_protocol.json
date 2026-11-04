@@ -1,0 +1,170 @@
+{
+  "schema_version": "phase5b5c-independent-evaluation-protocol/1",
+  "phase": "5B.5C_RESUME",
+  "protocol_version": "FEI-v1-v2-independent/1",
+  "status": "FROZEN_TECHNICAL_SPEC_PENDING_EXPLICIT_RISK_APPROVAL",
+  "evaluation_authorized": false,
+  "authorization_gate": {
+    "dataset_preparation_authorized": true,
+    "user_risk_criteria_approved": false,
+    "risk_approval": null,
+    "required_action": "Explicit user approval of this exact frozen protocol and proposed observed-sample risk caps before loading models or running enrollment/query inference. Record approval separately; do not edit frozen files.",
+    "user_instruction_reference": "Resume request section11: preliminary criteria; prompt delivery is not implicit approval of all risk decisions."
+  },
+  "thresholds": {
+    "V1": {
+      "decimal": 0.925533688089963,
+      "hex": "0x1.d9df8d3362a3cp-1",
+      "status": "OPERATIONAL_BASELINE"
+    },
+    "V2": {
+      "decimal": 0.665513450766159,
+      "hex": "0x1.54be2dd42d71dp-1",
+      "status": "DEVELOPMENT_ONLY_NOT_INDEPENDENTLY_VALIDATED"
+    },
+    "accept": "similarity >= threshold",
+    "reject": "similarity < threshold",
+    "sweep": false,
+    "create_v3": false
+  },
+  "frozen_pipeline_profile": "reports/evaluation_pipeline_profile.json",
+  "frozen_pipeline_profile_sha256": "9a42c0f3c8d4261e54304123746441254e8fea225abdc2a1e8c6084dbb3d9f1f",
+  "model_version_sha256": "26f1432e29721a4d1e881164a62db603a968a5aa3c0e505afcba29c59668d99b",
+  "historical_references": {
+    "reports/evaluation_split_frozen.json": "236440d55178e2c5459390010576dc369412f7ea7b455d99c7c153a3d66295d7",
+    "reports/evaluation_pipeline_profile.json": "9a42c0f3c8d4261e54304123746441254e8fea225abdc2a1e8c6084dbb3d9f1f",
+    "reports/evaluation_protocol_frozen.json": "44999ad9fa6acbe9223efb0aa3cc7931d749bfd3b78169915baa926576877a98",
+    "reports/calibration_phase5b3c_results.json": "39a56a3f211a72f457c434c4f402063e4cca0940a16f123b4866a8d0d437a035",
+    "reports/calibration_phase5b3c_threshold.json": "c731bf66614d8f40af93b3499cfcae864aa42aa64b0420d1b824a38c1b7cbec9",
+    "reports/calibration_phase5b3c_validation.log": "28f23376aaeabb984659cf96ee0f22e18ff6ce60f72b97affec8ba574282b1f8",
+    "scripts/run_threshold_calibration.py": "d5a651c57dfb9fcb51b1054c205c828c834935a249f60e256beededf04e91955",
+    "tests/test_threshold_calibration.py": "29de287354144e1f574ad91e870accd614134c33af65524f3a1efb18c218ff1a",
+    "reports/calibration_phase5b3c_summary.md": "658a10ae232ee2559e7f7a53fc0f349731b9227745ece7b024dfb3e94f616fa3",
+    "reports/final_phase5b3d_results.json": "9ee292741f2a9891bc117a277870105940d181745bce71ba8415f21c4edb01ca",
+    "reports/final_phase5b3d_metrics.json": "991c91b8b6c13e19e98b3708015c58e090242433eb46b19a3c8f2d4592a92661",
+    "reports/final_phase5b3d_validation.log": "bac35278273772bb968576d6e24cccb2d0901f6d58275566c91442df55582b86",
+    "scripts/run_final_evaluation.py": "7a7333d73a53c78bd08889e3236910c0466ac2d67fb5f2b1427d221386892b2d",
+    "tests/test_final_evaluation.py": "177ee9495a59c5bcde013d62862c6569c5be7b99728db7761399b74cc1703d79",
+    "reports/final_phase5b3d_summary.md": "b21f28f8af7ccbe5c57ed85467158d4d119dfcca6042d6cabb1ff6d168f31c89",
+    "reports/phase5b5b_protocol.json": "f81b575c2971340a831a8a08b490070fd2dfdf311503b72169b4777fd450b134",
+    "reports/phase5b5b_calibration.json": "32e60684aa37e1a9b6dd46bf9e0eb1b17582b96ddf5f8f2adc6e5a72ea3005e3",
+    "scripts/phase5b5b_calibrate_threshold_v2.py": "bef3d52ac183f2b10e8148a20818b718496827a8af4e0b2deee57e66d229fecd",
+    "tests/test_phase5b5b_threshold_v2.py": "455fe1bc21aacf65c844066492307f22e928338811a35d3b90c4ccd5be8b8417",
+    "reports/phase5b5b_summary.md": "522310079a9e005d44a0cdb1e8126b1a77e021892d7ec7215039e7ba3e8f711d"
+  },
+  "dataset_split": {
+    "rule_id": "FEI-first10-numeric-central6-interleaved-v1",
+    "counts": {
+      "images": 45,
+      "identities": 10,
+      "known_identities": 5,
+      "unknown_identities": 5,
+      "enrollment": 15,
+      "genuine_queries": 15,
+      "unknown_queries": 15,
+      "queries": 30,
+      "gallery_size": 5
+    },
+    "processing_order": "Numeric identity, numeric ordinal; all 15 enrollment records then all 30 query records; fixed manifest roles; no outcome-dependent ordering or replacement"
+  },
+  "source_integrity": "Verify provenance/manifest/protocol frozen SHA and every source SHA/decoded RGB pixel SHA before use; STOP on mismatch; no overwrites.",
+  "pipeline": {
+    "device": "CPU",
+    "input": "OpenCV decode original JPEG to uint8 BGR; cv2.cvtColor BGR2RGB at original 640x480; no resize before MTCNN",
+    "detector": "Bundled MTCNN; exact evaluation_pipeline_profile.json defaults/config, networks eval() and torch.inference_mode()",
+    "alignment": "Existing extract_faces_rgb size=160 align=True, five-point similarity; exact adapter; require exactly one face, no largest-face fallback",
+    "facenet": "Existing bundled ONNX and preprocessing (pixel-127.5)/128.0; RGB NCHW; 512D float32 unit embedding; unchanged extraction",
+    "enrollment": "Existing enroll_person_from_images and existing representative mean_float64_then_L2_to_float32; three fixed original images per Known, five-ID complete gallery",
+    "sqlite": "New controlled temporary registry using existing SQLite interfaces; never open/write historical databases; no permanent registry",
+    "model_loads": "Load MTCNN and FaceNet once only after explicit approval and integrity PASS",
+    "scores": "One enrollment extraction and one query extraction per source image; one five-ID cosine ranking per query, shared by V1/V2. Existing cosine_similarity/match_embedding semantics; lexical person_id tie break.",
+    "decisions": "Apply both fixed binary64 thresholds to identical saved score records; derive score replay without model inference; cross-check existing decision API using same embeddings in RAM; no vector/BLOB in reports."
+  },
+  "failure_policy": {
+    "expected_faces": 1,
+    "zero_multiple_face": "Explicit query pipeline failure; do not choose a different face or replace source",
+    "alignment_adapter_embedding_failure": "Retain query in planned denominator, no Unknown rejection credit; log stage/type without face data",
+    "enrollment_failure": "STOP independent comparison as INCONCLUSIVE if any of 15 enroll images fails; no dropped image/identity or alternate source. Planned gallery remains 5.",
+    "infrastructure_integrity_failure": "STOP; not a recognition outcome",
+    "query_failure_accounting": "K0=15,U0=15. Known A+R+W+FK=15; Unknown UA+UR+FU=15. Failures are separate from valid rejection/false-accept counts.",
+    "serious_coverage_rule": "Conservative proposal requires all 30 queries usable and all 5 enrollments complete for a V2 recommendation; otherwise INCONCLUSIVE with failure breakdown.",
+    "no_retry_using_changed_settings": true
+  },
+  "metrics": {
+    "planned_denominators": {
+      "known_queries": 15,
+      "unknown_queries": 15,
+      "total_queries": 30,
+      "enrollment_images": 15,
+      "gallery_identities": 5
+    },
+    "symbols": "A=Known correct accept;R=Known reject;W=Known wrong-ID accept;UA=Unknown false accept;UR=Unknown correct reject;FK/FU=pipeline failures;nK/nU=usable queries",
+    "primary": {
+      "known_correct_E2E": "A/15",
+      "unknown_rejection_E2E": "UR/15",
+      "balanced_E2E": "0.5*(A/15+UR/15)",
+      "query_FPIR_E2E": "UA/15, accompanied by nU/15 coverage and FU/15 failure; no interpretation as population FAR"
+    },
+    "conditional": {
+      "known_false_rejection": "R/nK; failures excluded and separately reported",
+      "known_wrong_ID": "W/nK",
+      "known_top1_identification": "true-ID top1/nK, independent of threshold",
+      "unknown_query_FPIR": "UA/nU",
+      "unknown_correct_rejection": "UR/nU",
+      "known_coverage": "nK/15",
+      "unknown_coverage": "nU/15",
+      "pairwise_known_impostor": "accepted wrong-ID pairs/[nK*(5-1)]",
+      "pairwise_unknown_impostor": "accepted Unknown-gallery pairs/[nU*5]",
+      "pairwise_genuine_FRR": "true-ID score<threshold /nK"
+    },
+    "expected_pairs_if_complete": {
+      "genuine": 15,
+      "known_impostor": 60,
+      "unknown_impostor": 75,
+      "total": 150
+    },
+    "outputs": "counts, denominators, percentages, V2-V1 differences, query and identity breakdown, differing-decision records, failure counts by detection/alignment/adapter/embedding stage, coverage",
+    "zero_denominator": "N/A, never numeric zero",
+    "timing": "If measured, one shared processing-time record per query plus threshold-replay time; not two separate inference benchmarks."
+  },
+  "decision_criteria_proposal": {
+    "status": "PENDING_USER_APPROVAL_NOT_ACTIVE",
+    "known_improvement": "A_V2>A_V1 on same 15 Known planned queries",
+    "unknown_risk_cap": {
+      "allowed_false_accepts_V2": 0,
+      "denominator": 15,
+      "additional_rule": "UA_V2<=UA_V1"
+    },
+    "known_wrong_ID_cap": {
+      "allowed_wrong_ID_accepts_V2": 0,
+      "denominator": 15,
+      "additional_rule": "W_V2<=W_V1"
+    },
+    "coverage": "Identical 30 query records/scores; full 30/30 usable query coverage and all five complete enrollments for a V2 recommendation",
+    "technical_regression": "No integrity/serialization/matching/evaluation regression",
+    "tie": "RETAIN_V1 when outcomes equivalent and no unresolved data/technical limitation; avoid needless runtime change",
+    "v2_pass_label": "RECOMMEND_V2_FOR_CONTROLLED_INTEGRATION — LIMITED_INDEPENDENT_EVIDENCE; no runtime modification",
+    "criteria_fail": "RETAIN_V1 if valid complete comparison clearly fails approved requirements; INCONCLUSIVE for insufficient/ambiguous data, serious failures or missing approval",
+    "sample_risk_scope": "Zero observed errors in these 15 Unknown and 15 Known queries is a proposed small-sample criterion only, not proof of zero FAR or an approved deployment risk tolerance.",
+    "deployment_risk_tolerance": null
+  },
+  "limitations": [
+    "45 source images,10 dependent identity clusters,only5 Unknown identities/15 Unknown queries; one query changes stratum rate by about6.67 percentage points.",
+    "Gallery5 differs from historical gallery3; report this; do not pool datasets.",
+    "No pretraining VGGFace2 identity isolation proof, no real-person FEI/IMM mapping, no visual near-duplicate verification.",
+    "No production-grade/universal-optimum/webcam claim; no image augmentation/threshold fitting/finalV1 reuse."
+  ],
+  "stop_conditions": [
+    "Missing explicit user risk approval",
+    "Frozen or raw source integrity mismatch",
+    "Enrollment incomplete",
+    "Leakage/labels/provenance issue",
+    "Protocol change needed after freeze"
+  ],
+  "runtime_policy": "Evaluation/recommendation only. Existing source/model/database/notebook/config/README/source projects unchanged. Any integration and rollback plan is a separate user-approved change; no cleanup/commit/push.",
+  "created_at_local": "2026-11-02T09:17:21.946226+07:00",
+  "provenance_artifact": "reports/phase5b5c/public_dataset_provenance.json",
+  "provenance_sha256": "17839e9d59d1dcee4efc9612d3bc7cf86242122f9bcc7a67d02c745d6de5761a",
+  "manifest_artifact": "reports/phase5b5c/independent_dataset_manifest.json",
+  "manifest_sha256": "697ff36755be85c2257f30726ba2a4256e1c15b9151d3bae08093129a45d57df"
+}

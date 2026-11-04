@@ -1,0 +1,1081 @@
+{
+  "phase": "5B.3A",
+  "byte_duplicate_groups": [
+    {
+      "hash": "514dee2ed1d25846b5647eeea7e091a2ade42008784a40cf2fee652acd3626a1",
+      "files": [
+        {
+          "root": "mtcnn",
+          "relative_path": "aligned_faces/face_1.png"
+        },
+        {
+          "root": "integrated",
+          "relative_path": "tests/fixtures/mtcnn_single.png"
+        }
+      ]
+    },
+    {
+      "hash": "732fded5384ebec9e394a21e738d900fd3911ea7bb9764b05decb7a4d1e58358",
+      "files": [
+        {
+          "root": "mtcnn",
+          "relative_path": "MTCNN/face.jpg"
+        },
+        {
+          "root": "integrated",
+          "relative_path": "tests/fixtures/mtcnn_multi.jpg"
+        }
+      ]
+    }
+  ],
+  "identical_decoded_pixel_groups": [
+    {
+      "hash": "2af70e83fb535d41674afa37538ee9a8bee28ba6ae700fac25480fd3206f4196",
+      "files": [
+        {
+          "root": "mtcnn",
+          "relative_path": "aligned_faces/face_1.png"
+        },
+        {
+          "root": "integrated",
+          "relative_path": "tests/fixtures/mtcnn_single.png"
+        }
+      ]
+    },
+    {
+      "hash": "434cf0677d562c3e53d36b9d20eec125be395db2b09859a3d3f63a91a9999e71",
+      "files": [
+        {
+          "root": "mtcnn",
+          "relative_path": "MTCNN/face.jpg"
+        },
+        {
+          "root": "integrated",
+          "relative_path": "tests/fixtures/mtcnn_multi.jpg"
+        }
+      ]
+    }
+  ],
+  "raw_imm_duplicate_hash_groups": [],
+  "raw_imm_identical_pixel_groups": [],
+  "same_source_asf_derivations": [
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_01/01-1m.jpg",
+      "source_sha256": "8d80606a0a8bde37c87fab0ca9f7853fc885b0beea8fa22e6ae67f36ce904f8f",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_01/01-1m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:01"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_01/01-2m.jpg",
+      "source_sha256": "9fbc04cc45863bfaa34b32d257994c72b8e002838e7a72dcd2ca1271755e9f80",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_01/01-2m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:01"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_01/01-3m.jpg",
+      "source_sha256": "f0c21950fe4923120d0841e25b09952a1ee5fad9c5c218aade1c546f819e1543",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_01/01-3m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:01"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_01/01-4m.jpg",
+      "source_sha256": "d4562dd289cdc32c6c5b1138d5a31431c9dc9307715046eff07538f01f9609b7",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_01/01-4m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:01"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_01/01-5m.jpg",
+      "source_sha256": "d5ce081787f87b796a96f15411286842538bd11d8bd7afea93e1e0851e84d6b0",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_01/01-5m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:01"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_02/05-1m.jpg",
+      "source_sha256": "163a2495887ee5d6048fd5ad5230a10fd526f77971939888d029171781e88e6b",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_02/05-1m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:05"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_02/05-2m.jpg",
+      "source_sha256": "575e23f15384632e0236ea32dda7894f93919b389fe5d272b521a72ba8ff5bc9",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_02/05-2m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:05"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_02/05-3m.jpg",
+      "source_sha256": "5fd6e05b85ad1ac9e5ca857a1e46ab43befc4ae3e977d1dd2c88a0b9b64dd6cf",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_02/05-3m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:05"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_02/05-4m.jpg",
+      "source_sha256": "86e6a83e83220f2a2ebd10ab99426a0968d70c9adf957a17d1717b6092ccbae1",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_02/05-4m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:05"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_02/05-5m.jpg",
+      "source_sha256": "b8e504057fe7296cc9b5044a87f7c35e7780bc89f56c98179aa9facdfd14cd79",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_02/05-5m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:05"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_03/06-1m.jpg",
+      "source_sha256": "5838c33ad2b71b4d37d92572b785e2ae622b8edfdc4524958901ec0946a2242d",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_03/06-1m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:06"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_03/06-2m.jpg",
+      "source_sha256": "68fb924f13dcfeab307eb81e734d7227a65bf01d3f6d3c6746714e536468297f",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_03/06-2m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:06"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_03/06-3m.jpg",
+      "source_sha256": "cfd96a2d61cf893a3ca409c43569229764b830da337715ef818cebb1c8413480",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_03/06-3m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:06"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_03/06-4m.jpg",
+      "source_sha256": "5c9085746325d3fc0d7057878c30adb1ae62f4dcaf3a0712e919c1a2335c0571",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_03/06-4m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:06"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_03/06-5m.jpg",
+      "source_sha256": "cd32975f028e43a293727cd1d8d9532a66ca7603f3f84ab69cd26e9335c7dcaa",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_03/06-5m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:06"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_04/07-1m.jpg",
+      "source_sha256": "6c63588f0e614cd389b2e2095620f6cac834a55304f73948250e9a903b038e2d",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_04/07-1m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:07"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_04/07-2m.jpg",
+      "source_sha256": "e77d4cf8d921ea9389c45277029fb623cdda9a658b66590a172c4083f06799f9",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_04/07-2m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:07"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_04/07-3m.jpg",
+      "source_sha256": "ba713bca0b8ba4c2fe872b92aea3fa03d2393f99eadedfde1983b16c7a8ee15f",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_04/07-3m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:07"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_04/07-4m.jpg",
+      "source_sha256": "72d30c713aadc7d409a049b9621a6ad643826dcc068bbb3e08f409b0183d1cda",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_04/07-4m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:07"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_04/07-5m.jpg",
+      "source_sha256": "2413aec652d86e5e1509391654bb0b0d0c2e79a3bd2b808cb8eb91454fe72ba0",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_04/07-5m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:07"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_05/08-1f.jpg",
+      "source_sha256": "058e2c53bfa6b2495c591f1039ffe27c3c7512db41e90cabb6d4f950c7e11349",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_05/08-1f.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:08"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_05/08-2f.jpg",
+      "source_sha256": "f43b61a4f31b02d4d94b4937ae20f3a34a0e93582791da5ff7979ce0d6ded8e6",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_05/08-2f.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:08"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_05/08-3f.jpg",
+      "source_sha256": "6610d0329f62e7f8600fceaa509cec539416b00eb0bccb520c74d255977d2882",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_05/08-3f.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:08"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_05/08-4f.jpg",
+      "source_sha256": "717301e0a23d4f2cb655f88bfc55e4d6e6a17f20ca0cb471b8b408a38513b3f8",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_05/08-4f.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:08"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/sample_faces/person_05/08-5f.jpg",
+      "source_sha256": "b40b43dcfde77c6c425c6ecf1e3ef7ad5bf736805d8aef56c58c2b25d37ae95c",
+      "child_root": "facenet",
+      "child_path": "data/processed_faces_imm/person_05/08-5f.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:08"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_09/09-1m.jpg",
+      "source_sha256": "f5b4312cbc22b3daef94c87deb19cb220baeb3bae2a2b83cb27e0e910fe44147",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_09/09-1m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:09"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_09/09-2m.jpg",
+      "source_sha256": "60cdfb298c1af545fac95e5fb6e4a0651ea54e83da5bba9679099cbd63958704",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_09/09-2m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:09"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_09/09-3m.jpg",
+      "source_sha256": "c2e490f1af9c0bcccb1584efe5baea5b0fda730585cb4f5f335f13752e6d2e15",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_09/09-3m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:09"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_09/09-4m.jpg",
+      "source_sha256": "cbfd4f9c6662c3ace07ac0797d02be52872953c9acaa5c445459cba87fab5130",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_09/09-4m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:09"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_09/09-5m.jpg",
+      "source_sha256": "04ac0db7b93eb59c2f02ef688c445fb0ab56cc700bedf060ec3bd080eef39140",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_09/09-5m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:09"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_09/09-6m.jpg",
+      "source_sha256": "1e5f0a234e2376afd964e220fd1943d5c3e081d68eea5247baa4ae0951071988",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_09/09-6m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:09"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_10/10-1m.jpg",
+      "source_sha256": "bb27f1fe17e6c2ba1b3d2089dd914097e34213c4df76bcacc6b3ea0621830f7e",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_10/10-1m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:10"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_10/10-2m.jpg",
+      "source_sha256": "cf2121032725a6a5c927bcac52281e8ec4865b23812c8ac15c9af7bfa0388f0e",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_10/10-2m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:10"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_10/10-3m.jpg",
+      "source_sha256": "7909e5f2cd0200c56d9ff44479fc11715c29cfcdb21618e776daa46fb97a3e1e",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_10/10-3m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:10"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_10/10-4m.jpg",
+      "source_sha256": "6119f83202cce5c9b76a9d9979d047a0fb169bbb9bf9e3ff82ca548a6741b1ae",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_10/10-4m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:10"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_10/10-5m.jpg",
+      "source_sha256": "49469ef5c8e3840770d72a3ffd6155738fd5b4c247ab090b9ea699848770a2b7",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_10/10-5m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:10"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_10/10-6m.jpg",
+      "source_sha256": "ee56e9bbebebe370400aeeb3957f2d37f1e033ec1df098489d2d0aa964fd20df",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_10/10-6m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:10"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_11/11-1m.jpg",
+      "source_sha256": "79f78214d7e469bee667b26704e28ebe5a2a2a34a21b4ed6f2628cb1f8005366",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_11/11-1m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:11"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_11/11-2m.jpg",
+      "source_sha256": "d532a72aebe782bc354036ed8c0af9b27a25268a80b1132d22c0d9ce83410884",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_11/11-2m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:11"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_11/11-3m.jpg",
+      "source_sha256": "f5e3b4bd4c8100e1d2493f30db95da3c3fec17f9b80b53009ec0bcca64c9bb84",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_11/11-3m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:11"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_11/11-4m.jpg",
+      "source_sha256": "2822fd7bd1bb22d2feb52d0fcb208a0246ede2f9a2d6616618b0c1f4f31a0869",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_11/11-4m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:11"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_11/11-5m.jpg",
+      "source_sha256": "a29e745342e42d6f2c5acf03013cf9be9ca38e87fe539f8c2425c69d5d02540b",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_11/11-5m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:11"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_11/11-6m.jpg",
+      "source_sha256": "02445b64e3a1e8bf7de4470290d78df3dd4e537a9dd64055c351b90f349816a4",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_11/11-6m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:11"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_12/12-1f.jpg",
+      "source_sha256": "3936428acdecb53c7fc313c145f7f3add2c2b89e5a0510727bd8ac0f175f12cc",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_12/12-1f.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:12"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_12/12-2f.jpg",
+      "source_sha256": "d74f8fee38945fbfd47f56052e5dd86ca926811a1ce7e77fcfde4b4e06069a36",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_12/12-2f.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:12"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_12/12-3f.jpg",
+      "source_sha256": "9dc85a2212ce1906c2810375a106a6914c0e2de97f9d4dd7aafb663a5744aff5",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_12/12-3f.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:12"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_12/12-4f.jpg",
+      "source_sha256": "17d310e7fda51aa6d385cb9a8bc2748a9624b9090844b317ea505e32130cbe06",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_12/12-4f.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:12"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_12/12-5f.jpg",
+      "source_sha256": "a29f76ca152c9bd183ac3934eb0be6144ebc2f0ec41556424cdc64276a8daf30",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_12/12-5f.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:12"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_12/12-6f.jpg",
+      "source_sha256": "95f42d0d208951f82c6a470c6b4a00b963d11cfb053e1e7b0f84d24de2875a61",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_12/12-6f.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:12"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_13/13-1m.jpg",
+      "source_sha256": "8f8cfaecaecf5ed8d4d239a058f7e959a45b286fed3c765739eab6aae30ee379",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_13/13-1m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:13"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_13/13-2m.jpg",
+      "source_sha256": "987fe897cd348f1e0f963335f9d0820c0c8ed3dd3b071c371a81800971dd596e",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_13/13-2m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:13"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_13/13-3m.jpg",
+      "source_sha256": "3cfd2097ba61d926956bd4918c955e31a693755f26ce05fbfd4fa38cdea7b567",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_13/13-3m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:13"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_13/13-4m.jpg",
+      "source_sha256": "e4c0bedda11c9859ce4af6b146434f5d8146d4f0bab90a78dbee877aa8dde700",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_13/13-4m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:13"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_13/13-5m.jpg",
+      "source_sha256": "7ab0c72e713ca25ecb73044f7deb1fe0ee619d31ba7a9eab75c7e7f9c53e1112",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_13/13-5m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:13"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_13/13-6m.jpg",
+      "source_sha256": "4f035207bd7903237328319966e508dce2f71659f93a676eac89d2579897775c",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_13/13-6m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:13"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_14/14-1f.jpg",
+      "source_sha256": "e89c843715f9c3b75818bbde4df315dc9a58d9def35aa77c349d0b25af415a12",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_14/14-1f.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:14"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_14/14-2f.jpg",
+      "source_sha256": "67d107560ef236ef4ac90093f57738e314be28306effa142536cafed8d4427da",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_14/14-2f.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:14"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_14/14-3f.jpg",
+      "source_sha256": "16d2efd0c0c5f08f8b18f8d04c75287984b37c4a9f9f37a350c8f38abda267dd",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_14/14-3f.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:14"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_14/14-4f.jpg",
+      "source_sha256": "ced5cc2c2689bd9c735aa47ec00af8343cacc881024f3f198ad9b981029aa815",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_14/14-4f.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:14"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_14/14-5f.jpg",
+      "source_sha256": "493534bfa0c0cc2903f3cbb8949b957634e532aa9743c2c2f1c1c24f25001968",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_14/14-5f.png",
+      "child_exists": false,
+      "status": "failed",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:14"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_14/14-6f.jpg",
+      "source_sha256": "24e84820090bb114abe77ea84a88f48680bc1ce74d7435e72ca46d8a0e115a5f",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_14/14-6f.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:14"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_15/15-1f.jpg",
+      "source_sha256": "f046e989a5e2b5bcd609064a2f8104e3afbbea08d1b9037c4128eadb0a92dba8",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_15/15-1f.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:15"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_15/15-2f.jpg",
+      "source_sha256": "9c03b676a5001348f0de4d34f68a4a46a1ac751d1aefc33a9ac24d37b2bdce49",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_15/15-2f.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:15"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_15/15-3f.jpg",
+      "source_sha256": "20edfbbc6942837f3fce1a4fd4604d6a264a4c9e5bbc32b66f2ac8cfcbcdb4a7",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_15/15-3f.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:15"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_15/15-4f.jpg",
+      "source_sha256": "fd06206a89dc8517725b442908b7a57aabdea2b9f86c8b447196fbc8e4722f7b",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_15/15-4f.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:15"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_15/15-5f.jpg",
+      "source_sha256": "74f015f6d71ab8908c65b01a3dbd22ea168424e5f5be35858d8dcc55af9240b2",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_15/15-5f.png",
+      "child_exists": false,
+      "status": "failed",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:15"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_15/15-6f.jpg",
+      "source_sha256": "fa117b493a97bf55e60404cddf7119cd1f0e4bb25e476ea96a735c45be5d757d",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_15/15-6f.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:15"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_16/16-1m.jpg",
+      "source_sha256": "dc12e29ca4678a782d775547104564adf1842b3319ebf7b3bcea4f333f79c645",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_16/16-1m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:16"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_16/16-2m.jpg",
+      "source_sha256": "e7106e40599f527568b0e3c5249fe1282d9faafaf89d014d951a5d2516b44ccf",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_16/16-2m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:16"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_16/16-3m.jpg",
+      "source_sha256": "b660c6ce9fce49c7ec8698f6da3c84d2aca306d7c0ecf5416b578f5612d873bf",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_16/16-3m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:16"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_16/16-4m.jpg",
+      "source_sha256": "997248a43a1954c7a60e9f5636cd99726d21630f38bd30dad6ba988a5d07690a",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_16/16-4m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:16"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_16/16-5m.jpg",
+      "source_sha256": "034a954c89e67cd247c9fd00d7621611639b6d7aa3e0e88f0e4a2a138d2ca1b2",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_16/16-5m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:16"
+    },
+    {
+      "source_root": "facenet",
+      "source_path": "data/unknown_faces_imm/imm_16/16-6m.jpg",
+      "source_sha256": "3036ac5f0d2015aa54d1d75c1a4f1eea70c616399de98da5b90baca1dc9c53bb",
+      "child_root": "facenet",
+      "child_path": "data/processed_unknown_faces_imm/imm_16/16-6m.png",
+      "child_exists": true,
+      "status": "saved",
+      "alignment": "ASF",
+      "dataset_identity_reference": "IMM:16"
+    }
+  ],
+  "fixture_copy_edges": [
+    {
+      "source": "D:\\MTCNN\\MTCNN\\face.jpg",
+      "child_root": "integrated",
+      "child_path": "tests/fixtures/mtcnn_multi.jpg",
+      "source_sha256": "732fded5384ebec9e394a21e738d900fd3911ea7bb9764b05decb7a4d1e58358",
+      "child_sha256": "732fded5384ebec9e394a21e738d900fd3911ea7bb9764b05decb7a4d1e58358"
+    },
+    {
+      "source": "D:\\MTCNN\\aligned_faces\\face_1.png",
+      "child_root": "integrated",
+      "child_path": "tests/fixtures/mtcnn_single.png",
+      "source_sha256": "514dee2ed1d25846b5647eeea7e091a2ade42008784a40cf2fee652acd3626a1",
+      "child_sha256": "514dee2ed1d25846b5647eeea7e091a2ade42008784a40cf2fee652acd3626a1"
+    }
+  ],
+  "mtcnn_crop_source_relationship": "Claimed MTCNN alignment outputs by path/history, but no source-photo/identity manifest; do not infer unique identities or independence.",
+  "detected_jpg_provenance": "Unknown; 1200x675 differs from bundled 666x409 demo image. Filename alone does not establish its source.",
+  "visual_near_duplicates": "NOT VERIFIED; no previews, perceptual matching, embeddings or clustering run.",
+  "historical_partitions": {
+    "known": [
+      "IMM:01",
+      "IMM:05",
+      "IMM:06",
+      "IMM:07",
+      "IMM:08"
+    ],
+    "unknown_calibration": [
+      "IMM:09",
+      "IMM:10",
+      "IMM:11",
+      "IMM:12"
+    ],
+    "unknown_evaluation": [
+      "IMM:13",
+      "IMM:14",
+      "IMM:15",
+      "IMM:16"
+    ],
+    "identity_intersections": {
+      "known_vs_unknown": [],
+      "unknown_calibration_vs_evaluation": []
+    },
+    "known_enrollment_query_rule": "First3/last2 PNG by path; source hashes/pixels distinct."
+  },
+  "historical_exposure": [
+    {
+      "source": "notebooks/04_real_face_embedding_evaluation.ipynb",
+      "scope": "All 25 known ASF PNGs scored before later holdout experiments."
+    },
+    {
+      "source": "notebooks/05/07/08",
+      "scope": "3/2 known split retained; query images had prior exploratory exposure."
+    },
+    {
+      "source": "notebooks/09_open_set_evaluation.ipynb",
+      "scope": "24 unknown calibration PNGs and 22 unknown final PNGs used with ASF; 0.48 was exploratory unknown-only calibration, no independent known calibration."
+    },
+    {
+      "source": "notebooks/10_mtcnn_facenet_interface.ipynb and regression",
+      "scope": "Known/unknown ASF images reused for contract tests."
+    },
+    {
+      "source": "Phase5B.2A/2B",
+      "scope": "All five raw IMM01 images used for MTCNN correctness; not a fresh blind cohort."
+    }
+  ],
+  "candidate_split": {
+    "status": "NOT_FINALIZED",
+    "identity_assignment": {
+      "calibration": {
+        "known": [
+          "IMM:01",
+          "IMM:05",
+          "IMM:06"
+        ],
+        "unknown": [
+          "IMM:07",
+          "IMM:08",
+          "IMM:09"
+        ]
+      },
+      "final_evaluation": {
+        "known": [
+          "IMM:10",
+          "IMM:11",
+          "IMM:12"
+        ],
+        "unknown": [
+          "IMM:13",
+          "IMM:14",
+          "IMM:15",
+          "IMM:16"
+        ]
+      }
+    },
+    "counts": {
+      "calibration": {
+        "enrollment": 9,
+        "genuine_query": 6,
+        "unknown_query": 15
+      },
+      "final_evaluation": {
+        "enrollment": 9,
+        "genuine_query": 6,
+        "unknown_query": 20
+      }
+    },
+    "source_hash_or_pixel_reuse_within_candidate": false,
+    "calibration_final_identity_overlap": false,
+    "known_unknown_identity_overlap_per_stage": false,
+    "old_and_new_role_change_note": "Known/unknown are relative to the new registry; original dataset identities are not changed."
+  },
+  "verification": {
+    "checks_passed": 23,
+    "checks": [
+      {
+        "name": "73 raw records / 13 labeled identities",
+        "pass": true
+      },
+      {
+        "name": "all raw readable RGB uint8 480x640 JPEG",
+        "pass": true
+      },
+      {
+        "name": "raw byte hashes unique",
+        "pass": true
+      },
+      {
+        "name": "raw decoded pixel hashes unique",
+        "pass": true
+      },
+      {
+        "name": "source/ASF/processed/fixture integrity",
+        "pass": true
+      },
+      {
+        "name": "ASF: 71 seven-field / 2 ten-field",
+        "pass": true
+      },
+      {
+        "name": "ASF headers and hosts",
+        "pass": true
+      },
+      {
+        "name": "153 image files readable",
+        "pass": true
+      },
+      {
+        "name": "71 existing ASF-PNG outputs",
+        "pass": true
+      },
+      {
+        "name": "two exact duplicate groups are fixture copies",
+        "pass": true
+      },
+      {
+        "name": "pixel duplicate groups match byte duplicate groups",
+        "pass": true
+      },
+      {
+        "name": "65 common-five images",
+        "pass": true
+      },
+      {
+        "name": "8 sixth-image reserves",
+        "pass": true
+      },
+      {
+        "name": "candidate leakage validation",
+        "pass": true
+      },
+      {
+        "name": "calibration: 9/6/15",
+        "pass": true
+      },
+      {
+        "name": "final: 9/6/20",
+        "pass": true
+      },
+      {
+        "name": "determinism under reversed input",
+        "pass": true
+      },
+      {
+        "name": "negative: reused source hash",
+        "pass": true
+      },
+      {
+        "name": "negative: reused pixels",
+        "pass": true
+      },
+      {
+        "name": "negative: cross-stage identity",
+        "pass": true
+      },
+      {
+        "name": "negative: known/unknown overlap",
+        "pass": true
+      },
+      {
+        "name": "negative: insufficient enrollment",
+        "pass": true
+      },
+      {
+        "name": "two ASF-failed JPEGs retained as final unknown",
+        "pass": true
+      }
+    ]
+  },
+  "png_exclusion": "All 71 ASF PNGs, 5 unlabeled MTCNN crops, demo/annotated images and copied fixtures excluded from primary evaluation.",
+  "asf_failures_do_not_exclude_jpeg": [
+    "14-5f.jpg",
+    "15-5f.jpg"
+  ]
+}

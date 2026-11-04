@@ -1,4 +1,9 @@
+"""Cosine, ranking và Known/Unknown giữ nguyên từ notebook 07–10.
 
+Chỉ nhận embedding đã trích xuất, không đọc SQLite/ảnh hoặc nạp model. Threshold
+luôn do bên gọi truyền; không có ngưỡng mặc định hoặc calibration trong module.
+Các validator giữ tại đây để không thay đổi contracts.py đã duyệt ở Phase 1.
+"""
 
 from __future__ import annotations
 
