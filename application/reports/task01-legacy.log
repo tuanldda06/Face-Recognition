@@ -1,0 +1,345 @@
+EEEEEEEEEEE....F......F..F..F...FFEEEEEEEEEEEEEEEEEEF...... [ 16%]
+..F..FEEEEEEEEEEEEEEEEEEEEEEEFFFFFFFFFFFFFFFFFFFFFFFFEEE........... [ 36%]
+...............F.......FF...FF..................... [ 50%]
+........s..............................FFFFF................................................................... [ 82%]
+............................................................             [100%]
+=================================== ERRORS ====================================
+____ ERROR at setup of TestContracts.test_error_keeps_face_index_and_cause ____
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+____ ERROR at setup of TestContracts.test_image_rejections_match_notebook _____
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+_ ERROR at setup of TestContracts.test_invalid_bbox_is_rejected_without_clipping _
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+___________ ERROR at setup of TestContracts.test_invalid_confidence ___________
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+_ ERROR at setup of TestContracts.test_invalid_container_and_required_fields __
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+___________ ERROR at setup of TestContracts.test_invalid_landmarks ____________
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+___ ERROR at setup of TestContracts.test_no_implicit_original_image_bounds ____
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+____ ERROR at setup of TestContracts.test_none_exceptions_remain_distinct _____
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+_ ERROR at setup of TestContracts.test_valid_detection_lists_and_metadata_remain_unchanged _
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+_______ ERROR at setup of TestContracts.test_valid_image_is_not_changed _______
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+____ ERROR at setup of TestContracts.test_validator_bodies_preserve_source ____
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+_ ERROR at setup of TestEnrollment.test_algorithm_and_registry_count_policies_remain_distinct _
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\05_face_enrollment.ipynb'
+____ ERROR at setup of TestEnrollment.test_body_preserves_notebook05_and06 ____
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\05_face_enrollment.ipynb'
+_ ERROR at setup of TestEnrollment.test_counts_other_than_three_are_supported _
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\05_face_enrollment.ipynb'
+_____________ ERROR at setup of TestEnrollment.test_empty_shapes ______________
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\05_face_enrollment.ipynb'
+_ ERROR at setup of TestEnrollment.test_fresh_import_has_no_io_or_inference_dependencies _
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\05_face_enrollment.ipynb'
+_________ ERROR at setup of TestEnrollment.test_identical_embeddings __________
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\05_face_enrollment.ipynb'
+____________ ERROR at setup of TestEnrollment.test_invalid_dtypes _____________
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\05_face_enrollment.ipynb'
+_ ERROR at setup of TestEnrollment.test_invalid_row_norm_and_heterogeneous_rows _
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\05_face_enrollment.ipynb'
+____________ ERROR at setup of TestEnrollment.test_invalid_shapes _____________
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\05_face_enrollment.ipynb'
+______ ERROR at setup of TestEnrollment.test_mean_is_float64_not_float32 ______
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\05_face_enrollment.ipynb'
+______________ ERROR at setup of TestEnrollment.test_nan_and_inf ______________
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\05_face_enrollment.ipynb'
+______ ERROR at setup of TestEnrollment.test_near_zero_mean_is_rejected _______
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\05_face_enrollment.ipynb'
+_ ERROR at setup of TestEnrollment.test_noncontiguous_input_unchanged_and_result_independent _
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\05_face_enrollment.ipynb'
+_____ ERROR at setup of TestEnrollment.test_rows_are_not_normalized_again _____
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\05_face_enrollment.ipynb'
+_ ERROR at setup of TestEnrollment.test_small_mean_above_original_cutoff_is_accepted _
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\05_face_enrollment.ipynb'
+_ ERROR at setup of TestEnrollment.test_three_different_embeddings_shape_dtype_and_l2 _
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\05_face_enrollment.ipynb'
+_ ERROR at setup of TestEnrollment.test_unsupported_container_and_mixed_input _
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\05_face_enrollment.ipynb'
+_________ ERROR at setup of TestEnrollment.test_zero_mean_is_rejected _________
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\05_face_enrollment.ipynb'
+__ ERROR at setup of TestNotebookRegression.test_real_batch_order_and_repeat __
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\README.md'
+_ ERROR at setup of TestNotebookRegression.test_real_images_match_original_values _
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\README.md'
+__ ERROR at setup of TestMatching.test_bodies_preserve_all_notebook_versions __
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+___ ERROR at setup of TestMatching.test_candidate_error_keeps_id_and_cause ____
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+___ ERROR at setup of TestMatching.test_empty_registry_keeps_original_error ___
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+____ ERROR at setup of TestMatching.test_equality_and_adjacent_thresholds _____
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+_ ERROR at setup of TestMatching.test_fresh_import_has_no_business_io_or_heavy_dependencies _
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+_ ERROR at setup of TestMatching.test_identical_orthogonal_and_opposite_cosine _
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+_________ ERROR at setup of TestMatching.test_inputs_remain_unchanged _________
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+___________ ERROR at setup of TestMatching.test_invalid_embeddings ____________
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+_______________ ERROR at setup of TestMatching.test_invalid_ids _______________
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+_________ ERROR at setup of TestMatching.test_invalid_registry_types __________
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+___________ ERROR at setup of TestMatching.test_invalid_thresholds ____________
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+___________ ERROR at setup of TestMatching.test_known_result_fields ___________
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+______ ERROR at setup of TestMatching.test_near_unit_norm_is_not_mutated ______
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+___ ERROR at setup of TestMatching.test_no_default_threshold_or_calibration ___
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+_ ERROR at setup of TestMatching.test_nonunit_embedding_is_rejected_not_normalized _
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+_ ERROR at setup of TestMatching.test_ranking_order_schema_and_all_candidates _
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+_ ERROR at setup of TestMatching.test_reserved_unknown_behavior_is_unchanged __
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+_ ERROR at setup of TestMatching.test_ties_use_person_id_not_insertion_order __
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+____ ERROR at setup of TestMatching.test_unknown_preserves_best_candidate _____
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+______ ERROR at setup of TestMatching.test_validation_order_is_unchanged ______
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+_ ERROR at setup of TestMatchingNotebookRegression.test_real_queries_match_notebook_cosine_rank_and_decisions _
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\README.md'
+_ ERROR at setup of TestRecognitionNotebookRegression.test_model_version_mismatch_stops_before_inference _
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\README.md'
+_ ERROR at setup of TestRecognitionNotebookRegression.test_real_onnx_complete_outputs_match_notebook10 _
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\README.md'
+_ ERROR at setup of TestRecognitionNotebookRegression.test_sqlite_registry_composition_is_readonly_without_initialization _
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\README.md'
+================================== FAILURES ===================================
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\07_face_matching.ipynb'
+---------------------------- Captured stdout call -----------------------------
+uuuuuuuu
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\07_face_matching.ipynb'
+E   NotADirectoryError: [WinError 267] The directory name is invalid
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\subprocess.py:1538: NotADirectoryError: [WinError 267] The directory name is invalid
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\README.md'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\README.md'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\06_face_database.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\README.md'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\README.md'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\01_facenet_model.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\01_facenet_model.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\01_facenet_model.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\01_facenet_model.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\02_embedding_extraction.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\02_embedding_extraction.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\01_facenet_model.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\01_facenet_model.ipynb'
+E   NotADirectoryError: [WinError 267] The directory name is invalid
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\subprocess.py:1538: NotADirectoryError: [WinError 267] The directory name is invalid
+E   NotADirectoryError: [WinError 267] The directory name is invalid
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\subprocess.py:1538: NotADirectoryError: [WinError 267] The directory name is invalid
+E   NotADirectoryError: [WinError 267] The directory name is invalid
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\subprocess.py:1538: NotADirectoryError: [WinError 267] The directory name is invalid
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\notebooks\\10_mtcnn_facenet_interface.ipynb'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\data\\face_database_test.db'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\data\\face_database_test.db'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\data\\processed_faces_imm\\manifest.json'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\data\\processed_faces_imm\\manifest.json'
+E   ValueError: Runtime/detector/embedding profile differs; re-enrollment required.
+E:\Face-Recognition-main\integration\enrollment_pipeline.py:266: ValueError: Runtime/detector/embedding profile differs; re-enrollment required.
+E   ValueError: Runtime/detector/embedding profile differs; re-enrollment required.
+E:\Face-Recognition-main\integration\enrollment_pipeline.py:266: ValueError: Runtime/detector/embedding profile differs; re-enrollment required.
+E   ValueError: Runtime/detector/embedding profile differs; re-enrollment required.
+E:\Face-Recognition-main\integration\enrollment_pipeline.py:266: ValueError: Runtime/detector/embedding profile differs; re-enrollment required.
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\data\\processed_faces_imm\\manifest.json'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\data\\processed_faces_imm\\manifest.json'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\data\\processed_faces_imm\\manifest.json'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\data\\processed_faces_imm\\manifest.json'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\data\\processed_faces_imm\\manifest.json'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\data\\processed_faces_imm\\manifest.json'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\data\\processed_faces_imm\\manifest.json'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\data\\processed_faces_imm\\manifest.json'
+E   FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\data\\processed_faces_imm\\manifest.json'
+C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:1013: FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Facenet-Recognition\\data\\processed_faces_imm\\manifest.json'
+=========================== short test summary info ===========================
+SKIPPED [1] integration\tests\test_mtcnn_adapter.py:285: NOT TESTED: thiếu ảnh mẫu local
+ERROR application\test_contracts.py::TestContracts::test_error_keeps_face_index_and_cause
+ERROR application\test_contracts.py::TestContracts::test_image_rejections_match_notebook
+ERROR application\test_contracts.py::TestContracts::test_invalid_bbox_is_rejected_without_clipping
+ERROR application\test_contracts.py::TestContracts::test_invalid_confidence
+ERROR application\test_contracts.py::TestContracts::test_invalid_container_and_required_fields
+ERROR application\test_contracts.py::TestContracts::test_invalid_landmarks - ...
+ERROR application\test_contracts.py::TestContracts::test_no_implicit_original_image_bounds
+ERROR application\test_contracts.py::TestContracts::test_none_exceptions_remain_distinct
+ERROR application\test_contracts.py::TestContracts::test_valid_detection_lists_and_metadata_remain_unchanged
+ERROR application\test_contracts.py::TestContracts::test_valid_image_is_not_changed
+ERROR application\test_contracts.py::TestContracts::test_validator_bodies_preserve_source
+ERROR application\test_enrollment.py::TestEnrollment::test_algorithm_and_registry_count_policies_remain_distinct
+ERROR application\test_enrollment.py::TestEnrollment::test_body_preserves_notebook05_and06
+ERROR application\test_enrollment.py::TestEnrollment::test_counts_other_than_three_are_supported
+ERROR application\test_enrollment.py::TestEnrollment::test_empty_shapes - Fil...
+ERROR application\test_enrollment.py::TestEnrollment::test_fresh_import_has_no_io_or_inference_dependencies
+ERROR application\test_enrollment.py::TestEnrollment::test_identical_embeddings
+ERROR application\test_enrollment.py::TestEnrollment::test_invalid_dtypes - F...
+ERROR application\test_enrollment.py::TestEnrollment::test_invalid_row_norm_and_heterogeneous_rows
+ERROR application\test_enrollment.py::TestEnrollment::test_invalid_shapes - F...
+ERROR application\test_enrollment.py::TestEnrollment::test_mean_is_float64_not_float32
+ERROR application\test_enrollment.py::TestEnrollment::test_nan_and_inf - File...
+ERROR application\test_enrollment.py::TestEnrollment::test_near_zero_mean_is_rejected
+ERROR application\test_enrollment.py::TestEnrollment::test_noncontiguous_input_unchanged_and_result_independent
+ERROR application\test_enrollment.py::TestEnrollment::test_rows_are_not_normalized_again
+ERROR application\test_enrollment.py::TestEnrollment::test_small_mean_above_original_cutoff_is_accepted
+ERROR application\test_enrollment.py::TestEnrollment::test_three_different_embeddings_shape_dtype_and_l2
+ERROR application\test_enrollment.py::TestEnrollment::test_unsupported_container_and_mixed_input
+ERROR application\test_enrollment.py::TestEnrollment::test_zero_mean_is_rejected
+ERROR application\test_facenet_model.py::TestNotebookRegression::test_real_batch_order_and_repeat
+ERROR application\test_facenet_model.py::TestNotebookRegression::test_real_images_match_original_values
+ERROR application\test_matching.py::TestMatching::test_bodies_preserve_all_notebook_versions
+ERROR application\test_matching.py::TestMatching::test_candidate_error_keeps_id_and_cause
+ERROR application\test_matching.py::TestMatching::test_empty_registry_keeps_original_error
+ERROR application\test_matching.py::TestMatching::test_equality_and_adjacent_thresholds
+ERROR application\test_matching.py::TestMatching::test_fresh_import_has_no_business_io_or_heavy_dependencies
+ERROR application\test_matching.py::TestMatching::test_identical_orthogonal_and_opposite_cosine
+ERROR application\test_matching.py::TestMatching::test_inputs_remain_unchanged
+ERROR application\test_matching.py::TestMatching::test_invalid_embeddings - F...
+ERROR application\test_matching.py::TestMatching::test_invalid_ids - FileNotF...
+ERROR application\test_matching.py::TestMatching::test_invalid_registry_types
+ERROR application\test_matching.py::TestMatching::test_invalid_thresholds - F...
+ERROR application\test_matching.py::TestMatching::test_known_result_fields - ...
+ERROR application\test_matching.py::TestMatching::test_near_unit_norm_is_not_mutated
+ERROR application\test_matching.py::TestMatching::test_no_default_threshold_or_calibration
+ERROR application\test_matching.py::TestMatching::test_nonunit_embedding_is_rejected_not_normalized
+ERROR application\test_matching.py::TestMatching::test_ranking_order_schema_and_all_candidates
+ERROR application\test_matching.py::TestMatching::test_reserved_unknown_behavior_is_unchanged
+ERROR application\test_matching.py::TestMatching::test_ties_use_person_id_not_insertion_order
+ERROR application\test_matching.py::TestMatching::test_unknown_preserves_best_candidate
+ERROR application\test_matching.py::TestMatching::test_validation_order_is_unchanged
+ERROR application\test_matching.py::TestMatchingNotebookRegression::test_real_queries_match_notebook_cosine_rank_and_decisions
+ERROR application\test_recognition.py::TestRecognitionNotebookRegression::test_model_version_mismatch_stops_before_inference
+ERROR application\test_recognition.py::TestRecognitionNotebookRegression::test_real_onnx_complete_outputs_match_notebook10
+ERROR application\test_recognition.py::TestRecognitionNotebookRegression::test_sqlite_registry_composition_is_readonly_without_initialization
+SUBFAILED(function='check_schema') application\test_database.py::TestDatabase::test_core_bodies_match_notebook
+SUBFAILED(function='embedding_to_blob') application\test_database.py::TestDatabase::test_core_bodies_match_notebook
+SUBFAILED(function='blob_to_embedding') application\test_database.py::TestDatabase::test_core_bodies_match_notebook
+SUBFAILED(function='validate_record_metadata') application\test_database.py::TestDatabase::test_core_bodies_match_notebook
+SUBFAILED(function='row_to_person') application\test_database.py::TestDatabase::test_core_bodies_match_notebook
+SUBFAILED(function='add_person') application\test_database.py::TestDatabase::test_core_bodies_match_notebook
+SUBFAILED(function='update_person') application\test_database.py::TestDatabase::test_core_bodies_match_notebook
+SUBFAILED(function='delete_person') application\test_database.py::TestDatabase::test_core_bodies_match_notebook
+FAILED application\test_database.py::TestDatabase::test_core_bodies_match_notebook
+FAILED application\test_database.py::TestDatabase::test_import_has_no_asset_access_or_connection
+FAILED application\test_database.py::TestDatabase::test_invalid_embeddings_match_notebook
+FAILED application\test_database.py::TestDatabase::test_record_metadata_validation_matches_notebook
+FAILED application\test_database.py::TestBaselineRegression::test_readonly_baseline_matches_notebook06_and_reader07
+FAILED application\test_database.py::TestCrudNotebookRegression::test_crud_errors_and_rollback_on_two_independent_temp_databases
+FAILED application\test_enrollment.py::TestEnrollmentNotebookRegression::test_real_enrollment_embeddings_match_notebook
+SUBFAILED(function='preprocess_face') application\test_facenet_model.py::TestModelInference::test_numeric_bodies_match_notebooks
+SUBFAILED(function='extract_embedding') application\test_facenet_model.py::TestModelInference::test_numeric_bodies_match_notebooks
+SUBFAILED(function='extract_embeddings') application\test_facenet_model.py::TestModelInference::test_numeric_bodies_match_notebooks
+FAILED application\test_facenet_model.py::TestModelInference::test_output_validation_matches_original
+SUBFAILED(cwd='D:\\Facenet-Recognition') application\test_facenet_model.py::TestImportAndWorkingDirectory::test_absolute_model_load_from_two_working_directories
+SUBFAILED(cwd='D:\\Facenet-Recognition\\notebooks') application\test_facenet_model.py::TestImportAndWorkingDirectory::test_absolute_model_load_from_two_working_directories
+FAILED application\test_facenet_model.py::TestImportAndWorkingDirectory::test_fresh_import_has_no_model_or_data_access
+FAILED application\test_recognition.py::TestRecognition::test_absent_metadata_is_not_added
+FAILED application\test_recognition.py::TestRecognition::test_all_optional_metadata_and_independent_copy
+FAILED application\test_recognition.py::TestRecognition::test_both_bodies_preserve_notebook10
+FAILED application\test_recognition.py::TestRecognition::test_call_order_reuses_validation_extraction_and_matching
+FAILED application\test_recognition.py::TestRecognition::test_empty_registry_matches_error_after_one_inference
+FAILED application\test_recognition.py::TestRecognition::test_empty_returns_before_threshold_registry_or_inference
+FAILED application\test_recognition.py::TestRecognition::test_extra_keys_are_rejected
+FAILED application\test_recognition.py::TestRecognition::test_face_validation_precedes_threshold
+FAILED application\test_recognition.py::TestRecognition::test_import_does_not_access_assets_load_model_or_connect_sqlite
+FAILED application\test_recognition.py::TestRecognition::test_inference_errors_keep_type_message_index_and_cause
+FAILED application\test_recognition.py::TestRecognition::test_input_pixels_metadata_and_registry_unchanged
+FAILED application\test_recognition.py::TestRecognition::test_invalid_detection_container_and_missing_face
+FAILED application\test_recognition.py::TestRecognition::test_invalid_face_matches_notebook_and_has_index
+FAILED application\test_recognition.py::TestRecognition::test_invalid_metadata_matches_notebook
+FAILED application\test_recognition.py::TestRecognition::test_invalid_registry_uses_matching_behavior
+FAILED application\test_recognition.py::TestRecognition::test_invalid_threshold_prevents_inference
+FAILED application\test_recognition.py::TestRecognition::test_later_invalid_metadata_prevents_all_inference
+FAILED application\test_recognition.py::TestRecognition::test_multiple_faces_keep_order_and_unknown
+FAILED application\test_recognition.py::TestRecognition::test_one_face_known_and_exact_output_keys
+FAILED application\test_recognition.py::TestRecognition::test_similarity_equal_threshold_is_known
+FAILED application\test_recognition.py::TestRecognition::test_single_face_validation_and_exceptions_match_notebook
+FAILED application\test_recognition.py::TestRecognition::test_threshold_is_required_for_both_apis
+FAILED application\test_recognition.py::TestRecognition::test_tuple_and_numpy_scalar_metadata_preserve_types
+FAILED application\test_recognition.py::TestRecognition::test_unknown_retains_best_candidate_and_full_ranking
+FAILED application\test_enrollment_pipeline.py::TestEnrollmentPipeline::test_source_baseline_and_outside_paths_rejected
+FAILED application\test_enrollment_pipeline.py::TestRealEnrollment::test_real_three_independent_imm_images_same_dataset_identity
+FAILED application\test_enrollment_pipeline.py::TestVersionMigration::test_copy_preserves_blob_checksum_schema_and_source
+FAILED application\test_enrollment_pipeline.py::TestVersionMigration::test_existing_destination_never_overwritten
+FAILED application\test_enrollment_pipeline.py::TestVersionMigration::test_failed_write_removes_only_owned_new_target
+FAILED application\test_recognition_pipeline.py::TestRealRecognition::test_a_single_enrollment_separate_query_accept_all_control
+FAILED application\test_recognition_pipeline.py::TestRealRecognition::test_b_three_enrollment_images_heldout_query_matches_approved_policy
+FAILED application\test_recognition_pipeline.py::TestRealRecognition::test_c_group_faces_independently_match_approved_policy
+FAILED application\test_recognition_pipeline.py::TestRealRecognition::test_d_no_face_image_returns_empty
+FAILED application\test_recognition_pipeline.py::TestRealRecognition::test_e_separate_query_unknown_strict_control
+56 failed, 249 passed, 1 skipped, 55 errors, 59 subtests passed in 58.96s

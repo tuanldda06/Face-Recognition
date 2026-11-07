@@ -1,0 +1,25 @@
+{
+  "health": {
+    "http_status": 200,
+    "bytes": 157,
+    "body": {
+      "status": "ok",
+      "backend": "running",
+      "models": "ready",
+      "registry": "empty",
+      "person_count": 0,
+      "registry_version_checked": true,
+      "threshold_profile": "v2",
+      "issues": []
+    }
+  },
+  "ui/": {
+    "http_status": 200,
+    "bytes": 80200
+  },
+  "ui/config": {
+    "http_status": 200,
+    "bytes": 75362
+  },
+  "new_tab_present": true
+}

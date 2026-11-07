@@ -1,0 +1,9 @@
+# Verified application runtime for Python 3.12 Windows x64; creates its own model_version.
+# Never use this to relabel a registry from the frozen Python 3.13 runtime.
+--extra-index-url https://download.pytorch.org/whl/cpu
+numpy==2.4.6
+opencv-python==4.10.0.84
+Pillow==12.2.0
+torch==2.14.0
+pytest==9.1.1
+-r requirements.txt

@@ -1,0 +1,18 @@
+{
+  "purpose": "Throughput scaling/regression only; derived crop, not independent accuracy evidence",
+  "source": "integration/tests/fixtures/mtcnn_multi.jpg",
+  "source_sha256": "732fded5384ebec9e394a21e738d900fd3911ea7bb9764b05decb7a4d1e58358",
+  "crop_xyxy": [
+    340,
+    0,
+    666,
+    300
+  ],
+  "file": "group_two_faces.png",
+  "sha256": "ae400e1d210d371bcd2d454fe3c430858edffe9d017a2aecaad9d27a3306a175",
+  "verified_faces": 2,
+  "dimensions": [
+    326,
+    300
+  ]
+}

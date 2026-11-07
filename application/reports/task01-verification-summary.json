@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-07",
+  "timezone": "Asia/Saigon",
+  "status": "implemented_awaiting_real_webcam_trial",
+  "acceptance_proposed": false,
+  "release_tests": [
+    {
+      "tests": "220",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "83.038"
+    }
+  ],
+  "legacy_pytest": {
+    "passed": 249,
+    "failed": 56,
+    "errors": 55,
+    "skipped": 1,
+    "passed_subtests": 59,
+    "new_failing_test_ids": 0
+  },
+  "core_integrity": {
+    "baseline_files": 41,
+    "existing_core_source_unchanged": true,
+    "changes": {}
+  },
+  "real_models": "passed_application_smoke_and_five_repeated_static_image_persistence",
+  "real_webcam": "pending_operator_report_browser_control_stopped_url_unavailable",
+  "limitations": [
+    "five_point_pose_not_calibrated",
+    "quality_and_identity_thresholds_not_calibrated",
+    "no_liveness",
+    "legacy_dataset_and_frozen_runtime_unavailable",
+    "single_worker_in_memory_sessions"
+  ]
+}

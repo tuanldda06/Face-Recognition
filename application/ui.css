@@ -1,0 +1,233 @@
+.gradio-container {
+    --studio-bg: #eef2f7;
+    --studio-panel: #fff;
+    --studio-line: #dbe3ee;
+    --studio-text: #14233b;
+    --studio-muted: #475a73;
+    --studio-accent: #0f766e;
+    --studio-soft: #e5f5f0;
+    --studio-warn: #a54519;
+    --studio-warn-bg: #fff1e5;
+    background: var(--studio-bg) !important;
+}
+.dark .gradio-container, .gradio-container.dark {
+    --studio-bg: #0b1320;
+    --studio-panel: #111e30;
+    --studio-line: #263950;
+    --studio-text: #ecf4ff;
+    --studio-muted: #a7bbd2;
+    --studio-accent: #5eead4;
+    --studio-soft: #143933;
+    --studio-warn: #ffb584;
+    --studio-warn-bg: #472d23;
+}
+#studio-header {
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+.studio-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.3rem;
+    padding: clamp(1.2rem, 3.3vw, 2.35rem);
+    border: 1px solid #314763;
+    border-radius: 1.2rem;
+    color: #f2f8ff;
+    background: radial-gradient(ellipse at 95% 8%, #16555b 0%, transparent 48%), #111f33;
+}
+.studio-brand {
+    display: flex;
+    align-items: center;
+    gap: 1.15rem;
+}
+.studio-mark {
+    display: grid;
+    place-items: center;
+    flex: 0 0 3.5rem;
+    height: 3.5rem;
+    border: 1px solid #528b91;
+    border-radius: 1rem;
+    color: #85f2de;
+    background: #193746;
+}
+.studio-kicker {
+    margin: 0 0 0.35rem;
+    color: var(--studio-accent);
+    font-size: 0.72rem;
+    font-weight: 750;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.studio-hero .studio-kicker { color: #95e9db; }
+.studio-hero h1 {
+    margin: 0;
+    color: inherit;
+    font-size: clamp(1.55rem, 3vw, 2.6rem);
+    font-weight: 750;
+    line-height: 1.15;
+}
+.studio-hero p:last-child {
+    margin: 0.45rem 0 0;
+    color: #c4d5e8;
+    font-size: 0.94rem;
+}
+.studio-badge {
+    flex-shrink: 0;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid #5a858c;
+    border-radius: 999px;
+    color: #c0f7e9;
+    background: #193747;
+    font-size: 0.8rem;
+    font-weight: 650;
+}
+#studio-health {
+    border: 0;
+    background: transparent;
+    padding: 0;
+}
+.studio-health-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    padding: 0.65rem 1rem;
+    border: 1px solid var(--studio-line);
+    border-radius: 0.75rem;
+    background: var(--studio-panel);
+    color: var(--studio-muted);
+    font-size: 0.86rem;
+}
+.studio-health-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--studio-accent);
+    font-weight: 700;
+}
+.studio-health-pill.is-alert { color: var(--studio-warn); }
+.studio-health-pill::before {
+    content: "";
+    width: 0.52rem;
+    height: 0.52rem;
+    border-radius: 50%;
+    background: currentColor;
+}
+#studio-tabs {
+    border: 1px solid var(--studio-line);
+    border-radius: 1rem;
+    background: var(--studio-panel);
+}
+#studio-tabs [role="tab"] {
+    min-height: 2.7rem;
+    font-weight: 650;
+}
+#studio-tabs [role="tab"][aria-selected="true"] { color: var(--studio-accent); }
+.studio-section-title h2, .studio-section-title h3 {
+    margin: 0;
+    color: var(--studio-text);
+    line-height: 1.2;
+}
+.studio-section-title h2 { font-size: 1.42rem; }
+.studio-section-title h3 { font-size: 1.12rem; }
+.studio-section-title p:last-child {
+    margin: 0.4rem 0 0;
+    color: var(--studio-muted);
+    font-size: 0.91rem;
+    line-height: 1.5;
+}
+#enrollment-workspace {
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(17rem, 1fr);
+    grid-template-areas: "camera form" "review form";
+    align-items: start;
+}
+#enrollment-camera-panel { grid-area: camera; position: relative; min-width: 0 !important; }
+#enrollment-form { grid-area: form; min-width: 0 !important; }
+#enrollment-review { grid-area: review; min-width: 0 !important; }
+.studio-card {
+    padding: 1rem;
+    border: 1px solid var(--studio-line);
+    border-radius: 0.9rem;
+    background: var(--studio-panel);
+}
+#enrollment-camera-status {
+    position: absolute;
+    inset: 2.2rem auto auto 0.85rem;
+    width: min(24rem, calc(100% - 1.7rem));
+    z-index: 5;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid #537285;
+    border-left: 3px solid #5eead4;
+    border-radius: 0.65rem;
+    background: rgb(10 24 40 / 94%);
+    pointer-events: none;
+}
+#enrollment-camera-status textarea {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    font-size: 0.94rem;
+    font-weight: 650;
+    line-height: 1.4;
+}
+#enrollment-preview { padding: 0; border: 0; }
+.studio-poses {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.55rem;
+}
+.studio-pose {
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid var(--studio-line);
+    border-radius: 0.7rem;
+    color: var(--studio-muted);
+}
+.studio-pose.is-next { border-color: var(--studio-accent); }
+.studio-pose-image {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    object-fit: contain;
+    background: var(--studio-bg);
+}
+.studio-pose-image span {
+    font-family: var(--font-mono);
+    font-size: 1.3rem;
+    font-weight: 650;
+    color: var(--studio-muted);
+}
+.studio-pose.is-next .studio-pose-image { background: var(--studio-soft); }
+.studio-pose figcaption { padding: 0.5rem; }
+.studio-pose strong {
+    display: block;
+    color: var(--studio-text);
+    font-size: 0.85rem;
+}
+.studio-pose small { font-size: 0.75rem; }
+.studio-pose.is-next small, .studio-pose.is-done small { color: var(--studio-accent); }
+.studio-footer {
+    padding: 0.2rem 0.1rem;
+    color: var(--studio-muted);
+    font-size: 0.82rem;
+}
+@media (max-width: 780px) {
+    #enrollment-workspace {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "camera" "form" "review";
+    }
+    .studio-hero { align-items: flex-start; }
+}
+@media (max-width: 480px) {
+    .studio-hero { flex-direction: column; }
+    .studio-brand { gap: 0.7rem; }
+    .studio-mark { flex-basis: 2.75rem; height: 2.75rem; }
+    .studio-poses { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
