@@ -1,0 +1,62 @@
+{
+  "scope": "real models on static bundled fixture; NOT webcam or pose ground truth",
+  "image": "integration\\tests\\fixtures\\mtcnn_single.png",
+  "sha256": "514dee2ed1d25846b5647eeea7e091a2ade42008784a40cf2fee652acd3626a1",
+  "image_shape": [
+    160,
+    160,
+    3
+  ],
+  "face_count": 1,
+  "boxes": [
+    [
+      18.963918685913086,
+      34.43722152709961,
+      124.92984771728516,
+      162.86260986328125
+    ]
+  ],
+  "scores": [
+    0.9999004602432251
+  ],
+  "landmarks": [
+    [
+      [
+        54.4887580871582,
+        81.82298278808594
+      ],
+      [
+        103.01110076904297,
+        82.0902099609375
+      ],
+      [
+        81.90306091308594,
+        101.39347076416016
+      ],
+      [
+        52.05546188354492,
+        127.72470092773438
+      ],
+      [
+        105.27861022949219,
+        127.29020690917969
+      ]
+    ]
+  ],
+  "inspection": {
+    "status": "rejected",
+    "error": {
+      "code": "face_clipped",
+      "message": "Đưa toàn bộ khuôn mặt vào khung hình."
+    }
+  },
+  "pose_estimator": null,
+  "candidate_reprojection_errors": [
+    {
+      "rms_over_interocular": 0.08424286321046304,
+      "max_error_over_interocular": 0.12442650885642816
+    }
+  ],
+  "webcam_trial": "not_verified_browser_control_stopped_url_unavailable",
+  "model_version_sha256": "47be33e07cc5dad54d4848463758e3191ebda37696d84109066e6a71f330dc16"
+}

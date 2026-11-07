@@ -1,0 +1,797 @@
+{
+  "schema": "application-benchmark/1",
+  "created_utc": "2026-11-05T09:10:44.018526+00:00",
+  "device": "CPU",
+  "cpu": "not_measured",
+  "logical_cpus": 22,
+  "os": "Windows-11-10.0.26300-SP0",
+  "python": "3.12.6",
+  "cpu_threads": 2,
+  "runtime": {
+    "numpy": "2.4.6",
+    "opencv-python": "4.10.0.84",
+    "Pillow": "12.2.0",
+    "torch": "2.14.0",
+    "fastapi": "0.162.0",
+    "gradio": "6.31.0"
+  },
+  "scope": "Service recognition + visualization; excludes model load, image decode, HTTP and browser transport. Serial warm-cache calls.",
+  "stage_definitions": {
+    "embedding": "extract_embedding minus preprocess_face; includes forward, validation and L2",
+    "matching": "existing detect_unknown, cosine/ranking/threshold",
+    "alignment": "existing extract_faces_rgb align=True"
+  },
+  "accuracy_evaluation": false,
+  "cases": [
+    {
+      "status": "measured",
+      "image": "mtcnn_single.png",
+      "image_sha256": "514dee2ed1d25846b5647eeea7e091a2ade42008784a40cf2fee652acd3626a1",
+      "dimensions": [
+        160,
+        160
+      ],
+      "detected_faces_each_run": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "repetitions": 20,
+      "warmup": 3,
+      "latency": {
+        "detection": {
+          "status": "measured",
+          "mean_ms": 22.820279999905324,
+          "p50_ms": 18.321999999898253,
+          "p95_ms": 39.05440499838733
+        },
+        "alignment": {
+          "status": "measured",
+          "mean_ms": 0.6663050004135584,
+          "p50_ms": 0.539250000656466,
+          "p95_ms": 1.0644149997460775
+        },
+        "facenet_preprocessing": {
+          "status": "measured",
+          "mean_ms": 0.12482000038289698,
+          "p50_ms": 0.10029999975813553,
+          "p95_ms": 0.19032500149478437
+        },
+        "embedding": {
+          "status": "measured",
+          "mean_ms": 56.725244999506685,
+          "p50_ms": 54.40889999954379,
+          "p95_ms": 74.85746999791445
+        },
+        "matching": {
+          "status": "measured",
+          "mean_ms": 0.19173000000591855,
+          "p50_ms": 0.17549999938637484,
+          "p95_ms": 0.2982599995448254
+        },
+        "end_to_end": {
+          "status": "measured",
+          "mean_ms": 229.12119499960681,
+          "p50_ms": 235.01199999918754,
+          "p95_ms": 264.3547550005678
+        }
+      },
+      "fps": 4.364502376140784,
+      "samples_ms": [
+        {
+          "detection": 27.73220000017318,
+          "alignment": 0.5383999996411148,
+          "facenet_preprocessing": 0.09869999848888256,
+          "embedding_including_preprocessing": 69.83069999841973,
+          "matching": 0.27489999774843454,
+          "end_to_end": 264.227600000595,
+          "embedding": 69.73199999993085
+        },
+        {
+          "detection": 17.48539999971399,
+          "alignment": 0.6539999994856771,
+          "facenet_preprocessing": 0.1083999995898921,
+          "embedding_including_preprocessing": 68.27069999781088,
+          "matching": 0.21410000044852495,
+          "end_to_end": 237.74559999947087,
+          "embedding": 68.16229999822099
+        },
+        {
+          "detection": 25.30970000225352,
+          "alignment": 0.815100000181701,
+          "facenet_preprocessing": 0.19839999731630087,
+          "embedding_including_preprocessing": 72.0712000002095,
+          "matching": 0.18220000129076652,
+          "end_to_end": 263.9825000005658,
+          "embedding": 71.8728000028932
+        },
+        {
+          "detection": 32.00759999890579,
+          "alignment": 1.254700000572484,
+          "facenet_preprocessing": 0.17910000315168872,
+          "embedding_including_preprocessing": 50.66330000045127,
+          "matching": 0.1494999996793922,
+          "end_to_end": 220.3397999983281,
+          "embedding": 50.484199997299584
+        },
+        {
+          "detection": 38.98489999846788,
+          "alignment": 1.0543999997025821,
+          "facenet_preprocessing": 0.18990000171470456,
+          "embedding_including_preprocessing": 61.70610000117449,
+          "matching": 0.14059999739401974,
+          "end_to_end": 234.49650000111433,
+          "embedding": 61.516199999459786
+        },
+        {
+          "detection": 17.482100000052014,
+          "alignment": 0.5730000011681113,
+          "facenet_preprocessing": 0.17740000112098642,
+          "embedding_including_preprocessing": 56.974899998749606,
+          "matching": 0.1446999995096121,
+          "end_to_end": 249.60129999817582,
+          "embedding": 56.79749999762862
+        },
+        {
+          "detection": 18.82560000012745,
+          "alignment": 0.7903000005171634,
+          "facenet_preprocessing": 0.14970000120229088,
+          "embedding_including_preprocessing": 76.82679999925313,
+          "matching": 0.2555999999458436,
+          "end_to_end": 247.98910000026808,
+          "embedding": 76.67709999805083
+        },
+        {
+          "detection": 21.362200001021847,
+          "alignment": 0.5015000024286564,
+          "facenet_preprocessing": 0.09539999882690609,
+          "embedding_including_preprocessing": 41.64920000039274,
+          "matching": 0.1747999995131977,
+          "end_to_end": 195.31780000033905,
+          "embedding": 41.55380000156583
+        },
+        {
+          "detection": 30.205600000044797,
+          "alignment": 0.514600000315113,
+          "facenet_preprocessing": 0.08680000246386044,
+          "embedding_including_preprocessing": 40.8962999972573,
+          "matching": 0.13860000035492703,
+          "end_to_end": 235.52749999726075,
+          "embedding": 40.80949999479344
+        },
+        {
+          "detection": 17.152899999928195,
+          "alignment": 0.5118000008224044,
+          "facenet_preprocessing": 0.09710000085760839,
+          "embedding_including_preprocessing": 45.46590000245487,
+          "matching": 0.176199999259552,
+          "end_to_end": 219.66429999883985,
+          "embedding": 45.368800001597265
+        },
+        {
+          "detection": 16.492700000526384,
+          "alignment": 0.509600002260413,
+          "facenet_preprocessing": 0.09750000026542693,
+          "embedding_including_preprocessing": 68.87360000109766,
+          "matching": 0.2975999996124301,
+          "end_to_end": 241.49469999974826,
+          "embedding": 68.77610000083223
+        },
+        {
+          "detection": 27.997000001050765,
+          "alignment": 0.8667000001878478,
+          "facenet_preprocessing": 0.15749999874969944,
+          "embedding_including_preprocessing": 47.425299999304116,
+          "matching": 0.17210000078193843,
+          "end_to_end": 212.0238999996218,
+          "embedding": 47.267800000554416
+        },
+        {
+          "detection": 16.22750000024098,
+          "alignment": 0.49560000115889125,
+          "facenet_preprocessing": 0.08760000127949752,
+          "embedding_including_preprocessing": 74.84929999918677,
+          "matching": 0.23020000298856758,
+          "end_to_end": 259.64509999903385,
+          "embedding": 74.76169999790727
+        },
+        {
+          "detection": 17.753399999492103,
+          "alignment": 0.5315999987942632,
+          "facenet_preprocessing": 0.09680000221123919,
+          "embedding_including_preprocessing": 47.0805000004475,
+          "matching": 0.14699999883305281,
+          "end_to_end": 189.03470000077505,
+          "embedding": 46.98369999823626
+        },
+        {
+          "detection": 17.71789999838802,
+          "alignment": 0.6219999995664693,
+          "facenet_preprocessing": 0.1019000010273885,
+          "embedding_including_preprocessing": 44.403600000805454,
+          "matching": 0.1401999979862012,
+          "end_to_end": 183.23179999788408,
+          "embedding": 44.301699999778066
+        },
+        {
+          "detection": 17.330700000457,
+          "alignment": 0.5082999996375293,
+          "facenet_preprocessing": 0.09389999831910245,
+          "embedding_including_preprocessing": 61.886899999080924,
+          "matching": 0.19070000053034164,
+          "end_to_end": 266.7707000000519,
+          "embedding": 61.79300000076182
+        },
+        {
+          "detection": 17.818399999669055,
+          "alignment": 0.5120999994687736,
+          "facenet_preprocessing": 0.09730000238050707,
+          "embedding_including_preprocessing": 43.30830000253627,
+          "matching": 0.1436000020476058,
+          "end_to_end": 203.6431000015,
+          "embedding": 43.211000000155764
+        },
+        {
+          "detection": 16.80539999870234,
+          "alignment": 0.5077999994682614,
+          "facenet_preprocessing": 0.10850000035134144,
+          "embedding_including_preprocessing": 44.26360000070417,
+          "matching": 0.14210000153980218,
+          "end_to_end": 182.16910000046482,
+          "embedding": 44.15510000035283
+        },
+        {
+          "detection": 40.374999996856786,
+          "alignment": 1.0245000012218952,
+          "facenet_preprocessing": 0.17869999646791257,
+          "embedding_including_preprocessing": 52.198999997926876,
+          "matching": 0.310799998260336,
+          "end_to_end": 228.26640000130283,
+          "embedding": 52.02030000145896
+        },
+        {
+          "detection": 21.33940000203438,
+          "alignment": 0.5401000016718172,
+          "facenet_preprocessing": 0.09580000187270343,
+          "embedding_including_preprocessing": 68.35610000052839,
+          "matching": 0.20910000239382498,
+          "end_to_end": 247.25239999679616,
+          "embedding": 68.26029999865568
+        }
+      ]
+    },
+    {
+      "status": "measured",
+      "image": "group_two_faces.png",
+      "image_sha256": "ae400e1d210d371bcd2d454fe3c430858edffe9d017a2aecaad9d27a3306a175",
+      "dimensions": [
+        326,
+        300
+      ],
+      "detected_faces_each_run": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "repetitions": 20,
+      "warmup": 3,
+      "latency": {
+        "detection": {
+          "status": "measured",
+          "mean_ms": 78.62054000070202,
+          "p50_ms": 54.31049999970128,
+          "p95_ms": 101.2332250009425
+        },
+        "alignment": {
+          "status": "measured",
+          "mean_ms": 1.2673700000959798,
+          "p50_ms": 1.1300000005576294,
+          "p95_ms": 1.8700100004934943
+        },
+        "facenet_preprocessing": {
+          "status": "measured",
+          "mean_ms": 0.27912499972444493,
+          "p50_ms": 0.2504500007489696,
+          "p95_ms": 0.5419400009486708
+        },
+        "embedding": {
+          "status": "measured",
+          "mean_ms": 124.89813000047434,
+          "p50_ms": 119.77325000043493,
+          "p95_ms": 178.26197000376854
+        },
+        "matching": {
+          "status": "measured",
+          "mean_ms": 0.37407500039989827,
+          "p50_ms": 0.32870000177354086,
+          "p95_ms": 0.5179899999347983
+        },
+        "end_to_end": {
+          "status": "measured",
+          "mean_ms": 372.762325000258,
+          "p50_ms": 317.5658000000112,
+          "p95_ms": 513.7261099980609
+        }
+      },
+      "fps": 2.6826745433549593,
+      "samples_ms": [
+        {
+          "detection": 528.1408999981068,
+          "alignment": 0.9285999985877424,
+          "facenet_preprocessing": 0.22390000231098384,
+          "embedding_including_preprocessing": 155.91200000199024,
+          "matching": 0.8464999991701916,
+          "end_to_end": 1032.314200001565,
+          "embedding": 155.68809999967925
+        },
+        {
+          "detection": 70.42039999942062,
+          "alignment": 1.8086999989463948,
+          "facenet_preprocessing": 0.20600000061676838,
+          "embedding_including_preprocessing": 132.3365999996895,
+          "matching": 0.28559999918797985,
+          "end_to_end": 465.47520000240183,
+          "embedding": 132.13059999907273
+        },
+        {
+          "detection": 78.76440000109142,
+          "alignment": 2.423100002488354,
+          "facenet_preprocessing": 0.5692999984603375,
+          "embedding_including_preprocessing": 177.33770000268123,
+          "matching": 0.4802000003110152,
+          "end_to_end": 486.4319999978761,
+          "embedding": 176.7684000042209
+        },
+        {
+          "detection": 54.645300002448494,
+          "alignment": 1.0356999991927296,
+          "facenet_preprocessing": 0.27999999656458385,
+          "embedding_including_preprocessing": 107.98560000330326,
+          "matching": 0.40079999962472357,
+          "end_to_end": 335.3829000006954,
+          "embedding": 107.70560000673868
+        },
+        {
+          "detection": 61.16910000127973,
+          "alignment": 1.3837000005878508,
+          "facenet_preprocessing": 0.2792000013869256,
+          "embedding_including_preprocessing": 206.91899999656016,
+          "matching": 0.3189000017300714,
+          "end_to_end": 423.41680000026827,
+          "embedding": 206.63979999517323
+        },
+        {
+          "detection": 56.28670000078273,
+          "alignment": 1.0032999998657033,
+          "facenet_preprocessing": 0.24839999605319463,
+          "embedding_including_preprocessing": 100.58419999768375,
+          "matching": 0.37800000063725747,
+          "end_to_end": 303.4938999990118,
+          "embedding": 100.33580000163056
+        },
+        {
+          "detection": 56.42120000266004,
+          "alignment": 1.8409000003885012,
+          "facenet_preprocessing": 0.21379999816417694,
+          "embedding_including_preprocessing": 83.31039999757195,
+          "matching": 0.2787000012176577,
+          "end_to_end": 263.67230000323616,
+          "embedding": 83.09659999940777
+        },
+        {
+          "detection": 51.2354000020423,
+          "alignment": 1.2566000004881062,
+          "facenet_preprocessing": 0.2472000014677178,
+          "embedding_including_preprocessing": 118.55880000075558,
+          "matching": 0.31320000198320486,
+          "end_to_end": 314.30990000080783,
+          "embedding": 118.31159999928786
+        },
+        {
+          "detection": 49.702300002536504,
+          "alignment": 0.9869000023172703,
+          "facenet_preprocessing": 0.2099999983329326,
+          "embedding_including_preprocessing": 125.85939999553375,
+          "matching": 0.4034999983559828,
+          "end_to_end": 317.28780000048573,
+          "embedding": 125.64939999720082
+        },
+        {
+          "detection": 54.49450000014622,
+          "alignment": 1.150600000983104,
+          "facenet_preprocessing": 0.2507999997760635,
+          "embedding_including_preprocessing": 95.83459999703337,
+          "matching": 0.32420000206911936,
+          "end_to_end": 312.92649999886635,
+          "embedding": 95.5837999972573
+        },
+        {
+          "detection": 51.69730000125128,
+          "alignment": 1.342399998975452,
+          "facenet_preprocessing": 0.2494000000297092,
+          "embedding_including_preprocessing": 91.69750000000931,
+          "matching": 0.2958999975817278,
+          "end_to_end": 347.0688000015798,
+          "embedding": 91.4480999999796
+        },
+        {
+          "detection": 52.50050000176998,
+          "alignment": 1.1094000001321547,
+          "facenet_preprocessing": 0.26109999816981144,
+          "embedding_including_preprocessing": 89.4564000009268,
+          "matching": 0.3171999996993691,
+          "end_to_end": 262.7356000011787,
+          "embedding": 89.195300002757
+        },
+        {
+          "detection": 50.538999999844236,
+          "alignment": 1.0430999973323196,
+          "facenet_preprocessing": 0.2677000011317432,
+          "embedding_including_preprocessing": 90.33980000094743,
+          "matching": 0.31520000266027637,
+          "end_to_end": 263.22350000191364,
+          "embedding": 90.07209999981569
+        },
+        {
+          "detection": 39.24589999951422,
+          "alignment": 1.2509000007412396,
+          "facenet_preprocessing": 0.25579999783076346,
+          "embedding_including_preprocessing": 143.94479999828036,
+          "matching": 0.3823000006377697,
+          "end_to_end": 317.5420999978087,
+          "embedding": 143.6890000004496
+        },
+        {
+          "detection": 43.324700000084704,
+          "alignment": 0.9117999979935121,
+          "facenet_preprocessing": 0.5405000010796357,
+          "embedding_including_preprocessing": 114.9392000043008,
+          "matching": 0.2856999999494292,
+          "end_to_end": 278.42839999721036,
+          "embedding": 114.39870000322117
+        },
+        {
+          "detection": 44.27829999985988,
+          "alignment": 0.9419000016350765,
+          "facenet_preprocessing": 0.19640000027720816,
+          "embedding_including_preprocessing": 156.1636999977054,
+          "matching": 0.3569000000425149,
+          "end_to_end": 369.9726999984705,
+          "embedding": 155.9672999974282
+        },
+        {
+          "detection": 58.96769999890239,
+          "alignment": 0.9169999975711107,
+          "facenet_preprocessing": 0.25010000172187574,
+          "embedding_including_preprocessing": 172.52490000464604,
+          "matching": 0.33320000147796236,
+          "end_to_end": 379.46220000230824,
+          "embedding": 172.27480000292417
+        },
+        {
+          "detection": 65.94160000167903,
+          "alignment": 1.2901000009151176,
+          "facenet_preprocessing": 0.31989999843062833,
+          "embedding_including_preprocessing": 121.55480000001262,
+          "matching": 0.5006999999750406,
+          "end_to_end": 317.58950000221375,
+          "embedding": 121.23490000158199
+        },
+        {
+          "detection": 50.50910000136355,
+          "alignment": 1.7170000028272625,
+          "facenet_preprocessing": 0.29709999944316223,
+          "embedding_including_preprocessing": 131.0923000019102,
+          "matching": 0.36589999945135787,
+          "end_to_end": 365.5862999985402,
+          "embedding": 130.79520000246703
+        },
+        {
+          "detection": 54.12649999925634,
+          "alignment": 1.0056999999505933,
+          "facenet_preprocessing": 0.2159000032406766,
+          "embedding_including_preprocessing": 87.19340000243392,
+          "matching": 0.2989000022353139,
+          "end_to_end": 298.92589999872143,
+          "embedding": 86.97749999919324
+        }
+      ]
+    },
+    {
+      "status": "measured",
+      "image": "mtcnn_multi.jpg",
+      "image_sha256": "732fded5384ebec9e394a21e738d900fd3911ea7bb9764b05decb7a4d1e58358",
+      "dimensions": [
+        666,
+        409
+      ],
+      "detected_faces_each_run": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "repetitions": 20,
+      "warmup": 3,
+      "latency": {
+        "detection": {
+          "status": "measured",
+          "mean_ms": 154.23762499995064,
+          "p50_ms": 140.15454999935173,
+          "p95_ms": 200.05799999835304
+        },
+        "alignment": {
+          "status": "measured",
+          "mean_ms": 2.8245050005352823,
+          "p50_ms": 2.637650000906433,
+          "p95_ms": 4.273745001046337
+        },
+        "facenet_preprocessing": {
+          "status": "measured",
+          "mean_ms": 0.7902899997134227,
+          "p50_ms": 0.6801000017730985,
+          "p95_ms": 1.3585449982201683
+        },
+        "embedding": {
+          "status": "measured",
+          "mean_ms": 288.3205000012822,
+          "p50_ms": 269.3645999970613,
+          "p95_ms": 398.2914150041325
+        },
+        "matching": {
+          "status": "measured",
+          "mean_ms": 1.1488200007079286,
+          "p50_ms": 0.9829000027821166,
+          "p95_ms": 1.6668800033585298
+        },
+        "end_to_end": {
+          "status": "measured",
+          "mean_ms": 608.5415650000868,
+          "p50_ms": 606.6160500013211,
+          "p95_ms": 788.8908499990067
+        }
+      },
+      "fps": 1.643273126298049,
+      "samples_ms": [
+        {
+          "detection": 112.75899999964167,
+          "alignment": 1.9773000021814369,
+          "facenet_preprocessing": 0.7726000003458466,
+          "embedding_including_preprocessing": 277.7327999974659,
+          "matching": 1.3109999999869615,
+          "end_to_end": 538.1930000003194,
+          "embedding": 276.96019999712007
+        },
+        {
+          "detection": 131.48980000187294,
+          "alignment": 2.13630000143894,
+          "facenet_preprocessing": 0.5777999976999126,
+          "embedding_including_preprocessing": 220.22260000449023,
+          "matching": 0.709100000676699,
+          "end_to_end": 516.6571999980079,
+          "embedding": 219.64480000679032
+        },
+        {
+          "detection": 149.02919999803999,
+          "alignment": 2.638199999637436,
+          "facenet_preprocessing": 0.5246000000624917,
+          "embedding_including_preprocessing": 220.14380000473466,
+          "matching": 0.7060999960231129,
+          "end_to_end": 531.3545000026352,
+          "embedding": 219.61920000467217
+        },
+        {
+          "detection": 189.44809999811696,
+          "alignment": 4.233200001181103,
+          "facenet_preprocessing": 1.0099999963131268,
+          "embedding_including_preprocessing": 446.55089999650954,
+          "matching": 1.4123999972071033,
+          "end_to_end": 781.7801999990479,
+          "embedding": 445.5409000001964
+        },
+        {
+          "detection": 140.54790000227513,
+          "alignment": 2.63710000217543,
+          "facenet_preprocessing": 0.5696000007446855,
+          "embedding_including_preprocessing": 248.6232000082964,
+          "matching": 0.8318000000144821,
+          "end_to_end": 584.885000000213,
+          "embedding": 248.05360000755172
+        },
+        {
+          "detection": 401.64610000283574,
+          "alignment": 3.961800000979565,
+          "facenet_preprocessing": 0.5992999977024738,
+          "embedding_including_preprocessing": 291.50319999826024,
+          "matching": 0.7020999983069487,
+          "end_to_end": 923.9931999982218,
+          "embedding": 290.90390000055777
+        },
+        {
+          "detection": 173.85640000065905,
+          "alignment": 2.446300000883639,
+          "facenet_preprocessing": 1.0694000047806185,
+          "embedding_including_preprocessing": 252.18650000169873,
+          "matching": 0.9832000068854541,
+          "end_to_end": 611.2729000014951,
+          "embedding": 251.1170999969181
+        },
+        {
+          "detection": 131.07709999894723,
+          "alignment": 2.7751000015996397,
+          "facenet_preprocessing": 0.6329999996523838,
+          "embedding_including_preprocessing": 233.40879999886965,
+          "matching": 0.7603000012750272,
+          "end_to_end": 495.1207999984035,
+          "embedding": 232.77579999921727
+        },
+        {
+          "detection": 119.95240000032936,
+          "alignment": 2.3861000008764677,
+          "facenet_preprocessing": 0.7109000034688506,
+          "embedding_including_preprocessing": 246.35670000498067,
+          "matching": 0.8874999984982423,
+          "end_to_end": 496.6788000019733,
+          "embedding": 245.64580000151182
+        },
+        {
+          "detection": 152.6367999977083,
+          "alignment": 3.0232999997679144,
+          "facenet_preprocessing": 0.7145000017771963,
+          "embedding_including_preprocessing": 253.1791000001249,
+          "matching": 0.9825999986787792,
+          "end_to_end": 557.0259999985865,
+          "embedding": 252.4645999983477
+        },
+        {
+          "detection": 170.79970000122557,
+          "alignment": 5.044099998485763,
+          "facenet_preprocessing": 1.7488999983470421,
+          "embedding_including_preprocessing": 266.83350000166683,
+          "matching": 1.568500003486406,
+          "end_to_end": 617.6245999995444,
+          "embedding": 265.0846000033198
+        },
+        {
+          "detection": 132.00460000007297,
+          "alignment": 4.214900000079069,
+          "facenet_preprocessing": 1.3379999982134905,
+          "embedding_including_preprocessing": 397.1426000025531,
+          "matching": 1.5633000002708286,
+          "end_to_end": 666.2957000007736,
+          "embedding": 395.8046000043396
+        },
+        {
+          "detection": 148.85489999869606,
+          "alignment": 2.1515000007639173,
+          "facenet_preprocessing": 0.8363000051758718,
+          "embedding_including_preprocessing": 274.4808999959787,
+          "matching": 1.244600000063656,
+          "end_to_end": 638.747400000284,
+          "embedding": 273.6445999908028
+        },
+        {
+          "detection": 132.86049999805982,
+          "alignment": 2.237299999251263,
+          "facenet_preprocessing": 0.6225999968592077,
+          "embedding_including_preprocessing": 239.2463999967731,
+          "matching": 0.7720000030531082,
+          "end_to_end": 509.50530000045546,
+          "embedding": 238.6237999999139
+        },
+        {
+          "detection": 140.9800000001269,
+          "alignment": 2.791899998555891,
+          "facenet_preprocessing": 0.6493000000773463,
+          "embedding_including_preprocessing": 329.9568999973417,
+          "matching": 1.017999995383434,
+          "end_to_end": 657.8599000022223,
+          "embedding": 329.30759999726433
+        },
+        {
+          "detection": 129.5923000034236,
+          "alignment": 2.725900001678383,
+          "facenet_preprocessing": 0.647900000330992,
+          "embedding_including_preprocessing": 351.6107000032207,
+          "matching": 1.033800006553065,
+          "end_to_end": 661.7053000009037,
+          "embedding": 350.9628000028897
+        },
+        {
+          "detection": 118.7817999998515,
+          "alignment": 2.6962999982060865,
+          "facenet_preprocessing": 0.6150999943201896,
+          "embedding_including_preprocessing": 231.25200000504265,
+          "matching": 0.7446000017807819,
+          "end_to_end": 482.4379999990924,
+          "embedding": 230.63690001072246
+        },
+        {
+          "detection": 127.42090000028838,
+          "alignment": 2.14350000169361,
+          "facenet_preprocessing": 0.8231999963754788,
+          "embedding_including_preprocessing": 325.96599999669706,
+          "matching": 0.9475000006204937,
+          "end_to_end": 670.847599998524,
+          "embedding": 325.1428000003216
+        },
+        {
+          "detection": 141.25380000041332,
+          "alignment": 2.0786999994015787,
+          "facenet_preprocessing": 0.7570000016130507,
+          "embedding_including_preprocessing": 319.97340000089025,
+          "matching": 1.261900004465133,
+          "end_to_end": 601.9592000011471,
+          "embedding": 319.2163999992772
+        },
+        {
+          "detection": 139.76119999642833,
+          "alignment": 2.1913000018685125,
+          "facenet_preprocessing": 0.5858000004081987,
+          "embedding_including_preprocessing": 355.8458000043174,
+          "matching": 3.5361000009288546,
+          "end_to_end": 626.8866999998863,
+          "embedding": 355.2600000039092
+        }
+      ]
+    }
+  ],
+  "gallery_size": 1,
+  "model_version_sha256": "47be33e07cc5dad54d4848463758e3191ebda37696d84109066e6a71f330dc16",
+  "status": "measured",
+  "face_count_coverage": {
+    "1": "measured",
+    "2": "measured",
+    "5": "measured"
+  }
+}

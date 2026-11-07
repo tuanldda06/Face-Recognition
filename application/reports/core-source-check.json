@@ -1,0 +1,90 @@
+{
+  "FaceNet/__init__.py": {
+    "matches_handoff_source": true,
+    "sha256": "52789f71cdbe76891c52ca48def569fb4eb7ebecedc75ed385a38ccaa6938405"
+  },
+  "integration/mtcnn_adapter.py": {
+    "matches_handoff_source": true,
+    "sha256": "9a37737898f392f86a0e226180a21ab7f14b5447ef8e63d53256c4f436151c1c"
+  },
+  "integration/recognition_pipeline.py": {
+    "matches_handoff_source": true,
+    "sha256": "4e1bd402427eee9c7730ca8de407d363f8a05011e73dc6e9662745e3cd6c6523"
+  },
+  "integration/recognition_runtime.py": {
+    "matches_handoff_source": true,
+    "sha256": "8623ff49fdce2b9f319a1c852067f6bf138f18ce58ed9a34dd81f156d0826af4"
+  },
+  "integration/__init__.py": {
+    "matches_handoff_source": true,
+    "sha256": "14c2a9ce97a9d3039f2b89e558755fb650a83999ad583d5f1593411a5bf64b29"
+  },
+  "MTCNN/model_loader.py": {
+    "matches_handoff_source": true,
+    "sha256": "a4950fb34e906a39209bc8b39470cb2d170c602d40bf4859ace160ffbad2a8b8"
+  },
+  "MTCNN/mtcnn.py": {
+    "matches_handoff_source": true,
+    "sha256": "25e4ea8ec74853c2c640d42953529d377449469172d0c2262c5c621a33c8cd87"
+  },
+  "MTCNN/__init__.py": {
+    "matches_handoff_source": true,
+    "sha256": "30eac9735e84988967128ac67c34a7aed2c9ffb9442a9b6eee2e65e360f4d399"
+  },
+  "MTCNN/detection/bounding_box.py": {
+    "matches_handoff_source": true,
+    "sha256": "bb1d63c42fec67f79b81e7a3c79ea3c7f63f523e891252ac27e24089e821a079"
+  },
+  "MTCNN/detection/image_pyramid.py": {
+    "matches_handoff_source": true,
+    "sha256": "785e711dec10d4ee2332d9a633fc726d7c09d52767cad1aea15c4a69240df047"
+  },
+  "MTCNN/models/onet.py": {
+    "matches_handoff_source": true,
+    "sha256": "1e2af79f85c54919ab5d06853b33f3ae1163b5fd6e067edcc24e6f2255284fc4"
+  },
+  "MTCNN/models/pnet.py": {
+    "matches_handoff_source": true,
+    "sha256": "b5afc63ebce752c04fc185db1b69ac197badf6147f7c2e6a4218d07fe0880835"
+  },
+  "MTCNN/models/rnet.py": {
+    "matches_handoff_source": true,
+    "sha256": "ebff53e9a15caf16e469e6bfa9a51de90e120a18637271e8fe9094107a0c45d5"
+  },
+  "MTCNN/preprocessing/face_alignment.py": {
+    "matches_handoff_source": true,
+    "sha256": "e1f3d740b1270e49d039a65fb7dd2195e9d521dd6c230dcb54dddda27a3def54"
+  },
+  "MTCNN/preprocessing/image_processing.py": {
+    "matches_handoff_source": true,
+    "sha256": "8072f6047aa68a12650c05b27ee4eb67df880701e486108763f692bade023541"
+  },
+  "FaceNet/contracts.py": {
+    "matches_handoff_source": true,
+    "sha256": "76180ff655f813d056986d734b06da3e7e1b24c4bec5ad50a676dc55370da0c6"
+  },
+  "FaceNet/database.py": {
+    "matches_handoff_source": true,
+    "sha256": "815833ab427cd267ab93f7efbaaf20a8f364653c7436b07e6fd1fd5952081679"
+  },
+  "FaceNet/enrollment.py": {
+    "matches_handoff_source": true,
+    "sha256": "c5d0f17b30ffd253565f81ef6e7532af8ab56a8895265f6b660b9137f7115801"
+  },
+  "FaceNet/facenet_model.py": {
+    "matches_handoff_source": true,
+    "sha256": "714532b51b3701d3b82e25b6286d6bfe6a4032638ce10aa99331d06db9a9620e"
+  },
+  "FaceNet/matching.py": {
+    "matches_handoff_source": true,
+    "sha256": "ef5579f23ca4675a8a5cd6d502ce9de54400b08f5b3e349324103eca1afba84c"
+  },
+  "FaceNet/recognition.py": {
+    "matches_handoff_source": true,
+    "sha256": "f5fb12b44919032766a081b16f3c8a1a8c1e7d59f7652e296d2f960224474ecc"
+  },
+  "integration/enrollment_pipeline.py:base": {
+    "matches_handoff_source": true,
+    "sha256": "75aa60e24dcda29e58886dedf0ac7999bc41f5cdf204a7d7e3ad84fe7bbdbbef"
+  }
+}

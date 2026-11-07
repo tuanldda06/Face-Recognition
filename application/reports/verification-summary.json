@@ -1,0 +1,39 @@
+{
+  "application_tests": {
+    "tests": "37",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "time": "53.190"
+  },
+  "legacy_raw_pytest_summary": {
+    "passed": 176,
+    "failed": 56,
+    "errors": 55,
+    "skipped": 1,
+    "subtests_passed": 59,
+    "seconds": 57.0
+  },
+  "legacy_failure_categories_including_subtests": {
+    "missing_legacy_D_sources": 108,
+    "frozen_runtime_mismatch": 3
+  },
+  "model": {
+    "bytes": 93987560,
+    "sha256": "f6688ba6c95465fac18df53fdf8e094048fa3f1dd2c09f1cc6dd734a1c8dedf8"
+  },
+  "camera_browser": {
+    "status": "awaiting_user_verification",
+    "automated_ui_access": "Browser host unavailable; Chrome computer-use approval timed out",
+    "server_frame_processing": "passed with real model on three sequential frames"
+  },
+  "http_checks": {
+    "/health": 200,
+    "/docs": 200,
+    "/ui/": 200,
+    "/ui/config": 200
+  },
+  "benchmark_final": "application/reports/benchmark_20261105T091114Z_f7f07034.json",
+  "core_verified_source_entries": 22,
+  "acceptance": "4/5 verified; physical browser webcam awaiting user verification"
+}

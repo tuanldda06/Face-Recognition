@@ -1,0 +1,109 @@
+{
+  "scope": "New application files, edited root docs/gitignore and restored ONNX; runtime data/venv excluded",
+  "files": {
+    ".gitignore": {
+      "bytes": 118,
+      "sha256": "7e3654918e919a7e539d2e7ae628fd413716ba9a6a6ee75106da3ad5ff7869bc"
+    },
+    "application/__init__.py": {
+      "bytes": 91,
+      "sha256": "8705e3bb20d163e891b0ee45207ce375a1ac6da21bf61765328d3326a0804bf1"
+    },
+    "application/__main__.py": {
+      "bytes": 3833,
+      "sha256": "8665a4be2f0150cd0ed85fd426ec6be92f137735354d0b0d34359c0d5b0fc4f9"
+    },
+    "application/api.py": {
+      "bytes": 4499,
+      "sha256": "8654bec0afb4fe14890011fc38abe4e790a4036ac284433a0c7d86ed387fb655"
+    },
+    "application/assets.py": {
+      "bytes": 1001,
+      "sha256": "79b99dfd15717ec9bc28fa08df695ecb27f94654d7cbed4f110cc426fb4bcb86"
+    },
+    "application/AUDIT.md": {
+      "bytes": 6221,
+      "sha256": "677f4d618c16cefdd84ca84563d2f8a3d2b04460364f70a48a69f0d4b8057078"
+    },
+    "application/benchmark.py": {
+      "bytes": 8758,
+      "sha256": "f5e4277544af5548d58a7c43097aec8ae2b2443fab3b1dc6c8773d8921ab9517"
+    },
+    "application/config.py": {
+      "bytes": 1459,
+      "sha256": "66a9d58785493ce3c98266d882fcec6781e128bc5d9008e69ab4c83ddfc17785"
+    },
+    "application/errors.py": {
+      "bytes": 385,
+      "sha256": "f5c903cfa69574d2567de3dce11cda029c4cf1e1615e074906c8a73edeff887f"
+    },
+    "application/HANDOFF.md": {
+      "bytes": 12169,
+      "sha256": "a0eaf9d01ca1f54dd234602be81d41d401253f5d9c9bf61d24e1ffabe788b82e"
+    },
+    "application/images.py": {
+      "bytes": 2098,
+      "sha256": "3bf2b2256c66a117726ca98cf494ab56ddaf9edd8c2c75eb99769466564adcdd"
+    },
+    "application/pytest.ini": {
+      "bytes": 98,
+      "sha256": "d2cce4c3f5ffb7aefcb038b6dd679e1888e2ffdf55cd313fb277790d4450aa0f"
+    },
+    "application/README.md": {
+      "bytes": 13523,
+      "sha256": "601a16a12098b3648646cad4676024c0caeedc6437d87dbd4cdd0346a0345ce2"
+    },
+    "application/requirements-cpu-py312.txt": {
+      "bytes": 323,
+      "sha256": "9f8eb563711564993ddc6decd52d76157fa27bc07bb61317ac1d376816b50cad"
+    },
+    "application/requirements.txt": {
+      "bytes": 189,
+      "sha256": "bf7b416a5e62c91a1fc6d180645ae776bc9ad411ab07e345ebf283dcb72dabe8"
+    },
+    "application/service.py": {
+      "bytes": 9755,
+      "sha256": "8f923cecb78c7a74cdafd39fd5daa69697e3e0a01185e573dfd53e164e3f64ce"
+    },
+    "application/tests/conftest.py": {
+      "bytes": 144,
+      "sha256": "86ef22a91a2fbc713f886138177d2103a44d90ad0884112f03605fd8b5a81961"
+    },
+    "application/tests/fixtures/group_two_faces.png": {
+      "bytes": 175199,
+      "sha256": "ae400e1d210d371bcd2d454fe3c430858edffe9d017a2aecaad9d27a3306a175"
+    },
+    "application/tests/fixtures/MANIFEST.json": {
+      "bytes": 495,
+      "sha256": "625acacc10fc4179972867a894215b2680f3a7ff1e1e72fa46c8f4982e6e11d0"
+    },
+    "application/tests/test_application.py": {
+      "bytes": 15552,
+      "sha256": "e209a4526064fd2d0a98b5ca48e84bb226bd0673cf995e254a3f4ea5716f37ed"
+    },
+    "application/tests/test_real_smoke.py": {
+      "bytes": 4536,
+      "sha256": "26c737c380922b294f9c63b558689062f48b6b6faebd5992f3bfb8f775ab3ac9"
+    },
+    "application/ui.py": {
+      "bytes": 9222,
+      "sha256": "5f40eebcfd520e30ad7436f35d1b10474523f5499d29705ff0f7f1e935e781ab"
+    },
+    "application/visualization.py": {
+      "bytes": 1183,
+      "sha256": "cacc43846cc02c0bc27dba48152577de7480c93498588e8faf7c1cba33ade5bd"
+    },
+    "application/webcam.py": {
+      "bytes": 1351,
+      "sha256": "c911a5f4846ce37d98888cba82eda2ca80d46609e792f39500c1a28256bbfef9"
+    },
+    "FaceNet/models/facenet.onnx": {
+      "bytes": 93987560,
+      "sha256": "f6688ba6c95465fac18df53fdf8e094048fa3f1dd2c09f1cc6dd734a1c8dedf8"
+    },
+    "README.md": {
+      "bytes": 7112,
+      "sha256": "9b93019446e32082b858543e1972cc768a5f9bbc167486c637e557881e954b0d"
+    }
+  }
+}
