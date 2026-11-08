@@ -1,4 +1,3 @@
-"""Stateless per-frame processor; stream timing state belongs to each UI session."""
 from time import perf_counter
 
 import numpy as np

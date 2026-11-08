@@ -1,9 +1,3 @@
-"""Atomic identity/name persistence without changing the fingerprinted core schema.
-
-Names live in an attached sibling SQLite database. Both files must use DELETE
-journals on disk: SQLite's super-journal then commits/rolls back both together.
-Callers hold ApplicationService.guard() across staging and this transaction.
-"""
 from contextlib import closing
 import hashlib
 import sqlite3

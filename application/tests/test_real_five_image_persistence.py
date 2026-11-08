@@ -1,8 +1,3 @@
-"""Real MTCNN/FaceNet smoke for four-image persistence and old/new recognition.
-
-Repeats a bundled static image. This proves pipeline/SQLite compatibility,
-NOT five different poses, camera capture, pose accuracy, or generalization.
-"""
 from pathlib import Path
 import tempfile
 

@@ -1,7 +1,3 @@
-"""Orchestration tests with synthetic landmarks/net, real core pipeline + SQLite.
-
-These do not claim real webcam accuracy. See test_real_smoke for real ML assets.
-"""
 from concurrent.futures import ThreadPoolExecutor
 from contextlib import closing
 from dataclasses import replace
