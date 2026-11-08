@@ -1,4 +1,3 @@
-"""Verify only the artifact identified by the repository's provenance record."""
 import hashlib
 from pathlib import Path
 
