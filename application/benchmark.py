@@ -1,8 +1,3 @@
-"""Standalone benchmark of the actual service/core, never run inside the web server.
-
-Temporary wrappers time existing functions without changing source or calculations.
-Stage sums exclude fingerprint/registry/adapter/serialization overhead; E2E includes it.
-"""
 import argparse
 from contextlib import ExitStack
 from dataclasses import replace

@@ -1,29 +1,3 @@
-"""Approximate five-point head pose for webcam enrollment (NumPy/OpenCV only).
-
-Use ``estimate_head_pose(result.landmarks[0], frame.shape)`` BEFORE alignment,
-cropping, resizing or preview mirroring. MTCNN decodes O-Net's x1..x5,y1..y5
-into original-image pixel (x,y) pairs in this order: image-left eye,
-image-right eye, nose, image-left mouth corner, image-right mouth corner.
-These are the adapter's left_eye/right_eye/nose/mouth_left/mouth_right labels;
-the left/right labels describe a frontal IMAGE, not the subject's anatomy.
-Never sort the points by x: their correspondence must survive head rotation.
-
-Angles are degrees in a NON-MIRRORED camera image (x right, y down, z forward):
-yaw > 0 turns toward the subject's anatomical RIGHT (nose moves image-left),
-pitch > 0 looks DOWN, roll > 0 tilts clockwise in the image. Rotation is
-Rz(roll) @ Ry(yaw) @ Rx(pitch); frontal is the identity rotation. A mirrored
-preview can be displayed independently, but must not feed this estimator.
-
-The generic non-planar face and assumed pinhole camera (fx=fy=max(H,W),
-principal point at image center, zero distortion) make these approximate
-angles, not calibrated measurements. Five landmarks lack chin/contour cues;
-pitch in particular depends on facial proportions. Geometry/reprojection
-gates reject unreliable fits; they are NOT a probability, liveness test, or
-replacement for a caller's detection-confidence and multi-frame stability
-gates. Thresholds below are initial enrollment policy, not empirically
-calibrated accuracy guarantees.
-"""
-
 from __future__ import annotations
 
 from dataclasses import dataclass

@@ -1,4 +1,3 @@
-"""Server-owned webcam enrollment. No registry writes before confirmation."""
 from dataclasses import dataclass, field, asdict
 import hashlib
 from pathlib import Path

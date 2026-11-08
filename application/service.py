@@ -1,4 +1,3 @@
-"""One application service shared by API/UI; existing core owns all inference/math."""
 from contextlib import contextmanager
 from dataclasses import dataclass
 import hashlib

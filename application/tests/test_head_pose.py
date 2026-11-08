@@ -1,5 +1,3 @@
-"""Independent perspective projections verify MTCNN order and anatomical signs."""
-
 from unittest.mock import patch
 
 import cv2
