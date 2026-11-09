@@ -1,9 +1,16 @@
-# Verified application runtime for Python 3.12 Windows x64; creates its own model_version.
-# Never use this to relabel a registry from the frozen Python 3.13 runtime.
+# Môi trường chạy Python 3.12 Windows x64 đã xác minh; tạo model_version riêng.
+# Không dùng môi trường này để đổi nhãn phiên bản kho được tạo từ Python 3.13 đã chốt.
+# Thêm nguồn gói PyTorch CPU; pip vẫn có thể dùng nguồn gói mặc định.
 --extra-index-url https://download.pytorch.org/whl/cpu
+# Tính toán mảng ảnh, vector đặc trưng và ma trận. Dấu == cố định đúng phiên bản ghi bên dưới.
 numpy==2.4.6
+# Xử lý ảnh, giải PnP và chạy mạng ONNX bằng OpenCV DNN. Dấu == cố định đúng phiên bản ghi bên dưới.
 opencv-python==4.10.0.84
+# Đọc/ghi ảnh, xử lý EXIF, vẽ khung và nhãn. Dấu == cố định đúng phiên bản ghi bên dưới.
 Pillow==12.2.0
+# Chạy các mạng MTCNN bằng PyTorch. Dấu == cố định đúng phiên bản ghi bên dưới.
 torch==2.14.0
+# Chạy bộ kiểm thử tự động. Dấu == cố định đúng phiên bản ghi bên dưới.
 pytest==9.1.1
+# Đọc thêm toàn bộ phụ thuộc từ file được nêu sau -r.
 -r requirements.txt

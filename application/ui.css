@@ -1,233 +1,480 @@
+/* Giao diện Gradio: selector # chọn ID, selector . chọn class; !important ưu tiên hơn kiểu mặc định. */
+/* Biến CSS dùng chung: đổi một màu ở đây sẽ cập nhật các thành phần dùng var(...). */
+/* Chọn .gradio-container: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .gradio-container {
+    /* Khai báo biến màu CSS --studio-bg = #eef2f7; dùng lại qua var(--studio-bg). */
     --studio-bg: #eef2f7;
+    /* Khai báo biến màu CSS --studio-panel = #fff; dùng lại qua var(--studio-panel). */
     --studio-panel: #fff;
+    /* Khai báo biến màu CSS --studio-line = #dbe3ee; dùng lại qua var(--studio-line). */
     --studio-line: #dbe3ee;
+    /* Khai báo biến màu CSS --studio-text = #14233b; dùng lại qua var(--studio-text). */
     --studio-text: #14233b;
+    /* Khai báo biến màu CSS --studio-muted = #475a73; dùng lại qua var(--studio-muted). */
     --studio-muted: #475a73;
+    /* Khai báo biến màu CSS --studio-accent = #0f766e; dùng lại qua var(--studio-accent). */
     --studio-accent: #0f766e;
+    /* Khai báo biến màu CSS --studio-soft = #e5f5f0; dùng lại qua var(--studio-soft). */
     --studio-soft: #e5f5f0;
+    /* Khai báo biến màu CSS --studio-warn = #a54519; dùng lại qua var(--studio-warn). */
     --studio-warn: #a54519;
+    /* Khai báo biến màu CSS --studio-warn-bg = #fff1e5; dùng lại qua var(--studio-warn-bg). */
     --studio-warn-bg: #fff1e5;
+    /* Đặt màu hoặc lớp nền: var(--studio-bg) !important. !important tăng ưu tiên so với kiểu mặc định. */
     background: var(--studio-bg) !important;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Chế độ tối ghi đè bảng màu nhưng giữ nguyên cấu trúc bố cục. */
+/* Chọn .dark .gradio-container, .gradio-container.dark: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .dark .gradio-container, .gradio-container.dark {
+    /* Khai báo biến màu CSS --studio-bg = #0b1320; dùng lại qua var(--studio-bg). */
     --studio-bg: #0b1320;
+    /* Khai báo biến màu CSS --studio-panel = #111e30; dùng lại qua var(--studio-panel). */
     --studio-panel: #111e30;
+    /* Khai báo biến màu CSS --studio-line = #263950; dùng lại qua var(--studio-line). */
     --studio-line: #263950;
+    /* Khai báo biến màu CSS --studio-text = #ecf4ff; dùng lại qua var(--studio-text). */
     --studio-text: #ecf4ff;
+    /* Khai báo biến màu CSS --studio-muted = #a7bbd2; dùng lại qua var(--studio-muted). */
     --studio-muted: #a7bbd2;
+    /* Khai báo biến màu CSS --studio-accent = #5eead4; dùng lại qua var(--studio-accent). */
     --studio-accent: #5eead4;
+    /* Khai báo biến màu CSS --studio-soft = #143933; dùng lại qua var(--studio-soft). */
     --studio-soft: #143933;
+    /* Khai báo biến màu CSS --studio-warn = #ffb584; dùng lại qua var(--studio-warn). */
     --studio-warn: #ffb584;
+    /* Khai báo biến màu CSS --studio-warn-bg = #472d23; dùng lại qua var(--studio-warn-bg). */
     --studio-warn-bg: #472d23;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Phần đầu trang gồm biểu tượng, tiêu đề và nhãn số góc đăng ký. */
+/* Chọn #studio-header: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 #studio-header {
+    /* Đặt khoảng trống bên trong khung: 0. */
     padding: 0;
+    /* Đặt độ dày, kiểu và màu đường viền: 0. */
     border: 0;
+    /* Đặt màu hoặc lớp nền: transparent. */
     background: transparent;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Chọn .studio-hero: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-hero {
+    /* Chọn cách bố trí phần tử (flex, grid hoặc block): flex. */
     display: flex;
+    /* Căn các phần tử theo trục phụ của flex hoặc theo chiều dọc của grid: center. */
     align-items: center;
+    /* Phân bố phần tử theo trục chính của flex hoặc chiều ngang của grid: space-between. */
     justify-content: space-between;
+    /* Đặt khoảng cách giữa các phần tử: 1.3rem. rem tính theo cỡ chữ gốc của trang. */
     gap: 1.3rem;
+    /* Đặt khoảng trống bên trong khung: clamp(1.2rem, 3.3vw, 2.35rem). clamp giữ giá trị trong khoảng nhỏ nhất–mong muốn–lớn nhất. rem tính theo cỡ chữ gốc của trang. */
     padding: clamp(1.2rem, 3.3vw, 2.35rem);
+    /* Đặt độ dày, kiểu và màu đường viền: 1px solid #314763. */
     border: 1px solid #314763;
+    /* Bo tròn các góc: 1.2rem. rem tính theo cỡ chữ gốc của trang. */
     border-radius: 1.2rem;
+    /* Đặt màu chữ/nét dùng currentcolor: #f2f8ff. */
     color: #f2f8ff;
+    /* Đặt màu hoặc lớp nền: radial-gradient(ellipse at 95% 8%, #16555b 0%, transparent 48%), #111f33. */
     background: radial-gradient(ellipse at 95% 8%, #16555b 0%, transparent 48%), #111f33;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Chọn .studio-brand: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-brand {
+    /* Chọn cách bố trí phần tử (flex, grid hoặc block): flex. */
     display: flex;
+    /* Căn các phần tử theo trục phụ của flex hoặc theo chiều dọc của grid: center. */
     align-items: center;
+    /* Đặt khoảng cách giữa các phần tử: 1.15rem. rem tính theo cỡ chữ gốc của trang. */
     gap: 1.15rem;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Chọn .studio-mark: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-mark {
+    /* Chọn cách bố trí phần tử (flex, grid hoặc block): grid. */
     display: grid;
+    /* Căn phần tử con theo cả hai chiều trong grid: center. */
     place-items: center;
+    /* Đặt độ co giãn và kích thước cơ sở của mục trong flex: 0 0 3.5rem. rem tính theo cỡ chữ gốc của trang. */
     flex: 0 0 3.5rem;
+    /* Đặt chiều cao: 3.5rem. rem tính theo cỡ chữ gốc của trang. */
     height: 3.5rem;
+    /* Đặt độ dày, kiểu và màu đường viền: 1px solid #528b91. */
     border: 1px solid #528b91;
+    /* Bo tròn các góc: 1rem. rem tính theo cỡ chữ gốc của trang. */
     border-radius: 1rem;
+    /* Đặt màu chữ/nét dùng currentcolor: #85f2de. */
     color: #85f2de;
+    /* Đặt màu hoặc lớp nền: #193746. */
     background: #193746;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Chọn .studio-kicker: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-kicker {
+    /* Đặt khoảng trống bên ngoài khung: 0 0 0.35rem. rem tính theo cỡ chữ gốc của trang. */
     margin: 0 0 0.35rem;
+    /* Đặt màu chữ/nét dùng currentcolor: var(--studio-accent). */
     color: var(--studio-accent);
+    /* Đặt cỡ chữ: 0.72rem. rem tính theo cỡ chữ gốc của trang. */
     font-size: 0.72rem;
+    /* Đặt độ đậm chữ: 750. */
     font-weight: 750;
+    /* Đặt khoảng cách giữa ký tự: 0.1em. */
     letter-spacing: 0.1em;
+    /* Đổi cách hiển thị chữ hoa/thường: uppercase. */
     text-transform: uppercase;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Chọn .studio-hero .studio-kicker: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-hero .studio-kicker { color: #95e9db; }
+/* Chọn .studio-hero h1: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-hero h1 {
+    /* Đặt khoảng trống bên ngoài khung: 0. */
     margin: 0;
+    /* Đặt màu chữ/nét dùng currentcolor: inherit. */
     color: inherit;
+    /* Đặt cỡ chữ: clamp(1.55rem, 3vw, 2.6rem). clamp giữ giá trị trong khoảng nhỏ nhất–mong muốn–lớn nhất. rem tính theo cỡ chữ gốc của trang. */
     font-size: clamp(1.55rem, 3vw, 2.6rem);
+    /* Đặt độ đậm chữ: 750. */
     font-weight: 750;
+    /* Đặt chiều cao dòng chữ: 1.15. */
     line-height: 1.15;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Chọn .studio-hero p:last-child: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-hero p:last-child {
+    /* Đặt khoảng trống bên ngoài khung: 0.45rem 0 0. rem tính theo cỡ chữ gốc của trang. */
     margin: 0.45rem 0 0;
+    /* Đặt màu chữ/nét dùng currentcolor: #c4d5e8. */
     color: #c4d5e8;
+    /* Đặt cỡ chữ: 0.94rem. rem tính theo cỡ chữ gốc của trang. */
     font-size: 0.94rem;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Chọn .studio-badge: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-badge {
+    /* Quy định mức co lại khi không đủ chỗ: 0. */
     flex-shrink: 0;
+    /* Đặt khoảng trống bên trong khung: 0.45rem 0.75rem. rem tính theo cỡ chữ gốc của trang. */
     padding: 0.45rem 0.75rem;
+    /* Đặt độ dày, kiểu và màu đường viền: 1px solid #5a858c. */
     border: 1px solid #5a858c;
+    /* Bo tròn các góc: 999px. */
     border-radius: 999px;
+    /* Đặt màu chữ/nét dùng currentcolor: #c0f7e9. */
     color: #c0f7e9;
+    /* Đặt màu hoặc lớp nền: #193747. */
     background: #193747;
+    /* Đặt cỡ chữ: 0.8rem. rem tính theo cỡ chữ gốc của trang. */
     font-size: 0.8rem;
+    /* Đặt độ đậm chữ: 650. */
     font-weight: 650;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Thanh tình trạng hệ thống; chấm màu dùng pseudo-element ::before. */
+/* Chọn #studio-health: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 #studio-health {
+    /* Đặt độ dày, kiểu và màu đường viền: 0. */
     border: 0;
+    /* Đặt màu hoặc lớp nền: transparent. */
     background: transparent;
+    /* Đặt khoảng trống bên trong khung: 0. */
     padding: 0;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Chọn .studio-health-bar: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-health-bar {
+    /* Chọn cách bố trí phần tử (flex, grid hoặc block): flex. */
     display: flex;
+    /* Cho phép các mục flex xuống dòng: wrap. */
     flex-wrap: wrap;
+    /* Căn các phần tử theo trục phụ của flex hoặc theo chiều dọc của grid: center. */
     align-items: center;
+    /* Phân bố phần tử theo trục chính của flex hoặc chiều ngang của grid: space-between. */
     justify-content: space-between;
+    /* Đặt khoảng cách giữa các phần tử: 0.5rem 1rem. rem tính theo cỡ chữ gốc của trang. */
     gap: 0.5rem 1rem;
+    /* Đặt khoảng trống bên trong khung: 0.65rem 1rem. rem tính theo cỡ chữ gốc của trang. */
     padding: 0.65rem 1rem;
+    /* Đặt độ dày, kiểu và màu đường viền: 1px solid var(--studio-line). */
     border: 1px solid var(--studio-line);
+    /* Bo tròn các góc: 0.75rem. rem tính theo cỡ chữ gốc của trang. */
     border-radius: 0.75rem;
+    /* Đặt màu hoặc lớp nền: var(--studio-panel). */
     background: var(--studio-panel);
+    /* Đặt màu chữ/nét dùng currentcolor: var(--studio-muted). */
     color: var(--studio-muted);
+    /* Đặt cỡ chữ: 0.86rem. rem tính theo cỡ chữ gốc của trang. */
     font-size: 0.86rem;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Chọn .studio-health-pill: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-health-pill {
+    /* Chọn cách bố trí phần tử (flex, grid hoặc block): inline-flex. */
     display: inline-flex;
+    /* Căn các phần tử theo trục phụ của flex hoặc theo chiều dọc của grid: center. */
     align-items: center;
+    /* Đặt khoảng cách giữa các phần tử: 0.45rem. rem tính theo cỡ chữ gốc của trang. */
     gap: 0.45rem;
+    /* Đặt màu chữ/nét dùng currentcolor: var(--studio-accent). */
     color: var(--studio-accent);
+    /* Đặt độ đậm chữ: 700. */
     font-weight: 700;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Chọn .studio-health-pill.is-alert: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-health-pill.is-alert { color: var(--studio-warn); }
+/* Chọn .studio-health-pill::before: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-health-pill::before {
+    /* Tạo nội dung cho phần tử giả ::before: "". */
     content: "";
+    /* Đặt chiều rộng: 0.52rem. rem tính theo cỡ chữ gốc của trang. */
     width: 0.52rem;
+    /* Đặt chiều cao: 0.52rem. rem tính theo cỡ chữ gốc của trang. */
     height: 0.52rem;
+    /* Bo tròn các góc: 50%. */
     border-radius: 50%;
+    /* Đặt màu hoặc lớp nền: currentColor. */
     background: currentColor;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Khung tab; aria-selected đánh dấu tab đang được chọn. */
+/* Chọn #studio-tabs: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 #studio-tabs {
+    /* Đặt độ dày, kiểu và màu đường viền: 1px solid var(--studio-line). */
     border: 1px solid var(--studio-line);
+    /* Bo tròn các góc: 1rem. rem tính theo cỡ chữ gốc của trang. */
     border-radius: 1rem;
+    /* Đặt màu hoặc lớp nền: var(--studio-panel). */
     background: var(--studio-panel);
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Chọn #studio-tabs [role="tab"]: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 #studio-tabs [role="tab"] {
+    /* Đặt chiều cao nhỏ nhất: 2.7rem. rem tính theo cỡ chữ gốc của trang. */
     min-height: 2.7rem;
+    /* Đặt độ đậm chữ: 650. */
     font-weight: 650;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Chọn #studio-tabs [role="tab"][aria-selected="true"]: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 #studio-tabs [role="tab"][aria-selected="true"] { color: var(--studio-accent); }
+/* Định dạng tiêu đề và đoạn mô tả dùng lại giữa các tab. */
+/* Chọn .studio-section-title h2, .studio-section-title h3: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-section-title h2, .studio-section-title h3 {
+    /* Đặt khoảng trống bên ngoài khung: 0. */
     margin: 0;
+    /* Đặt màu chữ/nét dùng currentcolor: var(--studio-text). */
     color: var(--studio-text);
+    /* Đặt chiều cao dòng chữ: 1.2. */
     line-height: 1.2;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Chọn .studio-section-title h2: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-section-title h2 { font-size: 1.42rem; }
+/* Chọn .studio-section-title h3: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-section-title h3 { font-size: 1.12rem; }
+/* Chọn .studio-section-title p:last-child: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-section-title p:last-child {
+    /* Đặt khoảng trống bên ngoài khung: 0.4rem 0 0. rem tính theo cỡ chữ gốc của trang. */
     margin: 0.4rem 0 0;
+    /* Đặt màu chữ/nét dùng currentcolor: var(--studio-muted). */
     color: var(--studio-muted);
+    /* Đặt cỡ chữ: 0.91rem. rem tính theo cỡ chữ gốc của trang. */
     font-size: 0.91rem;
+    /* Đặt chiều cao dòng chữ: 1.5. */
     line-height: 1.5;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Grid chia khu vực đăng ký: camera/xem lại ở trái, biểu mẫu bên phải. */
+/* Chọn #enrollment-workspace: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 #enrollment-workspace {
+    /* Chọn cách bố trí phần tử (flex, grid hoặc block): grid. */
     display: grid;
+    /* Khai báo số cột và kích thước cột: minmax(0, 1.8fr) minmax(17rem, 1fr). rem tính theo cỡ chữ gốc của trang. fr là phần tỷ lệ của không gian còn lại trong grid. */
     grid-template-columns: minmax(0, 1.8fr) minmax(17rem, 1fr);
+    /* Đặt sơ đồ các vùng có tên của grid: "camera form" "review form". */
     grid-template-areas: "camera form" "review form";
+    /* Căn các phần tử theo trục phụ của flex hoặc theo chiều dọc của grid: start. */
     align-items: start;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Chọn #enrollment-camera-panel: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 #enrollment-camera-panel { grid-area: camera; position: relative; min-width: 0 !important; }
+/* Chọn #enrollment-form: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 #enrollment-form { grid-area: form; min-width: 0 !important; }
+/* Chọn #enrollment-review: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 #enrollment-review { grid-area: review; min-width: 0 !important; }
+/* Kiểu thẻ dùng chung cho biểu mẫu và vùng xem lại. */
+/* Chọn .studio-card: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-card {
+    /* Đặt khoảng trống bên trong khung: 1rem. rem tính theo cỡ chữ gốc của trang. */
     padding: 1rem;
+    /* Đặt độ dày, kiểu và màu đường viền: 1px solid var(--studio-line). */
     border: 1px solid var(--studio-line);
+    /* Bo tròn các góc: 0.9rem. rem tính theo cỡ chữ gốc của trang. */
     border-radius: 0.9rem;
+    /* Đặt màu hoặc lớp nền: var(--studio-panel). */
     background: var(--studio-panel);
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Đặt hướng dẫn nổi trên camera; pointer-events:none để không chặn thao tác bên dưới. */
+/* Chọn #enrollment-camera-status: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 #enrollment-camera-status {
+    /* Chọn cách định vị phần tử: absolute. */
     position: absolute;
+    /* Đặt khoảng cách trên/phải/dưới/trái khi định vị: 2.2rem auto auto 0.85rem. rem tính theo cỡ chữ gốc của trang. */
     inset: 2.2rem auto auto 0.85rem;
+    /* Đặt chiều rộng: min(24rem, calc(100% - 1.7rem)). rem tính theo cỡ chữ gốc của trang. */
     width: min(24rem, calc(100% - 1.7rem));
+    /* Đặt thứ tự chồng lớp: 5. */
     z-index: 5;
+    /* Đặt khoảng trống bên trong khung: 0.55rem 0.75rem. rem tính theo cỡ chữ gốc của trang. */
     padding: 0.55rem 0.75rem;
+    /* Đặt độ dày, kiểu và màu đường viền: 1px solid #537285. */
     border: 1px solid #537285;
+    /* Đặt riêng viền trái: 3px solid #5eead4. */
     border-left: 3px solid #5eead4;
+    /* Bo tròn các góc: 0.65rem. rem tính theo cỡ chữ gốc của trang. */
     border-radius: 0.65rem;
+    /* Đặt màu hoặc lớp nền: rgb(10 24 40 / 94%). */
     background: rgb(10 24 40 / 94%);
+    /* Quy định có nhận chuột/chạm hay không: none. */
     pointer-events: none;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Chọn #enrollment-camera-status textarea: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 #enrollment-camera-status textarea {
+    /* Đặt khoảng trống bên trong khung: 0. */
     padding: 0;
+    /* Đặt độ dày, kiểu và màu đường viền: 0. */
     border: 0;
+    /* Đặt màu hoặc lớp nền: transparent. */
     background: transparent;
+    /* Đặt màu chữ/nét dùng currentcolor: #fff. */
     color: #fff;
+    /* Đặt màu tô chữ cho trình duyệt dùng thuộc tính webkit: #fff. */
     -webkit-text-fill-color: #fff;
+    /* Đặt cỡ chữ: 0.94rem. rem tính theo cỡ chữ gốc của trang. */
     font-size: 0.94rem;
+    /* Đặt độ đậm chữ: 650. */
     font-weight: 650;
+    /* Đặt chiều cao dòng chữ: 1.4. */
     line-height: 1.4;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Bốn thẻ ảnh: is-next là góc cần chụp, is-done là góc đã chụp. */
+/* Chọn #enrollment-preview: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 #enrollment-preview { padding: 0; border: 0; }
+/* Chọn .studio-poses: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-poses {
+    /* Chọn cách bố trí phần tử (flex, grid hoặc block): grid. */
     display: grid;
+    /* Khai báo số cột và kích thước cột: repeat(4, minmax(0, 1fr)). fr là phần tỷ lệ của không gian còn lại trong grid. */
     grid-template-columns: repeat(4, minmax(0, 1fr));
+    /* Đặt khoảng cách giữa các phần tử: 0.55rem. rem tính theo cỡ chữ gốc của trang. */
     gap: 0.55rem;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Chọn .studio-pose: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-pose {
+    /* Đặt khoảng trống bên ngoài khung: 0. */
     margin: 0;
+    /* Chọn cách xử lý nội dung tràn khung: hidden. */
     overflow: hidden;
+    /* Đặt độ dày, kiểu và màu đường viền: 1px solid var(--studio-line). */
     border: 1px solid var(--studio-line);
+    /* Bo tròn các góc: 0.7rem. rem tính theo cỡ chữ gốc của trang. */
     border-radius: 0.7rem;
+    /* Đặt màu chữ/nét dùng currentcolor: var(--studio-muted). */
     color: var(--studio-muted);
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Chọn .studio-pose.is-next: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-pose.is-next { border-color: var(--studio-accent); }
+/* Chọn .studio-pose-image: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-pose-image {
+    /* Chọn cách bố trí phần tử (flex, grid hoặc block): grid. */
     display: grid;
+    /* Căn phần tử con theo cả hai chiều trong grid: center. */
     place-items: center;
+    /* Giữ tỷ lệ chiều rộng/chiều cao: 4 / 3. */
     aspect-ratio: 4 / 3;
+    /* Đặt chiều rộng: 100%. */
     width: 100%;
+    /* Chọn cách ảnh nằm trong khung, contain giữ đủ toàn bộ ảnh: contain. */
     object-fit: contain;
+    /* Đặt màu hoặc lớp nền: var(--studio-bg). */
     background: var(--studio-bg);
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Chọn .studio-pose-image span: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-pose-image span {
+    /* Chọn phông chữ: var(--font-mono). */
     font-family: var(--font-mono);
+    /* Đặt cỡ chữ: 1.3rem. rem tính theo cỡ chữ gốc của trang. */
     font-size: 1.3rem;
+    /* Đặt độ đậm chữ: 650. */
     font-weight: 650;
+    /* Đặt màu chữ/nét dùng currentcolor: var(--studio-muted). */
     color: var(--studio-muted);
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Chọn .studio-pose.is-next .studio-pose-image: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-pose.is-next .studio-pose-image { background: var(--studio-soft); }
+/* Chọn .studio-pose figcaption: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-pose figcaption { padding: 0.5rem; }
+/* Chọn .studio-pose strong: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-pose strong {
+    /* Chọn cách bố trí phần tử (flex, grid hoặc block): block. */
     display: block;
+    /* Đặt màu chữ/nét dùng currentcolor: var(--studio-text). */
     color: var(--studio-text);
+    /* Đặt cỡ chữ: 0.85rem. rem tính theo cỡ chữ gốc của trang. */
     font-size: 0.85rem;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Chọn .studio-pose small: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-pose small { font-size: 0.75rem; }
+/* Chọn .studio-pose.is-next small, .studio-pose.is-done small: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-pose.is-next small, .studio-pose.is-done small { color: var(--studio-accent); }
+/* Chữ hướng dẫn phụ ở cuối khu vực. */
+/* Chọn .studio-footer: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
 .studio-footer {
+    /* Đặt khoảng trống bên trong khung: 0.2rem 0.1rem. rem tính theo cỡ chữ gốc của trang. */
     padding: 0.2rem 0.1rem;
+    /* Đặt màu chữ/nét dùng currentcolor: var(--studio-muted). */
     color: var(--studio-muted);
+    /* Đặt cỡ chữ: 0.82rem. rem tính theo cỡ chữ gốc của trang. */
     font-size: 0.82rem;
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Màn hình hẹp: chuyển bố cục hai cột thành camera → biểu mẫu → xem lại. */
+/* Chỉ áp dụng các quy tắc bên trong khi màn hình đạt điều kiện (max-width: 780px). */
 @media (max-width: 780px) {
+    /* Chọn #enrollment-workspace: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
     #enrollment-workspace {
+        /* Khai báo số cột và kích thước cột: minmax(0, 1fr). fr là phần tỷ lệ của không gian còn lại trong grid. */
         grid-template-columns: minmax(0, 1fr);
+        /* Đặt sơ đồ các vùng có tên của grid: "camera" "form" "review". */
         grid-template-areas: "camera" "form" "review";
+    /* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
     }
+    /* Chọn .studio-hero: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
     .studio-hero { align-items: flex-start; }
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
+/* Điện thoại nhỏ: xếp phần đầu theo chiều dọc và ảnh thành hai cột. */
+/* Chỉ áp dụng các quy tắc bên trong khi màn hình đạt điều kiện (max-width: 480px). */
 @media (max-width: 480px) {
+    /* Chọn .studio-hero: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
     .studio-hero { flex-direction: column; }
+    /* Chọn .studio-brand: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
     .studio-brand { gap: 0.7rem; }
+    /* Chọn .studio-mark: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
     .studio-mark { flex-basis: 2.75rem; height: 2.75rem; }
+    /* Chọn .studio-poses: # theo ID, . theo class, dấu cách chọn phần tử con; thuộc tính trong {...} áp dụng cho nhóm này. */
     .studio-poses { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+/* Kết thúc nhóm thuộc tính hoặc khối điều kiện màn hình đang mở. */
 }
